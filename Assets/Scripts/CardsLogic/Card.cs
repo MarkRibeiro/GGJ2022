@@ -11,7 +11,7 @@ public class Card : ScriptableObject
     [TextArea]
     public string description;
     public int brainsCost;
-    public int hearthCost;
+    public int heartCost;
     [SerializeField]
     public CardEffect effect;
     public Sprite sprite;

@@ -11,6 +11,7 @@ public enum BattleState {
 }
 public class BattleSystem : MonoBehaviour
 {
+    public static BattleSystem instance;
     public BattleState state;
     public DeckManager dm;
 
@@ -22,6 +23,7 @@ public class BattleSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         state = BattleState.START;
         BeginBattle();
     }
@@ -32,7 +34,7 @@ public class BattleSystem : MonoBehaviour
         PlayerTurn();
     }
 
-    private void PlayerTurn()
+    private void StartTurn(Card[] deck, List<GameObject> currentHand)
     {
         //Rolar dados
         int reason_gain = RollDice();
@@ -58,14 +60,62 @@ public class BattleSystem : MonoBehaviour
         }
 
         //Comprar carta
-        dm.DiscardHand();
-        dm.Shuffle();
-        dm.DrawHand();
+        dm.DiscardHand(currentHand);
+        dm.Shuffle(deck);
+        dm.DrawHand(deck, currentHand);
+    }
+
+    private void PlayerTurn()
+    {
+        StartTurn(dm.playerDeck, dm.playerCurrentHand);
+    }
+
+    private void EnemyTurn()
+    {
+        StartTurn(dm.enemyDeck, dm.enemyCurrentHand);
+
+        //Jogar cartas da sua mao, se possivel
+        foreach(GameObject card in dm.enemyCurrentHand)
+        {
+            Card instance = card.GetComponent<CardInstance>().card;
+            PlayCard(instance);
+        }
+
+        EndTurn();
     }
 
     private int RollDice()
     {
         int result = Random.Range(1, 7);
         return result;
+    }
+
+    public void PlayCard(Card playedCard)
+    {
+        //Subtrair custos da carta
+        if(playedCard.brainsCost > reason || playedCard.heartCost > emotion)
+        {
+            return;
+        }
+
+        reason -= playedCard.brainsCost;
+        emotion -= playedCard.heartCost;
+
+        //Aplicar efeito
+        Debug.Log(playedCard.effect.effectValue);
+    }
+
+    public void EndTurn()
+    {
+        if(state == BattleState.PLAYER_TURN)
+        {
+            state = BattleState.ENEMY_TURN;
+            EnemyTurn();
+        }
+        else if(state == BattleState.ENEMY_TURN)
+        {
+            state = BattleState.PLAYER_TURN;
+            PlayerTurn();
+        }
     }
 }
