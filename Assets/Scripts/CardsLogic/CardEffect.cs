@@ -3,9 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum CardType {
+    CHANGE_EXPRESSION,
+    SHAME,
     ATTACK,
     DEFENSE
 }
+
+public enum Expressions {
+    SHAME,
+    SMUG,
+    NORMAL,
+    KEEP,
+    RANDOM
+}  
 
 [System.Serializable]
 public class CardEffect
@@ -13,4 +23,5 @@ public class CardEffect
     public int effectValue;
     public bool ignoreShield;
     public CardType cardType;
+    public Expressions changeTo;
 }
