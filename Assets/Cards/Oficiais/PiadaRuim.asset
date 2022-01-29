@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc478351a038a804e8badf6ae2009c41, type: 3}
   m_Name: PiadaRuim
   m_EditorClassIdentifier: 
-  cardName: 
+  cardName: Contar Piada Ruim
   description: 
-  brainsCost: 0
+  brainsCost: 2
   heartCost: 0
   effect:
     effectValue: 0
     ignoreShield: 0
     cardType: 0
-    changeTo: 0
+    changeTo: 4
   sprite: {fileID: 0}

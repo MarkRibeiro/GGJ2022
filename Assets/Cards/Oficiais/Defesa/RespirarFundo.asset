@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc478351a038a804e8badf6ae2009c41, type: 3}
   m_Name: RespirarFundo
   m_EditorClassIdentifier: 
-  cardName: 
-  description: 
-  brainsCost: 0
+  cardName: Respirar Fundo
+  description: Acrescenta mais escudo para si mesmo.
+  brainsCost: 3
   heartCost: 0
   effect:
-    effectValue: 0
+    effectValue: 4
     ignoreShield: 0
-    cardType: 0
-    changeTo: 0
+    cardType: 3
+    changeTo: 2
   sprite: {fileID: 0}

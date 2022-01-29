@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc478351a038a804e8badf6ae2009c41, type: 3}
   m_Name: Cantada
   m_EditorClassIdentifier: 
-  cardName: 
-  description: 
-  brainsCost: 0
-  heartCost: 0
+  cardName: Cantada
+  description: "Se jogar certo: aplica efeito no oponente. Se jogar errado: aplica
+    efeito em si mesmo. Isso vale tanto para efeito quanto para mudan\xE7a de express\xE3o."
+  brainsCost: 2
+  heartCost: 1
   effect:
-    effectValue: 0
-    ignoreShield: 0
-    cardType: 0
+    effectValue: 3
+    ignoreShield: 1
+    cardType: 1
     changeTo: 0
   sprite: {fileID: 0}

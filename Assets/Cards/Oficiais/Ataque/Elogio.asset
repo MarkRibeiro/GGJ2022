@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: Elogio
   m_EditorClassIdentifier: 
   cardName: 
-  description: 
-  brainsCost: 0
-  heartCost: 0
+  description: "Ataca somente a vida do oponente. Se o oponente tiver escudo, nada
+    acontece. Nem o dano, nem a mudan\xE7a de express\xE3o."
+  brainsCost: 1
+  heartCost: 1
   effect:
-    effectValue: 0
-    ignoreShield: 0
-    cardType: 0
-    changeTo: 0
+    effectValue: 3
+    ignoreShield: 1
+    cardType: 2
+    changeTo: 2
   sprite: {fileID: 0}

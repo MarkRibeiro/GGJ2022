@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc478351a038a804e8badf6ae2009c41, type: 3}
   m_Name: EmprestarCasaco
   m_EditorClassIdentifier: 
-  cardName: 
-  description: 
+  cardName: Emprestar Casaco
+  description: "Ataca o escudo do oponente. Se o oponente n\xE3o tiver escudo, n\xE3o
+    d\xE1 dano mas continua mudando a express\xE3o do oponente."
   brainsCost: 0
-  heartCost: 0
+  heartCost: 2
   effect:
-    effectValue: 0
+    effectValue: 4
     ignoreShield: 0
-    cardType: 0
+    cardType: 2
     changeTo: 0
   sprite: {fileID: 0}
