@@ -13,6 +13,7 @@ public class CardInstance : MonoBehaviour
     public Text effectText;
     public Image cardImage;
 
+
     // Start is called before the first frame update
     void Start()
     {
