@@ -27,7 +27,7 @@ public class CardInstance : MonoBehaviour
         cardImage.sprite = card.sprite;
     }
 
-    void Play()
+    public void Play()
     {
         BattleSystem.instance.PlayCard(card);
         Destroy(gameObject);
