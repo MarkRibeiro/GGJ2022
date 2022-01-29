@@ -102,7 +102,29 @@ public class BattleSystem : MonoBehaviour
         emotion -= playedCard.card.heartCost;
 
         //Aplicar efeito
-        Debug.Log(playedCard.card.effect.effectValue);
+        ApplyEffect(playedCard.card.effect);
+    }
+
+    public void ApplyEffect(CardEffect effect)
+    {
+        if(effect.cardType == CardType.ATTACK)
+        {
+            //checar se e no miolo ou casca
+            //aplicar dano
+        }
+        else if(effect.cardType == CardType.DEFENSE)
+        {
+            //checar se e no miolo ou casca
+            //aplicar cura/escudo
+        }
+        else if(effect.cardType == CardType.SHAME)
+        {
+            //verificar se a expression atual e a correta
+        }
+        else if(effect.cardType == CardType.CHANGE_EXPRESSION)
+        {
+            //mudar expression do oponente
+        }
     }
 
     public void EndTurn()
