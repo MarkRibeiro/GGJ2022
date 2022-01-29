@@ -283,6 +283,10 @@ PrefabInstance:
       propertyPath: card
       value: 
       objectReference: {fileID: 11400000, guid: 3fb095e851fec1848a3168f6d05b4123, type: 2}
+    - target: {fileID: 2106086600099195846, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 2954368717867397018, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -353,7 +357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2954368717867397018, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 115.01495
+      value: 111.11499
       objectReference: {fileID: 0}
     - target: {fileID: 2954368717867397018, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -461,6 +465,10 @@ PrefabInstance:
       propertyPath: card
       value: 
       objectReference: {fileID: 11400000, guid: 3fb095e851fec1848a3168f6d05b4123, type: 2}
+    - target: {fileID: 2106086600099195846, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 2954368717867397018, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -531,7 +539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2954368717867397018, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 115.01495
+      value: 111.11499
       objectReference: {fileID: 0}
     - target: {fileID: 2954368717867397018, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
