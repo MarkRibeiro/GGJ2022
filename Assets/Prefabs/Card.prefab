@@ -585,11 +585,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 0}
-  cardName: {fileID: 0}
-  description: {fileID: 0}
-  b_costText: {fileID: 0}
-  h_costText: {fileID: 0}
-  effectText: {fileID: 0}
+  cardName: {fileID: 594785821629015695}
+  description: {fileID: 5774055586735459425}
+  b_costText: {fileID: 1428906756896323760}
+  h_costText: {fileID: 4938572328388094148}
+  effectText: {fileID: 4938572328388094148}
   cardImage: {fileID: 6893423245217358941}
 --- !u!114 &6878734196340987262
 MonoBehaviour:
@@ -753,7 +753,7 @@ GameObject:
   - component: {fileID: 4732017630882812993}
   - component: {fileID: 594785821629015695}
   m_Layer: 5
-  m_Name: Titulo
+  m_Name: name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -963,7 +963,7 @@ GameObject:
   - component: {fileID: 7911431491099752719}
   - component: {fileID: 8337713451786537364}
   m_Layer: 5
-  m_Name: Type
+  m_Name: Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1173,7 +1173,7 @@ GameObject:
   - component: {fileID: 8003901549823122738}
   - component: {fileID: 5774055586735459425}
   m_Layer: 5
-  m_Name: descricao
+  m_Name: description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
