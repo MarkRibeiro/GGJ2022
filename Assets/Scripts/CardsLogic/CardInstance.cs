@@ -25,7 +25,7 @@ public class CardInstance : MonoBehaviour
         b_costText.text = card.brainsCost.ToString();
         h_costText.text = card.brainsCost.ToString();
         
-        effectText.text = card.effect.ToString();
+        effectText.text = card.effect.effectValue.ToString();
 
         cardImage.sprite = card.sprite;
     }
