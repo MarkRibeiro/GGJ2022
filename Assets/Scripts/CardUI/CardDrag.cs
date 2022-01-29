@@ -21,6 +21,7 @@ public class CardDrag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         _dragging = false;
         _anim = GetComponent<CardAnimation>();
+        playArea = GameObject.FindGameObjectWithTag("PlayArea").GetComponent<RectTransform>();
         Assert.IsNotNull(playArea);
     }
     private void LateUpdate()
