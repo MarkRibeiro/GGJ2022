@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HandArea : MonoBehaviour
 {
+    int lastChildCount;
     [SerializeField]
     float radius;
     [SerializeField]
@@ -31,22 +32,46 @@ public class HandArea : MonoBehaviour
         Gizmos.DrawLine(center, center + Rotate(Vector2.up * radius, angle));
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(center, radius);
-        LateUpdate();
+        UpdatePositions();
     }
 
+    private void Awake()
+    {
+        UpdatePositions();
+        lastChildCount = transform.childCount;
+    }
     private void LateUpdate()
     {
+        if (transform.childCount != lastChildCount)
+        {
+            UpdatePositions();
+            lastChildCount = transform.childCount;
+        }
+    }
+
+    private void UpdatePositions()
+    {
         int childrenCount = transform.childCount;
-        if(childrenCount == 0)
+        if (childrenCount == 0)
         {
             return;
         }
-        float step = childrenCount > 1 ? 2 * angle / (childrenCount-1) : 0;
+        float step = childrenCount > 1 ? 2 * angle / (childrenCount - 1) : 0;
         foreach (Transform child in transform)
         {
-            child.SetPositionAndRotation(
-                center + Rotate(Vector2.up * radius, -angle + step * child.GetSiblingIndex()),
-                Quaternion.Euler(0,0,-angle + step * child.GetSiblingIndex()));
+            var anim = child.GetComponent<CardAnimation>();
+            if (anim == null)
+            {
+                child.SetPositionAndRotation(
+                                center + Rotate(Vector2.up * radius, -angle + step * child.GetSiblingIndex()),
+                                Quaternion.Euler(0, 0, -angle + step * child.GetSiblingIndex()));
+            }
+            else
+            {
+                anim.GoToPosition(center + Rotate(Vector2.up * radius, -angle + step * child.GetSiblingIndex()));
+                anim.SetRotation(Quaternion.Euler(0, 0, -angle + step * child.GetSiblingIndex()));
+            }
+
         }
     }
 }

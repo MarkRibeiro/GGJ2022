@@ -23,10 +23,11 @@ public class CardAnimation : MonoBehaviour
     private IEnumerator GoToPositionCoroutine(Vector3 position)
     {
         float t = 0;
+        Vector3 startPosition = transform.position;
         while (t < positionTime)
         {
-            positionTime += Time.deltaTime;
-            transform.position = new Vector3(positionCurve.Evaluate(t / positionTime), transform.position.y, transform.position.z);
+            t += Time.deltaTime / positionTime;
+            transform.position = Vector3.Lerp(startPosition, position, positionCurve.Evaluate(t));
             yield return null;
         }
         positionCoroutine = null;
@@ -50,10 +51,11 @@ public class CardAnimation : MonoBehaviour
     private IEnumerator SetRotationCoroutine(Quaternion rotation)
     {
         float t = 0;
+        Quaternion startRotation = transform.rotation;
         while (t < rotationTime)
         {
-            rotationTime += Time.deltaTime;
-            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, rotationCurve.Evaluate(t / rotationTime));
+            t += Time.deltaTime / rotationTime;
+            transform.rotation = Quaternion.Lerp(startRotation, rotation, rotationCurve.Evaluate(t));
             yield return null;
         }
         rotationCoroutine = null;
