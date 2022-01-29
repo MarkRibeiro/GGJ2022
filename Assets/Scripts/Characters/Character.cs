@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
-public class Character: MonoBehaviour
+public class Character : MonoBehaviour
 {
-    public enum Emotions {
+    public enum Emotions
+    {
         NORMAL,
         SHAME,
         SMUG
@@ -15,6 +16,12 @@ public class Character: MonoBehaviour
     //Recursos
     public int reason;
     public int emotion;
+
+    public int expressionNumber;
+
+    public List<Sprite> spriteSheet;
+
+    private Image image;
 
     //Cartas
     public Card[] deck;
@@ -28,4 +35,29 @@ public class Character: MonoBehaviour
 
     public Slider healthBar;
     public Slider shieldBar;
+
+
+    private void Start()
+    {
+        image = GetComponentInChildren<Image>();
+    }
+
+
+
+    private void ChangeExpression()
+    {
+        image.sprite = spriteSheet[expressionNumber];
+    }
+
+    public void AddEmotion()
+    {
+        expressionNumber++;
+
+        if (expressionNumber > 3)
+        {
+            expressionNumber = 0;
+        }
+        ChangeExpression();
+        Debug.Log("A");
+    }
 }
