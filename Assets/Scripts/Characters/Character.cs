@@ -28,16 +28,26 @@ public class Character : MonoBehaviour
     public int maxShield;
     public int currShield;
 
-    public Slider healthBar;
-    public Slider shieldBar;
+    public HealthBar healthBar;
+    public HealthBar shieldBar;
 
 
     private void Start()
     {
         image = GetComponentInChildren<Image>();
+        healthBar.SetMaxValue(maxHP);
+        currHP = maxHP;
+        shieldBar.SetMaxValue(maxShield);
+        currShield = maxShield;
     }
 
-
+    private void Update() {
+        if(Input.GetKeyDown("space"))
+        {
+            currHP -= 10;
+            healthBar.SetValue(currHP);
+        }
+    }
 
     public void ChangeExpression(Expressions emotion)
     {
