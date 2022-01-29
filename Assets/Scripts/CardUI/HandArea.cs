@@ -36,7 +36,11 @@ public class HandArea : MonoBehaviour
     private void LateUpdate()
     {
         int childrenCount = transform.childCount;
-        float step = 2 * angle / (childrenCount - 1);
+        if(childrenCount == 0)
+        {
+            return;
+        }
+        float step = childrenCount > 1 ? 2 * angle / (childrenCount-1) : 0;
         foreach (Transform child in transform)
         {
             child.SetPositionAndRotation(

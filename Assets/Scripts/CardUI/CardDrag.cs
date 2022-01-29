@@ -9,6 +9,7 @@ public class CardDrag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     private Vector3 _offset;
     private Vector3 _startPosition;
     private int _startIndex;
+    private Transform _startParent;
     private void Start() {
         _dragging = false;
     }
@@ -24,6 +25,8 @@ public class CardDrag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         _offset = Input.mousePosition - transform.position;
         _startPosition = transform.position;
         _startIndex = transform.GetSiblingIndex();
+        _startParent = transform.parent;
+        transform.SetParent(transform.parent.parent);
         transform.SetAsLastSibling();
     }
 
@@ -31,6 +34,7 @@ public class CardDrag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         _dragging = false;
         transform.position = _startPosition;
+        transform.SetParent(_startParent);
         transform.SetSiblingIndex(_startIndex);
     }
 }
