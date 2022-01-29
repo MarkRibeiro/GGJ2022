@@ -22,6 +22,8 @@ public class Character : MonoBehaviour
     public Card[] deck;
     public List<GameObject> currentHand;
 
+    public RectTransform handArea;
+
     //Barras
     public int maxHP;
     public int currHP;
