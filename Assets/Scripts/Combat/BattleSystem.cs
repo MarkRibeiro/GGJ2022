@@ -34,7 +34,7 @@ public class BattleSystem : MonoBehaviour
         PlayerTurn();
     }
 
-    private void StartTurn(Card[] deck, List<GameObject> currentHand)
+    private void StartTurn(Character currentChar)
     {
         //Rolar dados
         int reason_gain = RollDice();
@@ -60,22 +60,22 @@ public class BattleSystem : MonoBehaviour
         }
 
         //Comprar carta
-        dm.DiscardHand(currentHand);
-        dm.Shuffle(deck);
-        dm.DrawHand(deck, currentHand);
+        dm.DiscardHand(currentChar.currentHand);
+        dm.Shuffle(currentChar.deck);
+        dm.DrawHand(currentChar.deck, currentChar.currentHand);
     }
 
     private void PlayerTurn()
     {
-        StartTurn(dm.playerDeck, dm.playerCurrentHand);
+        StartTurn(dm.player);
     }
 
     private void EnemyTurn()
     {
-        StartTurn(dm.enemyDeck, dm.enemyCurrentHand);
+        StartTurn(dm.enemy);
 
         //Jogar cartas da sua mao, se possivel
-        foreach(GameObject card in dm.enemyCurrentHand)
+        foreach(GameObject card in dm.enemy.currentHand)
         {
             CardInstance instance = card.GetComponent<CardInstance>();
             PlayCard(instance);

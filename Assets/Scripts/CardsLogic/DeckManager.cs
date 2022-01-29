@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class DeckManager : MonoBehaviour
 {
-    public Card[] playerDeck, enemyDeck;
-
+    public Character player, enemy;
     [SerializeField] private int handSize;
     [SerializeField] private GameObject cardPrefab;
     [SerializeField] private GameObject handArea;
-    public List<GameObject> playerCurrentHand, enemyCurrentHand;
 
     public void Shuffle(Card[] deck)
     {
