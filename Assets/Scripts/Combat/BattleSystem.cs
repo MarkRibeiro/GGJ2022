@@ -15,9 +15,6 @@ public class BattleSystem : MonoBehaviour
     public BattleState state;
     public DeckManager dm;
 
-    [SerializeField] private int reason;
-    [SerializeField] private int emotion;
-
     [SerializeField] private int resource_limit;
 
     // Start is called before the first frame update
@@ -41,22 +38,22 @@ public class BattleSystem : MonoBehaviour
         int emotion_gain = RollDice();
 
         //Adicionar valores de razao e emocao
-        if(reason + reason_gain > resource_limit)
+        if(currentChar.reason + reason_gain > resource_limit)
         {
-            reason = resource_limit;
+            currentChar.reason = resource_limit;
         }
         else
         {
-            reason += reason_gain;
+            currentChar.reason += reason_gain;
         }
 
-        if(emotion + emotion_gain > resource_limit)
+        if(currentChar.emotion + emotion_gain > resource_limit)
         {
-            emotion = resource_limit;
+            currentChar.emotion = resource_limit;
         }
         else
         {
-            emotion += emotion_gain;
+            currentChar.emotion += emotion_gain;
         }
 
         //Comprar carta
@@ -78,7 +75,7 @@ public class BattleSystem : MonoBehaviour
         foreach(GameObject card in dm.enemy.currentHand)
         {
             CardInstance instance = card.GetComponent<CardInstance>();
-            PlayCard(instance);
+            PlayCard(instance, dm.enemy);
         }
 
         EndTurn();
@@ -90,19 +87,21 @@ public class BattleSystem : MonoBehaviour
         return result;
     }
 
-    public void PlayCard(CardInstance playedCard)
+    public void PlayCard(CardInstance playedCard, Character currentChar)
     {
         //Subtrair custos da carta
-        if(playedCard.card.brainsCost > reason || playedCard.card.heartCost > emotion)
+        if(playedCard.card.brainsCost > currentChar.reason || playedCard.card.heartCost > currentChar.emotion)
         {
             return;
         }
 
-        reason -= playedCard.card.brainsCost;
-        emotion -= playedCard.card.heartCost;
+        currentChar.reason -= playedCard.card.brainsCost;
+        currentChar.emotion -= playedCard.card.heartCost;
 
         //Aplicar efeito
         ApplyEffect(playedCard.card.effect);
+
+        Destroy(playedCard.gameObject);
     }
 
     public void ApplyEffect(CardEffect effect)
