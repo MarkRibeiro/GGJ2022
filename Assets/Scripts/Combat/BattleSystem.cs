@@ -34,27 +34,7 @@ public class BattleSystem : MonoBehaviour
     private void StartTurn(Character currentChar)
     {
         //Rolar dados
-        int reason_gain = RollDice();
-        int emotion_gain = RollDice();
-
-        //Adicionar valores de razao e emocao
-        if(currentChar.reason + reason_gain > resource_limit)
-        {
-            currentChar.reason = resource_limit;
-        }
-        else
-        {
-            currentChar.reason += reason_gain;
-        }
-
-        if(currentChar.emotion + emotion_gain > resource_limit)
-        {
-            currentChar.emotion = resource_limit;
-        }
-        else
-        {
-            currentChar.emotion += emotion_gain;
-        }
+        RollDice(currentChar);
 
         //Comprar carta
         dm.DiscardHand(currentChar.currentHand);
@@ -81,10 +61,46 @@ public class BattleSystem : MonoBehaviour
         EndTurn();
     }
 
-    private int RollDice()
+    private void RollDice(Character currentChar)
     {
-        int result = Random.Range(1, 7);
-        return result;
+        int reason_gain = 0;
+        int emotion_gain = 0;
+
+        for(int i = 0; i < 2; i++)
+        {
+            int result = Random.Range(1, 7);
+            Debug.Log(result);
+            switch(result)
+            {
+                case 1:
+                    emotion_gain += 1;
+                    break;
+                case 2:
+                    reason_gain += 1;
+                    break;
+                case 3:
+                    emotion_gain += 2;
+                    break;
+                case 4:
+                    reason_gain += 2;
+                    break;
+                case 5:
+                case 6:
+                    reason_gain += 1;
+                    emotion_gain += 1;
+                    break;
+            }
+        }
+
+        if(currentChar.reason + reason_gain > resource_limit)
+            currentChar.reason = resource_limit;
+        else
+            currentChar.reason += reason_gain;
+
+        if(currentChar.emotion + emotion_gain > resource_limit)
+            currentChar.emotion = resource_limit;
+        else
+            currentChar.emotion += emotion_gain;
     }
 
     public void PlayCard(CardInstance playedCard, Character currentChar)
