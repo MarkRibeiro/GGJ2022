@@ -16,9 +16,11 @@ public class CardDrag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     private Vector3 _startPosition;
     private int _startIndex;
     private Transform _startParent;
+    private CardAnimation _anim;
     private void Start()
     {
         _dragging = false;
+        _anim = GetComponent<CardAnimation>();
         Assert.IsNotNull(playArea);
     }
     private void LateUpdate()
@@ -54,7 +56,14 @@ public class CardDrag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         }
         else
         {
-            transform.position = _startPosition;
+            if (_anim != null)
+            {
+                _anim.GoToPosition(_startPosition);
+            }
+            else
+            {
+                transform.position = _startPosition;
+            }
             transform.SetParent(_startParent);
             transform.SetSiblingIndex(_startIndex);
         }
