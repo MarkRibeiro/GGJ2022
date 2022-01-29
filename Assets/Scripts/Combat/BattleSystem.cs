@@ -16,8 +16,6 @@ public class BattleSystem : MonoBehaviour
     public BattleState state;
     public DeckManager dm;
 
-    public int MaxLimit;
-
     [SerializeField] private int resource_limit;
 
     // Start is called before the first frame update
@@ -72,7 +70,6 @@ public class BattleSystem : MonoBehaviour
         for (int i = 0; i < 2; i++)
         {
             int result = Random.Range(1, 7);
-            Debug.Log(result);
             switch (result)
             {
                 case 1:
@@ -127,9 +124,7 @@ public class BattleSystem : MonoBehaviour
     {
         switch (effect.cardType)
         {
-
             case CardType.ATTACK:
-
                 if (effect.AffectHp)
                 {
                     if (character.target.currShield <= 0)
@@ -137,21 +132,18 @@ public class BattleSystem : MonoBehaviour
                         character.target.currHP -= effect.effectValue;
                         if (character.target.currHP <= 0)
                         {
-                            EndMatch();
+                            EndMatch(character);
                         }
                     }
                 }
-
                 else
                 {
                     if (character.target.currShield > 0)
                     {
                         character.target.currShield -= effect.effectValue;
                     }
-
                 }
                 character.target.ChangeExpression(effect.changeTo);
-
                 break;
             case CardType.DEFENSE:
                 if (effect.AffectHp)
@@ -168,28 +160,24 @@ public class BattleSystem : MonoBehaviour
                 }
                 break;
             case CardType.SHAME:
+                //verificar se a expression atual e a correta
                 if (character.target.currentExpression == effect.RightExpression)
                 {
                     character.target.currHP -= effect.effectValue;
                     character.target.ChangeExpression(effect.changeTo);
-                    EndMatch();
+                    EndMatch(character);
                 }
                 else
                 {
                     character.currHP -= effect.effectValue;
                     character.ChangeExpression(effect.changeTo);
-                    EndMatch();
+                    EndMatch(character.target);
                 }
-
-
-                //verificar se a expression atual e a correta
                 break;
             case CardType.CHANGE_EXPRESSION:
                 character.target.ChangeExpression(effect.changeTo);
                 break;
-
         }
-
     }
 
     public void EndTurn()
@@ -206,10 +194,16 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    public void EndMatch()
+    public void EndMatch(Character winner)
     {
-
-        //end match
+        if(winner == dm.player)
+        {
+            //Tela de vitoria
+        }
+        else
+        {
+            //Tela de derrota
+        }
     }
 
 }

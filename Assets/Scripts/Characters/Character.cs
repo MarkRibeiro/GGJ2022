@@ -54,34 +54,20 @@ public class Character : MonoBehaviour
     {
         switch (emotion)
         {
-
             case (Expressions.NORMAL):
-
                 currentExpression = Expressions.NORMAL;
                 break;
-
             case (Expressions.SHAME):
-
                 currentExpression = Expressions.SHAME;
-
                 break;
-
-
             case (Expressions.SMUG):
                 currentExpression = Expressions.SMUG;
-
-
                 break;
-
-
             case (Expressions.RANDOM):
-
                 currentExpression = Expressions.RANDOM;
                 break;
-
             default:
                 currentExpression = Expressions.NORMAL;
-
                 break;
         }
         SetExpression();
@@ -91,30 +77,19 @@ public class Character : MonoBehaviour
         int index;
         switch (currentExpression)
         {
-
             case (Expressions.NORMAL):
                 index = 0;
-
                 break;
-
             case (Expressions.SHAME):
                 index = 1;
-
-
                 break;
-
-
             case (Expressions.SMUG):
-
                 index = 2;
                 break;
-
             default:
                 index = 0;
-
                 break;
         }
         image.sprite = spriteSheet[index];
     }
-
 }
