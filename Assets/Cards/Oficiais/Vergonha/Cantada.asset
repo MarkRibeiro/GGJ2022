@@ -22,4 +22,5 @@ MonoBehaviour:
     AffectHp: 1
     cardType: 1
     changeTo: 0
+    RightExpression: 1
   sprite: {fileID: 0}

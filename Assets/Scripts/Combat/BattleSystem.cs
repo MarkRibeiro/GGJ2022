@@ -132,20 +132,23 @@ public class BattleSystem : MonoBehaviour
 
                 if (effect.AffectHp)
                 {
-                    character.target.currHP -= effect.effectValue;
-                    if (character.target.currHP <= 0)
+                    if (character.target.currShield <= 0)
                     {
-                        EndMatch();
-                    }
-
-
-                    else
-                    {
-                        if (character.target.currShield > 0)
+                        character.target.currHP -= effect.effectValue;
+                        if (character.target.currHP <= 0)
                         {
-                            character.target.currShield -= effect.effectValue;
+                            EndMatch();
                         }
                     }
+                }
+
+                else
+                {
+                    if (character.target.currShield > 0)
+                    {
+                        character.target.currShield -= effect.effectValue;
+                    }
+
                 }
                 character.target.ChangeExpression(effect.changeTo);
 
@@ -159,9 +162,26 @@ public class BattleSystem : MonoBehaviour
                 {
                     character.currShield += effect.effectValue;
                 }
-                character.target.ChangeExpression(effect.changeTo);
+                if (effect.changeTo != Expressions.KEEP)
+                {
+                    character.target.ChangeExpression(effect.changeTo);
+                }
                 break;
             case CardType.SHAME:
+                if (character.target.currentExpression == effect.RightExpression)
+                {
+                    character.target.currHP -= effect.effectValue;
+                    character.target.ChangeExpression(effect.changeTo);
+                    EndMatch();
+                }
+                else
+                {
+                    character.currHP -= effect.effectValue;
+                    character.ChangeExpression(effect.changeTo);
+                    EndMatch();
+                }
+
+
                 //verificar se a expression atual e a correta
                 break;
             case CardType.CHANGE_EXPRESSION:

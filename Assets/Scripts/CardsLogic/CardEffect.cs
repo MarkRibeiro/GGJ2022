@@ -26,4 +26,6 @@ public class CardEffect
     public bool AffectHp;
     public CardType cardType;
     public Expressions changeTo;
+    public Expressions RightExpression;
+
 }

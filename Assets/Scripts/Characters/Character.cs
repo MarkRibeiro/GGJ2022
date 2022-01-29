@@ -11,8 +11,8 @@ public class Character : MonoBehaviour
     public int reason;
     public int emotion;
 
-    public int expressionNumber;
     public Character target;
+    public Expressions currentExpression;
 
     public List<Sprite> spriteSheet;
 
@@ -41,8 +41,9 @@ public class Character : MonoBehaviour
         currShield = maxShield;
     }
 
-    private void Update() {
-        if(Input.GetKeyDown("space"))
+    private void Update()
+    {
+        if (Input.GetKeyDown("space"))
         {
             currHP -= 10;
             healthBar.SetValue(currHP);
@@ -51,20 +52,60 @@ public class Character : MonoBehaviour
 
     public void ChangeExpression(Expressions emotion)
     {
-        int index;
         switch (emotion)
         {
 
             case (Expressions.NORMAL):
-                index = 0;
+
+                currentExpression = Expressions.NORMAL;
                 break;
 
             case (Expressions.SHAME):
-                index = 1;
+
+                currentExpression = Expressions.SHAME;
+
                 break;
 
 
             case (Expressions.SMUG):
+                currentExpression = Expressions.SMUG;
+
+
+                break;
+
+
+            case (Expressions.RANDOM):
+
+                currentExpression = Expressions.RANDOM;
+                break;
+
+            default:
+                currentExpression = Expressions.NORMAL;
+
+                break;
+        }
+        SetExpression();
+    }
+    public void SetExpression()
+    {
+        int index;
+        switch (currentExpression)
+        {
+
+            case (Expressions.NORMAL):
+                index = 0;
+
+                break;
+
+            case (Expressions.SHAME):
+                index = 1;
+
+
+                break;
+
+
+            case (Expressions.SMUG):
+
                 index = 2;
                 break;
 
