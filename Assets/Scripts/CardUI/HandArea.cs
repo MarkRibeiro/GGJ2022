@@ -31,6 +31,7 @@ public class HandArea : MonoBehaviour
         Gizmos.DrawLine(center, center + Rotate(Vector2.up * radius, angle));
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(center, radius);
+        LateUpdate();
     }
 
     private void LateUpdate()
