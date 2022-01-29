@@ -8,7 +8,7 @@ public class HandArea : MonoBehaviour
     [SerializeField]
     float radius;
     [SerializeField]
-    float angle;
+    float angleBase,angleStep,angleMax;
     [SerializeField]
     float height;
 
@@ -28,9 +28,11 @@ public class HandArea : MonoBehaviour
     {
         Vector2 center = new Vector2(transform.position.x, transform.position.y - height);
         Gizmos.color = Color.blue;
-        Gizmos.DrawLine(center, center + Rotate(Vector2.up * radius, -angle));
+        Gizmos.DrawLine(center, center + Rotate(Vector2.up * radius, -angleBase));
+        Gizmos.DrawLine(center, center + Rotate(Vector2.up * radius, angleBase));
         Gizmos.color = Color.green;
-        Gizmos.DrawLine(center, center + Rotate(Vector2.up * radius, angle));
+        Gizmos.DrawLine(center, center + Rotate(Vector2.up * radius, -angleMax));
+        Gizmos.DrawLine(center, center + Rotate(Vector2.up * radius, angleMax));
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(center, radius);
         UpdatePositions();
@@ -52,6 +54,7 @@ public class HandArea : MonoBehaviour
 
     private void UpdatePositions()
     {
+        float angle = Mathf.Clamp(angleBase + angleStep * (transform.childCount - 1),0,angleMax);
         Vector2 center = new Vector2(transform.position.x, transform.position.y - height);
         int childrenCount = transform.childCount;
         if (childrenCount == 0)
