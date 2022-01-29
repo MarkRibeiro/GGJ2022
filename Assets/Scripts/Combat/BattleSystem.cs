@@ -130,6 +130,7 @@ public class BattleSystem : MonoBehaviour
                     if (character.target.currShield <= 0)
                     {
                         character.target.currHP -= effect.effectValue;
+                        character.target.healthBar.SetValue(character.target.currHP);
                         if (character.target.currHP <= 0)
                         {
                             EndMatch(character);
@@ -141,6 +142,7 @@ public class BattleSystem : MonoBehaviour
                     if (character.target.currShield > 0)
                     {
                         character.target.currShield -= effect.effectValue;
+                        character.target.shieldBar.SetValue(character.target.currShield);
                     }
                 }
                 character.target.ChangeExpression(effect.changeTo);
@@ -149,10 +151,12 @@ public class BattleSystem : MonoBehaviour
                 if (effect.AffectHp)
                 {
                     character.currHP += effect.effectValue;
+                    character.healthBar.SetValue(character.currHP);
                 }
                 else
                 {
                     character.currShield += effect.effectValue;
+                    character.shieldBar.SetValue(character.currShield);
                 }
                 if (effect.changeTo != Expressions.KEEP)
                 {
@@ -165,13 +169,21 @@ public class BattleSystem : MonoBehaviour
                 {
                     character.target.currHP -= effect.effectValue;
                     character.target.ChangeExpression(effect.changeTo);
-                    EndMatch(character);
+                    character.target.healthBar.SetValue(character.target.currHP);
+                    if (character.target.currHP <= 0)
+                    {
+                        EndMatch(character);
+                    }
                 }
                 else
                 {
                     character.currHP -= effect.effectValue;
                     character.ChangeExpression(effect.changeTo);
-                    EndMatch(character.target);
+                    character.healthBar.SetValue(character.currHP);
+                    if (character.currHP <= 0)
+                    {
+                        EndMatch(character.target);
+                    }
                 }
                 break;
             case CardType.CHANGE_EXPRESSION:
