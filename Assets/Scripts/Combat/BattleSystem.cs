@@ -77,7 +77,7 @@ public class BattleSystem : MonoBehaviour
         //Jogar cartas da sua mao, se possivel
         foreach(GameObject card in dm.enemyCurrentHand)
         {
-            Card instance = card.GetComponent<CardInstance>().card;
+            CardInstance instance = card.GetComponent<CardInstance>();
             PlayCard(instance);
         }
 
@@ -90,19 +90,19 @@ public class BattleSystem : MonoBehaviour
         return result;
     }
 
-    public void PlayCard(Card playedCard)
+    public void PlayCard(CardInstance playedCard)
     {
         //Subtrair custos da carta
-        if(playedCard.brainsCost > reason || playedCard.heartCost > emotion)
+        if(playedCard.card.brainsCost > reason || playedCard.card.heartCost > emotion)
         {
             return;
         }
 
-        reason -= playedCard.brainsCost;
-        emotion -= playedCard.heartCost;
+        reason -= playedCard.card.brainsCost;
+        emotion -= playedCard.card.heartCost;
 
         //Aplicar efeito
-        Debug.Log(playedCard.effect.effectValue);
+        Debug.Log(playedCard.card.effect.effectValue);
     }
 
     public void EndTurn()

@@ -29,7 +29,7 @@ public class CardInstance : MonoBehaviour
 
     public void Play()
     {
-        BattleSystem.instance.PlayCard(card);
+        BattleSystem.instance.PlayCard(gameObject.GetComponent<CardInstance>());
         Destroy(gameObject);
     }
 }
