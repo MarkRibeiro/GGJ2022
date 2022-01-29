@@ -26,9 +26,9 @@ public class CardAnimation : MonoBehaviour
         Vector3 startPosition = transform.position;
         while (t < positionTime)
         {
-            t += Time.deltaTime / positionTime;
-            transform.position = Vector3.Lerp(startPosition, position, positionCurve.Evaluate(t));
-            yield return null;
+            t += Time.deltaTime;
+            transform.position = Vector3.Lerp(startPosition, position, positionCurve.Evaluate(t/ positionTime));
+            yield return new WaitForEndOfFrame();
         }
         positionCoroutine = null;
     }
@@ -54,9 +54,9 @@ public class CardAnimation : MonoBehaviour
         Quaternion startRotation = transform.rotation;
         while (t < rotationTime)
         {
-            t += Time.deltaTime / rotationTime;
-            transform.rotation = Quaternion.Lerp(startRotation, rotation, rotationCurve.Evaluate(t));
-            yield return null;
+            t += Time.deltaTime ;
+            transform.rotation = Quaternion.Lerp(startRotation, rotation, rotationCurve.Evaluate(t/ rotationTime));
+            yield return new WaitForEndOfFrame();
         }
         rotationCoroutine = null;
     }

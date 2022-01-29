@@ -10,7 +10,7 @@ public class HandArea : MonoBehaviour
     [SerializeField]
     float angle;
     [SerializeField]
-    Vector2 center;
+    float height;
 
     private static Vector2 Rotate(Vector2 v, float degrees)
     {
@@ -26,6 +26,7 @@ public class HandArea : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        Vector2 center = new Vector2(transform.position.x, transform.position.y - height);
         Gizmos.color = Color.blue;
         Gizmos.DrawLine(center, center + Rotate(Vector2.up * radius, -angle));
         Gizmos.color = Color.green;
@@ -51,13 +52,31 @@ public class HandArea : MonoBehaviour
 
     private void UpdatePositions()
     {
+        Vector2 center = new Vector2(transform.position.x, transform.position.y - height);
         int childrenCount = transform.childCount;
         if (childrenCount == 0)
         {
             return;
         }
-        float step = childrenCount > 1 ? 2 * angle / (childrenCount - 1) : 0;
-        foreach (Transform child in transform)
+        if(childrenCount == 1)
+        {
+            RectTransform child = transform.GetChild(0) as RectTransform;
+            var anim = child.GetComponent<CardAnimation>();
+            if (anim == null)
+            {
+                child.SetPositionAndRotation(
+                                center + Rotate(Vector2.up * radius, 0),
+                                Quaternion.identity);
+            }
+            else
+            {
+                anim.GoToPosition(center + Rotate(Vector2.up * radius,0));
+                anim.SetRotation(Quaternion.identity);
+            }
+            return;
+        }
+        float step = 2 * angle / (childrenCount - 1) ;
+        foreach (RectTransform child in transform)
         {
             var anim = child.GetComponent<CardAnimation>();
             if (anim == null)
