@@ -7,6 +7,7 @@ public class CardInstance : MonoBehaviour
 {
     public Card card;
     public Text cardName;
+    public Text description;
     public Text b_costText;
     public Text h_costText;
     public Text effectText;
@@ -16,6 +17,7 @@ public class CardInstance : MonoBehaviour
     void Start()
     {
         cardName.text = card.cardName;
+        description.text = card.description;
         b_costText.text = card.brainsCost.ToString();
         h_costText.text = card.brainsCost.ToString();
         effectText.text = card.effect.ToString();
