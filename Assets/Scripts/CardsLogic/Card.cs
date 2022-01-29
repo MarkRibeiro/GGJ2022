@@ -8,9 +8,11 @@ using UnityEngine;
 public class Card : ScriptableObject
 {
     public string cardName;
+    [TextArea]
     public string description;
     public int brainsCost;
     public int hearthCost;
+    [SerializeField]
     public CardEffect effect;
 
     public Sprite sprite;
