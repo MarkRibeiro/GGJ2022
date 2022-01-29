@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Deck : MonoBehaviour
+public class DeckManager : MonoBehaviour
 {
 
     public Card[] deck;
@@ -19,7 +19,7 @@ public class Deck : MonoBehaviour
         
     }
 
-    private void Shuffle()
+    public void Shuffle()
     {
         for(int i = 0; i < deck.Length - 1; i++)
         {
