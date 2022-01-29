@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class DeckManager : MonoBehaviour
 {
-    public Card[] deck;
+    public Card[] playerDeck, enemyDeck;
 
     [SerializeField] private int handSize;
     [SerializeField] private GameObject cardPrefab;
     [SerializeField] private GameObject handArea;
-    public List<GameObject> currentHand;
+    public List<GameObject> playerCurrentHand, enemyCurrentHand;
 
-    public void Shuffle()
+    public void Shuffle(Card[] deck)
     {
         for(int i = 0; i < deck.Length - 1; i++)
         {
@@ -22,7 +22,7 @@ public class DeckManager : MonoBehaviour
         }
     }
 
-    public void DrawHand()
+    public void DrawHand(Card[] deck, List<GameObject> currentHand)
     {
         CardInstance newCard = cardPrefab.GetComponent<CardInstance>();
 
@@ -34,7 +34,7 @@ public class DeckManager : MonoBehaviour
         }
     }
 
-    public void DiscardHand()
+    public void DiscardHand(List<GameObject> currentHand)
     {
         foreach(GameObject card in currentHand)
         {

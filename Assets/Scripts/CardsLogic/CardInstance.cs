@@ -13,9 +13,6 @@ public class CardInstance : MonoBehaviour
     public TextMeshProUGUI h_costText;
     public TextMeshProUGUI effectText;
     public Image cardImage;
-    
-    
-
 
     // Start is called before the first frame update
     void Start()
@@ -28,5 +25,11 @@ public class CardInstance : MonoBehaviour
         effectText.text = card.effect.effectValue.ToString();
 
         cardImage.sprite = card.sprite;
+    }
+
+    public void Play()
+    {
+        BattleSystem.instance.PlayCard(card);
+        Destroy(gameObject);
     }
 }
