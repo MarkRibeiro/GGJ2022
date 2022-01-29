@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum BattleState {
+public enum BattleState
+{
     START,
     PLAYER_TURN,
     ENEMY_TURN,
@@ -14,6 +15,8 @@ public class BattleSystem : MonoBehaviour
     public static BattleSystem instance;
     public BattleState state;
     public DeckManager dm;
+
+    public int MaxLimit;
 
     [SerializeField] private int resource_limit;
 
@@ -52,7 +55,7 @@ public class BattleSystem : MonoBehaviour
         StartTurn(dm.enemy);
 
         //Jogar cartas da sua mao, se possivel
-        foreach(GameObject card in dm.enemy.currentHand)
+        foreach (GameObject card in dm.enemy.currentHand)
         {
             CardInstance instance = card.GetComponent<CardInstance>();
             PlayCard(instance, dm.enemy);
@@ -66,11 +69,11 @@ public class BattleSystem : MonoBehaviour
         int reason_gain = 0;
         int emotion_gain = 0;
 
-        for(int i = 0; i < 2; i++)
+        for (int i = 0; i < 2; i++)
         {
             int result = Random.Range(1, 7);
             Debug.Log(result);
-            switch(result)
+            switch (result)
             {
                 case 1:
                     emotion_gain += 1;
@@ -92,12 +95,12 @@ public class BattleSystem : MonoBehaviour
             }
         }
 
-        if(currentChar.reason + reason_gain > resource_limit)
+        if (currentChar.reason + reason_gain > resource_limit)
             currentChar.reason = resource_limit;
         else
             currentChar.reason += reason_gain;
 
-        if(currentChar.emotion + emotion_gain > resource_limit)
+        if (currentChar.emotion + emotion_gain > resource_limit)
             currentChar.emotion = resource_limit;
         else
             currentChar.emotion += emotion_gain;
@@ -106,7 +109,7 @@ public class BattleSystem : MonoBehaviour
     public void PlayCard(CardInstance playedCard, Character currentChar)
     {
         //Subtrair custos da carta
-        if(playedCard.card.brainsCost > currentChar.reason || playedCard.card.heartCost > currentChar.emotion)
+        if (playedCard.card.brainsCost > currentChar.reason || playedCard.card.heartCost > currentChar.emotion)
         {
             return;
         }
@@ -115,44 +118,78 @@ public class BattleSystem : MonoBehaviour
         currentChar.emotion -= playedCard.card.heartCost;
 
         //Aplicar efeito
-        ApplyEffect(playedCard.card.effect);
+        ApplyEffect(playedCard.card.effect, currentChar);
 
         Destroy(playedCard.gameObject);
     }
 
-    public void ApplyEffect(CardEffect effect)
+    public void ApplyEffect(CardEffect effect, Character character)
     {
-        if(effect.cardType == CardType.ATTACK)
+        switch (effect.cardType)
         {
-            //checar se e no miolo ou casca
-            //aplicar dano
+
+            case CardType.ATTACK:
+
+                if (effect.AffectHp)
+                {
+                    character.target.currHP -= effect.effectValue;
+                    if (character.target.currHP <= 0)
+                    {
+                        EndMatch();
+                    }
+
+
+                    else
+                    {
+                        if (character.target.currShield > 0)
+                        {
+                            character.target.currShield -= effect.effectValue;
+                        }
+                    }
+                }
+                character.target.ChangeExpression(effect.changeTo);
+
+                break;
+            case CardType.DEFENSE:
+                if (effect.AffectHp)
+                {
+                    character.currHP += effect.effectValue;
+                }
+                else
+                {
+                    character.currShield += effect.effectValue;
+                }
+                character.target.ChangeExpression(effect.changeTo);
+                break;
+            case CardType.SHAME:
+                //verificar se a expression atual e a correta
+                break;
+            case CardType.CHANGE_EXPRESSION:
+                character.target.ChangeExpression(effect.changeTo);
+                break;
+
         }
-        else if(effect.cardType == CardType.DEFENSE)
-        {
-            //checar se e no miolo ou casca
-            //aplicar cura/escudo
-        }
-        else if(effect.cardType == CardType.SHAME)
-        {
-            //verificar se a expression atual e a correta
-        }
-        else if(effect.cardType == CardType.CHANGE_EXPRESSION)
-        {
-            //mudar expression do oponente
-        }
+
     }
 
     public void EndTurn()
     {
-        if(state == BattleState.PLAYER_TURN)
+        if (state == BattleState.PLAYER_TURN)
         {
             state = BattleState.ENEMY_TURN;
             EnemyTurn();
         }
-        else if(state == BattleState.ENEMY_TURN)
+        else if (state == BattleState.ENEMY_TURN)
         {
             state = BattleState.PLAYER_TURN;
             PlayerTurn();
         }
     }
+
+    public void EndMatch()
+    {
+
+        //end match
+    }
+
 }

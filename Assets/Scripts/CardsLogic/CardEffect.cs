@@ -2,26 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum CardType {
+public enum CardType
+{
     CHANGE_EXPRESSION,
     SHAME,
     ATTACK,
     DEFENSE
 }
 
-public enum Expressions {
+public enum Expressions
+{
     SHAME,
     SMUG,
     NORMAL,
     KEEP,
     RANDOM
-}  
+}
 
 [System.Serializable]
 public class CardEffect
 {
     public int effectValue;
-    public bool ignoreShield;
+    public bool AffectHp;
     public CardType cardType;
     public Expressions changeTo;
 }

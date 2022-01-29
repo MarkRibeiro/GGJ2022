@@ -6,18 +6,13 @@ using UnityEngine.UI;
 [System.Serializable]
 public class Character : MonoBehaviour
 {
-    public enum Emotions
-    {
-        NORMAL,
-        SHAME,
-        SMUG
-    }
 
     //Recursos
     public int reason;
     public int emotion;
 
     public int expressionNumber;
+    public Character target;
 
     public List<Sprite> spriteSheet;
 
@@ -44,20 +39,31 @@ public class Character : MonoBehaviour
 
 
 
-    private void ChangeExpression()
+    public void ChangeExpression(Expressions emotion)
     {
-        image.sprite = spriteSheet[expressionNumber];
-    }
-
-    public void AddEmotion()
-    {
-        expressionNumber++;
-
-        if (expressionNumber > 3)
+        int index;
+        switch (emotion)
         {
-            expressionNumber = 0;
+
+            case (Expressions.NORMAL):
+                index = 0;
+                break;
+
+            case (Expressions.SHAME):
+                index = 1;
+                break;
+
+
+            case (Expressions.SMUG):
+                index = 2;
+                break;
+
+            default:
+                index = 0;
+
+                break;
         }
-        ChangeExpression();
-        Debug.Log("A");
+        image.sprite = spriteSheet[index];
     }
+
 }

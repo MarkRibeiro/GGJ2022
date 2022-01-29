@@ -18,7 +18,7 @@ MonoBehaviour:
   heartCost: 2
   effect:
     effectValue: 3
-    ignoreShield: 1
+    AffectHp: 1
     cardType: 3
     changeTo: 3
   sprite: {fileID: 0}
