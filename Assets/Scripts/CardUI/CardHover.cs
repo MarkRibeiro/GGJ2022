@@ -24,6 +24,7 @@ public class CardHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         _canvas = GetComponentInParent<Canvas>();
         Assert.IsNotNull(_anim);
         Assert.IsNotNull(_canvas);
+        _canvas.sortingOrder = defaultSortingOrder;
     }
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
     {
