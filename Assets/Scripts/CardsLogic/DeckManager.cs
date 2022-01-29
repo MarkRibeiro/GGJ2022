@@ -4,20 +4,12 @@ using UnityEngine;
 
 public class DeckManager : MonoBehaviour
 {
-
     public Card[] deck;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Shuffle();   
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] private int handSize;
+    [SerializeField] private GameObject cardPrefab;
+    [SerializeField] private GameObject handArea;
+    public List<GameObject> currentHand;
 
     public void Shuffle()
     {
@@ -28,5 +20,26 @@ public class DeckManager : MonoBehaviour
             deck[index] = deck[i];
             deck[i] = randomCard;
         }
+    }
+
+    public void DrawHand()
+    {
+        CardInstance newCard = cardPrefab.GetComponent<CardInstance>();
+
+        for(int i = 0; i < handSize; i++)
+        {
+            newCard.card = deck[i];
+            GameObject instance = Instantiate(cardPrefab, handArea.transform.position, Quaternion.identity);
+            currentHand.Add(instance);
+        }
+    }
+
+    public void DiscardHand()
+    {
+        foreach(GameObject card in currentHand)
+        {
+            Destroy(card);
+        }
+        currentHand.Clear();
     }
 }

@@ -58,6 +58,9 @@ public class BattleSystem : MonoBehaviour
         }
 
         //Comprar carta
+        dm.DiscardHand();
+        dm.Shuffle();
+        dm.DrawHand();
     }
 
     private int RollDice()

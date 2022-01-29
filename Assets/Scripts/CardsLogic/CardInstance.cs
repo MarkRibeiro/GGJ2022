@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class CardInstance : MonoBehaviour
 {
-    [SerializeField] private Card card;
-
+    public Card card;
     public Text cardName;
     public Text b_costText;
     public Text h_costText;
