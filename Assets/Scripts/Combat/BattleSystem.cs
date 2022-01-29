@@ -14,8 +14,10 @@ public class BattleSystem : MonoBehaviour
     public BattleState state;
     public DeckManager dm;
 
-    public int reason;
-    public int emotion;
+    [SerializeField] private int reason;
+    [SerializeField] private int emotion;
+
+    [SerializeField] private int resource_limit;
 
     // Start is called before the first frame update
     void Start()
@@ -37,18 +39,18 @@ public class BattleSystem : MonoBehaviour
         int emotion_gain = RollDice();
 
         //Adicionar valores de razao e emocao
-        if(reason + reason_gain > 10)
+        if(reason + reason_gain > resource_limit)
         {
-            reason = 10;
+            reason = resource_limit;
         }
         else
         {
             reason += reason_gain;
         }
 
-        if(emotion + emotion_gain > 10)
+        if(emotion + emotion_gain > resource_limit)
         {
-            emotion = 10;
+            emotion = resource_limit;
         }
         else
         {
