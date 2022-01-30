@@ -67,3 +67,14 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
     source: {fileID: 0}
+  - name: CardPlay
+    clip: {fileID: 8300000, guid: 797555c8a29e27a48a0ff959b81bdb89, type: 3}
+    playOnAwake: 0
+    isSFX: 1
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
+    source: {fileID: 0}
