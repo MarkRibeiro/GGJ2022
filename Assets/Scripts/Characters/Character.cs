@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.Assertions;
 [System.Serializable]
 public class Character : MonoBehaviour
 {
+
+    public int ID;
 
     //Recursos
     public int reason;
@@ -35,6 +37,7 @@ public class Character : MonoBehaviour
     private void Start()
     {
         image = GetComponentInChildren<Image>();
+        SetExpression();
         healthBar.SetMaxValue(maxHP);
         currHP = maxHP;
         shieldBar.SetMaxValue(maxShield);
@@ -90,6 +93,9 @@ public class Character : MonoBehaviour
                 index = 0;
                 break;
         }
+        Debug.Log(index);
+        Debug.Log(spriteSheet);
+        Debug.Log(image);
         image.sprite = spriteSheet[index];
     }
 }

@@ -208,7 +208,7 @@ public class BattleSystem : MonoBehaviour
 
     public void EndMatch(Character winner)
     {
-        if(winner == dm.player)
+        if (winner == dm.player)
         {
             //Tela de vitoria
         }

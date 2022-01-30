@@ -10,7 +10,7 @@ public class ChoseButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
     private bool mouse_over = false;
     Color unselectedColor = new Color(0.745283f, 0.745283f, 0.745283f);
 
-
+    public int ID;
 
 
     public List<Sprite> Sprites;
@@ -67,6 +67,7 @@ public class ChoseButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
         toggle.GetComponent<Image>().color = Color.white;
         this.GetComponent<Image>().sprite = Sprites[0];
         this.transform.localScale = initialScale * 1.3f;
+        CharacterManager.playerID = ID;
 
     }
     public void Unselected()
@@ -75,6 +76,7 @@ public class ChoseButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
         toggle.GetComponent<Image>().color = unselectedColor;
         this.GetComponent<Image>().sprite = Sprites[1];
         this.transform.localScale = initialScale * 1;
+
 
     }
 
