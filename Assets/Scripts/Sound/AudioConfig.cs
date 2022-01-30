@@ -5,37 +5,66 @@ using UnityEngine.UI;
 
 public class AudioConfig : MonoBehaviour
 {
-    private int firstPlayInt;
     public Slider geralSlider;
     public Slider musicSlider;
     public Slider sfxSlider;
-    private float geralFloat;
-    private float musicFloat;
-    private float sfxFloat;
-    private AudioManager _am;
-    // Start is called before the first frame update
-    void Start()
+    public static float geralFloat;
+    public static float musicFloat;
+    public static float sfxFloat;
+    public static AudioManager _am;
+    public static AudioManager am
     {
-        _am = GetComponent<AudioManager>();
-
-        geralFloat = 0.5f;
-        musicFloat = 0.5f;
-        sfxFloat = 0.5f;
+        get
+        {
+            if (_am == null)
+            {
+                _am = FindObjectOfType<AudioManager>();
+            }
+            return _am;
+        }
+    }
+    // Start is called before the first frame update
+    void Awake()
+    {
         geralSlider.value = geralFloat;
         musicSlider.value = musicFloat;
         sfxSlider.value = sfxFloat;
+
+        geralSlider.onValueChanged.AddListener(SetGeralVolume);
+        musicSlider.onValueChanged.AddListener(SetMusicVolume);
+        sfxSlider.onValueChanged.AddListener(SetSfxVolume);
     }
 
-    public void UpdateSound()
+    public void SetGeralVolume(float vol)
     {
-        foreach(Sound s in _am.sounds)
+        geralFloat = vol;
+        UpdateSound();
+    }
+
+    public void SetMusicVolume(float vol)
+    {
+        musicFloat = vol;
+        UpdateSound();
+    }
+
+    public void SetSfxVolume(float vol)
+    {
+        sfxFloat = vol;
+        UpdateSound();
+    }
+
+    public static void UpdateSound()
+    {
+        foreach (Sound s in am.sounds)
         {
-            s.source.volume = geralSlider.value;
-            if(s.isSFX){
-                s.source.volume *= sfxSlider.value;
+            s.source.volume = geralFloat;
+            if (s.isSFX)
+            {
+                s.source.volume *= sfxFloat;
             }
-            else{
-                s.source.volume *= musicSlider.value;
+            else
+            {
+                s.source.volume *= musicFloat;
             }
         }
     }

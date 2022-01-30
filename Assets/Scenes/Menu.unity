@@ -1944,17 +1944,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792906264}
   m_CullTransparentMesh: 1
---- !u!114 &798683487 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4432532151965863352, guid: 4add30f584abeb4499779e82d135f81b, type: 3}
-  m_PrefabInstance: {fileID: 4432532151521950951}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41d024db74be9b14e889f237aa8ca27f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &823815563
 GameObject:
   m_ObjectHideFlags: 0
@@ -3740,7 +3729,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 798683487}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AudioConfig, Assembly-CSharp
         m_MethodName: UpdateSound
         m_Mode: 1
@@ -4019,6 +4008,7 @@ GameObject:
   - component: {fileID: 1452651920}
   - component: {fileID: 1452651922}
   - component: {fileID: 1452651921}
+  - component: {fileID: 1452651923}
   m_Layer: 5
   m_Name: Panel - Configuracoes
   m_TagString: Untagged
@@ -4086,6 +4076,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452651919}
   m_CullTransparentMesh: 1
+--- !u!114 &1452651923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452651919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41d024db74be9b14e889f237aa8ca27f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  geralSlider: {fileID: 1953249673}
+  musicSlider: {fileID: 1359858883}
+  sfxSlider: {fileID: 1574345791}
 --- !u!1 &1453569619
 GameObject:
   m_ObjectHideFlags: 0
@@ -4705,7 +4710,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 798683487}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AudioConfig, Assembly-CSharp
         m_MethodName: UpdateSound
         m_Mode: 1
@@ -5909,22 +5914,10 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.398
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 798683487}
-        m_TargetAssemblyTypeName: AudioConfig, Assembly-CSharp
-        m_MethodName: UpdateSound
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &2007402082
 GameObject:
   m_ObjectHideFlags: 0
@@ -6485,18 +6478,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4432532151965863352, guid: 4add30f584abeb4499779e82d135f81b, type: 3}
-      propertyPath: sfxSlider
-      value: 
-      objectReference: {fileID: 1574345791}
-    - target: {fileID: 4432532151965863352, guid: 4add30f584abeb4499779e82d135f81b, type: 3}
-      propertyPath: geralSlider
-      value: 
-      objectReference: {fileID: 1953249673}
-    - target: {fileID: 4432532151965863352, guid: 4add30f584abeb4499779e82d135f81b, type: 3}
-      propertyPath: musicSlider
-      value: 
-      objectReference: {fileID: 1359858883}
     - target: {fileID: 4432532151965863353, guid: 4add30f584abeb4499779e82d135f81b, type: 3}
       propertyPath: m_RootOrder
       value: 4

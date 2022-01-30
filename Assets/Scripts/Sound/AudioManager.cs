@@ -6,87 +6,92 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
 
-	public static AudioManager instance;
+    public static AudioManager instance;
 
-	public AudioMixerGroup mixerGroup;
+    public AudioMixerGroup mixerGroup;
 
-	public Sound[] sounds;
+    public Sound[] sounds;
 
-	void Awake()
-	{
-		if (instance != null)
-		{
-			Destroy(gameObject);
-		}
-		else
-		{
-			instance = this;
-		}
-		DontDestroyOnLoad(gameObject);
+    void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+        DontDestroyOnLoad(gameObject);
 
-		foreach (Sound s in sounds)
-		{
-			s.source = gameObject.AddComponent<AudioSource>();
-			s.source.clip = s.clip;
-			s.source.loop = s.loop;
-			s.source.volume = s.volume;
+        foreach (Sound s in sounds)
+        {
+            s.source = gameObject.AddComponent<AudioSource>();
+            s.source.clip = s.clip;
+            s.source.loop = s.loop;
+            s.source.volume = s.volume;
 
-			s.source.outputAudioMixerGroup = mixerGroup;
-            if(s.playOnAwake){
+            s.source.outputAudioMixerGroup = mixerGroup;
+            if (s.playOnAwake)
+            {
                 Play(s.name);
             }
-		}
-	}
+        }
+        AudioConfig.geralFloat = 0.5f;
+        AudioConfig.musicFloat = 0.5f;
+        AudioConfig.sfxFloat = 0.5f;
+		AudioConfig.UpdateSound();
+    }
 
-	public void Play(string sound)
-	{
-		Sound s = Array.Find(sounds, item => item.name == sound);
-		if (s == null)
-		{
-			Debug.LogWarning("Sound: " + name + " not found!");
-			return;
-		} 
+    public void Play(string sound)
+    {
+        Sound s = Array.Find(sounds, item => item.name == sound);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
 
-		s.source.Play();
-	}
+        s.source.Play();
+    }
 
 
-	public void StopSound(string sound)
-	{
-		Sound s = Array.Find(sounds, item => item.name == sound);
-		if (s == null)
-		{
-			Debug.LogWarning("Sound: " + name + " not found!");
-			return;
-		}
+    public void StopSound(string sound)
+    {
+        Sound s = Array.Find(sounds, item => item.name == sound);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
 
-		s.source.Stop();
-	}
+        s.source.Stop();
+    }
 
-	public void StopAllSounds()
-	{
-		foreach (Sound s in sounds)
-		{
-			s.source.Stop();
-		}
-	}
+    public void StopAllSounds()
+    {
+        foreach (Sound s in sounds)
+        {
+            s.source.Stop();
+        }
+    }
 
-	public IEnumerator PlayLevelSounds()
-	{
-		string[] clips = new string[3] {"Inicio fase", "Tema Fase p1", "Tema Fase p2" }; 
+    public IEnumerator PlayLevelSounds()
+    {
+        string[] clips = new string[3] { "Inicio fase", "Tema Fase p1", "Tema Fase p2" };
 
-		yield return null; 
+        yield return null;
 
-		for(int i = 0; i < clips.Length; i++)
-		{
-			Sound s = Array.Find(sounds, item => item.name == clips[i]);
+        for (int i = 0; i < clips.Length; i++)
+        {
+            Sound s = Array.Find(sounds, item => item.name == clips[i]);
 
-			s.source.Play();	
+            s.source.Play();
 
-			while(s.source.isPlaying)
-			{
-				yield return null;
-			}		
-		}
-	}
+            while (s.source.isPlaying)
+            {
+                yield return null;
+            }
+        }
+    }
 }
