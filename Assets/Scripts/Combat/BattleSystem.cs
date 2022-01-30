@@ -92,6 +92,7 @@ public class BattleSystem : MonoBehaviour
 
         for (int i = 0; i < 2; i++)
         {
+            AudioManager.PlaySound("RolarDado");
             for (int j = 0; j <= 20; j++)
             {
                 int randomSide = Random.Range(0, 6);
@@ -124,6 +125,7 @@ public class BattleSystem : MonoBehaviour
                     break;
             }
             dices[i].GetComponent<Image>().sprite = diceSides[result - 1];
+
         }
 
         if (currentChar.reason + reason_gain > resource_limit)
@@ -206,6 +208,7 @@ public class BattleSystem : MonoBehaviour
                 }
                 else
                 {
+                    AudioManager.instance.Play("GainShield");
                     if (character.currShield + effect.effectValue > character.maxShield)
                     {
                         character.currShield = character.maxShield;

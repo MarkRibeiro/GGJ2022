@@ -60,7 +60,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: c8a869e070e8db147ad6da3c4b06abee, type: 3}
     playOnAwake: 0
     isSFX: 1
-    volume: 1
+    volume: 0
     volumeVariance: 0
     pitch: 0
     pitchVariance: 0
@@ -69,6 +69,28 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: CardPlay
     clip: {fileID: 8300000, guid: 797555c8a29e27a48a0ff959b81bdb89, type: 3}
+    playOnAwake: 0
+    isSFX: 1
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
+    source: {fileID: 0}
+  - name: GainShield
+    clip: {fileID: 8300000, guid: d43502f914869da4fa26afdb1f96b64e, type: 3}
+    playOnAwake: 0
+    isSFX: 1
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
+    source: {fileID: 0}
+  - name: RolarDado
+    clip: {fileID: 8300000, guid: 766af70b8f04c7e46b45e1a9d404f7ba, type: 3}
     playOnAwake: 0
     isSFX: 1
     volume: 1

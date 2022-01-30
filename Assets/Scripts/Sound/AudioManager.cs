@@ -5,12 +5,20 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-
     public static AudioManager instance;
 
     public AudioMixerGroup mixerGroup;
 
     public Sound[] sounds;
+
+	public static void PlaySound(string sound)
+	{
+		if(instance == null)
+		{
+			return;
+		}
+		instance.Play(sound);
+	}
 
     void Awake()
     {
