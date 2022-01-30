@@ -889,7 +889,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4268699854231206810, guid: 7471f86cd3a31d541a4ea4e6a4b6ed84, type: 3}
       propertyPath: m_Name
-      value: yellow guy
+      value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4886813040212592163, guid: 7471f86cd3a31d541a4ea4e6a4b6ed84, type: 3}
       propertyPath: m_Sprite
@@ -1769,6 +1769,7 @@ GameObject:
   - component: {fileID: 1180588259}
   - component: {fileID: 1180588258}
   - component: {fileID: 1180588257}
+  - component: {fileID: 1180588260}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1791,7 +1792,6 @@ MonoBehaviour:
   state: 0
   dm: {fileID: 1180588258}
   resource_limit: 10
-  diceButton: {fileID: 0}
 --- !u!114 &1180588258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1822,6 +1822,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1180588260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180588256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 454d980a66be5d741ba49f5b319e2f56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1699018228}
+  enemy: {fileID: 1181912527}
 --- !u!224 &1181912526 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7810287718206607277, guid: 7471f86cd3a31d541a4ea4e6a4b6ed84, type: 3}
@@ -2650,7 +2664,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4268699854231206810, guid: 7471f86cd3a31d541a4ea4e6a4b6ed84, type: 3}
       propertyPath: m_Name
-      value: purple guy
+      value: player
       objectReference: {fileID: 0}
     - target: {fileID: 4886813040212592163, guid: 7471f86cd3a31d541a4ea4e6a4b6ed84, type: 3}
       propertyPath: m_Sprite
