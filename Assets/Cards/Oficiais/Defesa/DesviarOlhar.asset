@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DesviarOlhar
   m_EditorClassIdentifier: 
   cardName: Desviar o Olhar
-  description: "Recupera 1 ponto da sua Indiferen\xE7a."
+  description: "Recupera 1 ponto da sua <color=#7B83C9><b>Indiferen\xE7ada</b></color>."
   brainsCost: 0
   heartCost: 1
   effect:

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Elogio
   m_EditorClassIdentifier: 
   cardName: Elogio
-  description: Causa 3 de dano ao Orgulho da pessoa amada.
+  description: Causa 3 de dano ao <color=#83B32B><b>Orgulho</b></color> da pessoa
+    amada.
   brainsCost: 1
   heartCost: 1
   effect:

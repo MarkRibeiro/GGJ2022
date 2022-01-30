@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Piscadinha
   m_EditorClassIdentifier: 
   cardName: Piscadinha
-  description: Causa 1 de dano ao Orgulho da pessoa amada.
+  description: Causa 1 de dano ao <color=#83B32B><b>Orgulho</b></color> da pessoa
+    amada.
   brainsCost: 0
   heartCost: 1
   effect:

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: EmprestarCasaco
   m_EditorClassIdentifier: 
   cardName: Emprestar Casaco
-  description: "Causa 4 de dano \xE0 Indiferen\xE7ada pessoa amada."
+  description: "Causa 4 de dano \xE0 <color=#7B83C9><b>Indiferen\xE7ada</b></color>
+    pessoa amada."
   brainsCost: 0
   heartCost: 2
   effect:

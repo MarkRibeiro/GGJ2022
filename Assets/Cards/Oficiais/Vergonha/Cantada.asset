@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Cantada
   m_EditorClassIdentifier: 
   cardName: Cantada
-  description: "Se jogada no momento certo, causa 3 de dano diretamente ao Orgulho
-    da pessoa amada. Caso contr\xE1rio, leve 3 de dano no seu Orgulho."
+  description: "Se jogada no momento certo, causa 3 de dano diretamente ao <color=#83B32B><b>Orgulho</b></color>
+    da pessoa amada. Caso contr\xE1rio, leve 3 de dano no seu <color=#83B32B><b>Orgulho</b></color>."
   brainsCost: 2
   heartCost: 1
   effect:
@@ -27,4 +27,4 @@ MonoBehaviour:
   p_mainSprite: {fileID: 21300000, guid: 0ad98218869f28c4e88b57c0cf30ddd6, type: 3}
   typeSprite: {fileID: 21300000, guid: 8605cb9a925120643ac519a8485ec108, type: 3}
   effectSprite: {fileID: 21300000, guid: 7f929b1c91836154f8216588e3c60f3e, type: 3}
-  color: {r: 0.7169812, g: 0.043289386, b: 0.043289386, a: 1}
+  color: {r: 0.77254903, g: 0.20784314, b: 0.20784314, a: 1}
