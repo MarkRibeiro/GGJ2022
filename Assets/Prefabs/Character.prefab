@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 15, y: -2.5}
-  m_SizeDelta: {x: -30, y: -4.999975}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8088605080844122315
 CanvasRenderer:
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 003f620038d38114a966b869e700e089, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6a948005a1bb05b42ab7155b99785991, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 7810287718206607277}
   - component: {fileID: 7060667406775343766}
   - component: {fileID: 243335322}
+  - component: {fileID: 55090146}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -131,21 +132,36 @@ MonoBehaviour:
   target: {fileID: 0}
   currentExpression: 2
   spriteSheet:
-  - {fileID: 21300000, guid: 0324fcb876702e346896c389070c827b, type: 3}
-  - {fileID: 21300000, guid: c83a6e72e6b40fb458e3d9e5a979e8ad, type: 3}
-  - {fileID: 21300000, guid: 003f620038d38114a966b869e700e089, type: 3}
-  - {fileID: 21300000, guid: 4fb169ccaa98f0e4090ff0dc3b0c1bc3, type: 3}
+  - {fileID: 21300000, guid: 0d9912c38d992be4e8478b86e2e2ca46, type: 3}
+  - {fileID: 21300000, guid: 97e9cc1681c818445b62c8dc8aab6e81, type: 3}
+  - {fileID: 21300000, guid: 610b17487aae4f04aa4e18cb36e35394, type: 3}
+  - {fileID: 21300000, guid: 6a948005a1bb05b42ab7155b99785991, type: 3}
   deck:
-  - {fileID: 11400000, guid: 984b4ec0688d9f54fa07dfdcd41ea091, type: 2}
+  - {fileID: 11400000, guid: d7cfe8a00cb9668408a168012cf1cb28, type: 2}
+  - {fileID: 11400000, guid: d7cfe8a00cb9668408a168012cf1cb28, type: 2}
+  - {fileID: 11400000, guid: 9996a56596a431b428faa555bea01633, type: 2}
   - {fileID: 11400000, guid: 3242dcb5b28ce9040be6ce55267885ce, type: 2}
-  - {fileID: 11400000, guid: 956986f6c7e4c3d4e9cc0cbd9f1ec469, type: 2}
-  - {fileID: 11400000, guid: 24d3e2044dd314e4189bd121e0b63885, type: 2}
+  - {fileID: 11400000, guid: 6bb8322d16235974c84e972e27cf5dd5, type: 2}
+  - {fileID: 11400000, guid: 41abb52ac11584e4a99a4084d395897d, type: 2}
+  - {fileID: 11400000, guid: 41abb52ac11584e4a99a4084d395897d, type: 2}
+  - {fileID: 11400000, guid: 41abb52ac11584e4a99a4084d395897d, type: 2}
+  - {fileID: 11400000, guid: 041cc3e4e457bef47b14b983dc20a4cf, type: 2}
+  - {fileID: 11400000, guid: 5546900e79322f84a9fa601ad12f49f7, type: 2}
+  - {fileID: 11400000, guid: 76cca0ee23c233340882590caadcf4d8, type: 2}
+  - {fileID: 11400000, guid: 76cca0ee23c233340882590caadcf4d8, type: 2}
   - {fileID: 11400000, guid: 99c8c45e4a604ba4a826fa1baaaabf0e, type: 2}
-  - {fileID: 11400000, guid: 749c2b810adc68d41907779a25209f4d, type: 2}
+  - {fileID: 11400000, guid: 99c8c45e4a604ba4a826fa1baaaabf0e, type: 2}
+  - {fileID: 11400000, guid: 9074877771ae89a45b820791ae9b2f55, type: 2}
+  - {fileID: 11400000, guid: 9074877771ae89a45b820791ae9b2f55, type: 2}
   - {fileID: 11400000, guid: e960954a3898dc140b7f502ef988d45d, type: 2}
-  - {fileID: 11400000, guid: 74dcc184c3c355c4795305fa41df2e61, type: 2}
   - {fileID: 11400000, guid: 749c2b810adc68d41907779a25209f4d, type: 2}
-  - {fileID: 11400000, guid: e960954a3898dc140b7f502ef988d45d, type: 2}
+  - {fileID: 11400000, guid: 984b4ec0688d9f54fa07dfdcd41ea091, type: 2}
+  - {fileID: 11400000, guid: 984b4ec0688d9f54fa07dfdcd41ea091, type: 2}
+  - {fileID: 11400000, guid: 6bb8322d16235974c84e972e27cf5dd5, type: 2}
+  - {fileID: 11400000, guid: 6bb8322d16235974c84e972e27cf5dd5, type: 2}
+  - {fileID: 11400000, guid: acc0e9e429db79e4a96056bf4fdf464b, type: 2}
+  - {fileID: 11400000, guid: acc0e9e429db79e4a96056bf4fdf464b, type: 2}
+  - {fileID: 11400000, guid: 24d3e2044dd314e4189bd121e0b63885, type: 2}
   currentHand: []
   handArea: {fileID: 0}
   maxHP: 10
@@ -173,3 +189,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &55090146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4268699854231206810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 3
+  m_AspectRatio: 0.7
