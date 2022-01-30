@@ -1583,6 +1583,8 @@ MonoBehaviour:
   imageDisplay: {fileID: 1667482437}
   textDiaplay: {fileID: 1892943796}
   nextScene: Festa
+  backArrow: {fileID: 497077998}
+  nextArrow: {fileID: 1179892576}
 --- !u!114 &2038799780
 MonoBehaviour:
   m_ObjectHideFlags: 0

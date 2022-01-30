@@ -18,28 +18,38 @@ public class CutsceneManager : MonoBehaviour
 
     private int currentIndex;
 
+    [SerializeField]
+    GameObject backArrow, nextArrow;
+
     // Start is called before the first frame update
     void Start()
     {
         imageDisplay.sprite = scenes[0];
         textDiaplay.text = descriptions[0];
         currentIndex = 0;
+        Navigate(0);
     }
 
     public void Navigate(int indexStep)
     {
-        if(indexStep < 0 && currentIndex == 0)
+        if (indexStep < 0 && currentIndex == 0)
         {
             return;
         }
 
-        if(indexStep > 0 && currentIndex == scenes.Length - 1)
+        if (indexStep > 0 && currentIndex == scenes.Length - 1)
         {
             SceneManager.LoadScene(nextScene);
             return;
         }
 
         currentIndex += indexStep;
+
+        if(backArrow != null && nextArrow != null)
+        {
+            backArrow.SetActive(currentIndex != 0);
+            nextArrow.SetActive(currentIndex != scenes.Length - 1);
+        }
 
         imageDisplay.sprite = scenes[currentIndex];
         textDiaplay.text = descriptions[currentIndex];
