@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: FazerCarinho
   m_EditorClassIdentifier: 
   cardName: Fazer Carinho
-  description: "Se jogar certo: aplica efeito no oponente. Se jogar errado: aplica
-    efeito em si mesmo. Isso vale tanto para efeito quanto para mudan\xE7a de express\xE3o."
+  description: "Se jogada no momento certo, causa 5 de dano diretamente ao Orgulho
+    da pessoa amada. Caso contr\xE1rio, leve 5 de dano no seu Orgulho."
   brainsCost: 0
   heartCost: 3
   effect:

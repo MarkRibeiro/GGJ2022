@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: QuebrarGelo
   m_EditorClassIdentifier: 
   cardName: Quebrar o Gelo
-  description: "Ataca o escudo do oponente. Se o oponente n\xE3o tiver escudo, n\xE3o
-    d\xE1 dano mas continua mudando a express\xE3o do oponente."
+  description: "Causa 2 de dano \xE0 Indiferen\xE7a da pessoa amada."
   brainsCost: 1
   heartCost: 0
   effect:

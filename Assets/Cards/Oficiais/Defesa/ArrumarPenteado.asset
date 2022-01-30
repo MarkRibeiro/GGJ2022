@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ArrumarPenteado
   m_EditorClassIdentifier: 
   cardName: Arrumar Penteado
-  description: Acrescenta mais escudo para si mesmo.
+  description: "Recupera 1 ponto da sua Indiferen\xE7a."
   brainsCost: 1
   heartCost: 0
   effect:

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: InflarEgo
   m_EditorClassIdentifier: 
   cardName: Inflar o Ego
-  description: Acrescenta mais miolo para si mesmo.
+  description: Recupera 3 pontos do seu Orgulho.
   brainsCost: 1
   heartCost: 2
   effect:

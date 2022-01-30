@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc478351a038a804e8badf6ae2009c41, type: 3}
   m_Name: Piscadinha
   m_EditorClassIdentifier: 
-  cardName: 
-  description: "Ataca somente o miolo do oponente. Se o oponente tiver casca, nada
-    acontece. Nem o dano, nem a mudan\xE7a de express\xE3o."
+  cardName: Piscadinha
+  description: Causa 1 de dano ao Orgulho da pessoa amada.
   brainsCost: 0
   heartCost: 1
   effect:

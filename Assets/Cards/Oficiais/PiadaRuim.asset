@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PiadaRuim
   m_EditorClassIdentifier: 
   cardName: Contar Piada Ruim
-  description: 
+  description: "Muda a express\xE3o da pessoa amada."
   brainsCost: 2
   heartCost: 0
   effect:

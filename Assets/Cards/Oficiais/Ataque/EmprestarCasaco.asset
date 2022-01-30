@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: EmprestarCasaco
   m_EditorClassIdentifier: 
   cardName: Emprestar Casaco
-  description: "Ataca o escudo do oponente. Se o oponente n\xE3o tiver escudo, n\xE3o
-    d\xE1 dano mas continua mudando a express\xE3o do oponente."
+  description: "Causa 4 de dano \xE0 Indiferen\xE7ada pessoa amada."
   brainsCost: 0
   heartCost: 2
   effect:

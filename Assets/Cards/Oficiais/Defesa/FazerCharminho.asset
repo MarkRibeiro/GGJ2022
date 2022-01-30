@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FazerCharminho
   m_EditorClassIdentifier: 
   cardName: Fazer Charminho
-  description: Acrescenta mais casca para si mesmo.
+  description: "Recupera 2 pontos da sua Indiferen\xE7a."
   brainsCost: 1
   heartCost: 1
   effect:

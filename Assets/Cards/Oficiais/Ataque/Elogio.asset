@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc478351a038a804e8badf6ae2009c41, type: 3}
   m_Name: Elogio
   m_EditorClassIdentifier: 
-  cardName: 
-  description: "Ataca somente a vida do oponente. Se o oponente tiver escudo, nada
-    acontece. Nem o dano, nem a mudan\xE7a de express\xE3o."
+  cardName: Elogio
+  description: Causa 3 de dano ao Orgulho da pessoa amada.
   brainsCost: 1
   heartCost: 1
   effect:

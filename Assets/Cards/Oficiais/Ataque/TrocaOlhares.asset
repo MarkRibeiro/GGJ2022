@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: TrocaOlhares
   m_EditorClassIdentifier: 
   cardName: Troca de Olhares
-  description: "Ataca somente o miolo do oponente. Se o oponente tiver casca, nada
-    acontece. Nem o dano, nem a mudan\xE7a de express\xE3o."
+  description: Causa 5 de dano ao Orgulho da pessoa amada.
   brainsCost: 0
   heartCost: 3
   effect:
