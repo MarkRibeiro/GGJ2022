@@ -93,6 +93,14 @@ public class Character : MonoBehaviour
                 break;
             case (Expressions.RANDOM):
                 index = Random.Range(0, 3);
+                if(image.sprite == spriteSheet[index])
+                {
+                    index += 1;
+                    if(index == 3)
+                    {
+                        index = 0;
+                    }
+                }
                 break;
             default:
                 index = 0;
