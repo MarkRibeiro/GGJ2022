@@ -25,6 +25,7 @@ public class ChoseButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
         toggle = this.GetComponent<Toggle>();
         initialScale = this.transform.localScale;
         button = GameObject.Find("Jogar-button").GetComponent<Button>();
+
     }
 
 

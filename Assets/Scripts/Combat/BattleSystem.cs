@@ -18,6 +18,7 @@ public class BattleSystem : MonoBehaviour
     public Color InvalidField = Color.white;
     public Color InvalidCard = Color.white;
     public BattleState state;
+    public bool FinalMatch = false;
     public DeckManager dm;
     public int resource_limit;
     public GameObject endMatchScreen;
@@ -26,7 +27,7 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private GameObject[] dices;
 
     [SerializeField] private string victoryText, defeatText;
-    [SerializeField] private Sprite y_endSprite, p_endSprite;
+    [SerializeField] private Sprite y_endSprite, p_endSprite, goodEnding;
 
     // Start is called before the first frame update
     void Start()
@@ -38,8 +39,11 @@ public class BattleSystem : MonoBehaviour
 
     private void BeginBattle()
     {
+
+
         state = BattleState.PLAYER_TURN;
         PlayerTurn();
+
     }
 
     private IEnumerator StartTurn(Character currentChar)
@@ -268,20 +272,25 @@ public class BattleSystem : MonoBehaviour
         endMatchScreen.SetActive(true);
         dm.player.handArea.gameObject.SetActive(false);
 
-
+        Debug.Log("END");
 
         if (winner == dm.player)
         {
+            CharacterManager.PlayerPoints++;
             endMatchScreen.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>().text = victoryText;
-            if (CharacterManager.playerID == 0)
-            {
-                endMatchScreen.transform.GetChild(0).GetComponent<Image>().sprite = p_endSprite;
-            }
-            else
-            {
 
-                endMatchScreen.transform.GetChild(0).GetComponent<Image>().sprite = y_endSprite;
+            {
+                if (CharacterManager.playerID == 0)
+                {
+                    endMatchScreen.transform.GetChild(0).GetComponent<Image>().sprite = p_endSprite;
+                }
+                else
+                {
+
+                    endMatchScreen.transform.GetChild(0).GetComponent<Image>().sprite = y_endSprite;
+                }
             }
+
 
         }
         else
@@ -295,9 +304,44 @@ public class BattleSystem : MonoBehaviour
             {
                 endMatchScreen.transform.GetChild(0).GetComponent<Image>().sprite = p_endSprite;
             }
+
+
         }
+        if (FinalMatch)
+        {
+            Debug.Log("AAA");
+            if (PlayerVictory())
+            {
+                Debug.Log("AAA");
+                endMatchScreen.transform.GetChild(0).GetComponent<Image>().sprite = goodEnding;
+                endMatchScreen.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>().text = victoryText;
+            }
+            else
+            {
+                Debug.Log("bbb");
+                if (CharacterManager.playerID == 0)
+                {
+                    endMatchScreen.transform.GetChild(0).GetComponent<Image>().sprite = y_endSprite;
+                }
+                else
+                {
+                    endMatchScreen.transform.GetChild(0).GetComponent<Image>().sprite = p_endSprite;
+                }
+                endMatchScreen.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>().text = defeatText;
+
+            }
+        }
+
     }
 
+    public bool PlayerVictory()
+    {
+        if (CharacterManager.PlayerPoints >= 2)
+        {
+            return true;
+        }
+        return false;
+    }
     public void VerifyCards(Character character)
     {
 
