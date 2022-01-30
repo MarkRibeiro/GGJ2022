@@ -7,7 +7,6 @@ public class DeckManager : MonoBehaviour
     public Character player, enemy;
     [SerializeField] private int handSize;
     [SerializeField] private GameObject cardPrefab;
-    [SerializeField] private GameObject handArea;
 
     public void Shuffle(Card[] deck)
     {
@@ -20,7 +19,7 @@ public class DeckManager : MonoBehaviour
         }
     }
 
-    public void DrawHand(Card[] deck, List<GameObject> currentHand)
+    public void DrawHand(Card[] deck, List<GameObject> currentHand, RectTransform handArea)
     {
         CardInstance newCard = cardPrefab.GetComponent<CardInstance>();
 

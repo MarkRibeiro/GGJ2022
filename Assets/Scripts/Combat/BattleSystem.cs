@@ -40,7 +40,7 @@ public class BattleSystem : MonoBehaviour
         //Comprar carta
         dm.DiscardHand(currentChar.currentHand);
         dm.Shuffle(currentChar.deck);
-        dm.DrawHand(currentChar.deck, currentChar.currentHand);
+        dm.DrawHand(currentChar.deck, currentChar.currentHand, currentChar.handArea);
     }
 
     private void PlayerTurn()
@@ -201,6 +201,7 @@ public class BattleSystem : MonoBehaviour
         }
         else if (state == BattleState.ENEMY_TURN)
         {
+            Debug.Log("Fim do turno do oponente");
             state = BattleState.PLAYER_TURN;
             PlayerTurn();
         }
