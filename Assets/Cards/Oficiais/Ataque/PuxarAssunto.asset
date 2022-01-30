@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PuxarAssunto
   m_EditorClassIdentifier: 
   cardName: Puxar Assunto
-  description: "Causa 6 de dano \xE0 <color=#7B83C9><b>Indiferen\xE7ada</b></color>
+  description: "Causa 6 de dano \xE0 <color=#7B83C9><b>Indiferen\xE7a</b></color>
     da pessoa amada."
   brainsCost: 4
   heartCost: 0

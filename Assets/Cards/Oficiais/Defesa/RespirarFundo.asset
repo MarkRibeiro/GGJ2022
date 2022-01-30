@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RespirarFundo
   m_EditorClassIdentifier: 
   cardName: Respirar Fundo
-  description: "Recupera 4 pontos da sua <color=#7B83C9><b>Indiferen\xE7ada</b></color>."
+  description: "Recupera 4 pontos da sua <color=#7B83C9><b>Indiferen\xE7a</b></color>."
   brainsCost: 3
   heartCost: 0
   effect:
