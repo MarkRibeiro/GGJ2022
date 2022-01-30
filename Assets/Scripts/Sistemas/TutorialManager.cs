@@ -26,6 +26,7 @@ public class TutorialManager : MonoBehaviour
     {
         tittleDisplay.text = tittle[0];
         imageDisplay.sprite = scenes[0];
+        imageDisplay.preserveAspect = true;
         textDisplay.text = descriptions[0];
         currentIndex = 0;
     }
@@ -47,6 +48,7 @@ public class TutorialManager : MonoBehaviour
 
         tittleDisplay.text = tittle[currentIndex];
         imageDisplay.sprite = scenes[currentIndex];
+        imageDisplay.preserveAspect = true;
         textDisplay.text = descriptions[currentIndex];
     }
 }
