@@ -1952,14 +1952,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenes:
-  - {fileID: 21300000, guid: bf21c40aa28573141a889d538f1d2cf1, type: 3}
-  - {fileID: 21300000, guid: b74fb9781b234df4fb7c2ee1396b0638, type: 3}
-  - {fileID: 21300000, guid: b74fb9781b234df4fb7c2ee1396b0638, type: 3}
-  - {fileID: 21300000, guid: b74fb9781b234df4fb7c2ee1396b0638, type: 3}
-  - {fileID: 21300000, guid: b74fb9781b234df4fb7c2ee1396b0638, type: 3}
-  - {fileID: 21300000, guid: b74fb9781b234df4fb7c2ee1396b0638, type: 3}
-  - {fileID: 21300000, guid: b74fb9781b234df4fb7c2ee1396b0638, type: 3}
-  - {fileID: 21300000, guid: b74fb9781b234df4fb7c2ee1396b0638, type: 3}
+  - {fileID: 21300000, guid: 341ff555d32dc19469adc2b124348c45, type: 3}
+  - {fileID: 21300000, guid: e310f5c24d17e914a831443a8e72fe50, type: 3}
+  - {fileID: 21300000, guid: 9cf2e0f7c0d127e479e8e0ccad52590c, type: 3}
+  - {fileID: 21300000, guid: ab0a0cf914fb0f444ba184b043bc5a04, type: 3}
+  - {fileID: 0}
+  - {fileID: 21300000, guid: f06e992c3494ea14f83df2ee2f5596ec, type: 3}
+  - {fileID: 0}
   descriptions:
   - "Existem dois tipos de barra de vida: a de Indiferen\xE7a, barra superior, e
     a de Orgulho, barra inferior. Aquele que levar a barra de Orgulho do oponente
@@ -1981,10 +1980,8 @@ MonoBehaviour:
     esse efeito apenas acontecer\xE1 em momentos espec\xEDficos. Caso n\xE3o seja
     o momento adequado, todos os efeitos da carta afetar\xE3o quem a jogou."
   - "As express\xF5es do seu advers\xE1rio indicam se ele est\xE1 mais aberto ou
-    n\xE3o aos seus ataques. Sua \xFAltima carta jogada pode gerar mudan\xE7a de
-    Express\xE3o no seu oponente.\r\n"
-  - "Cartas que mudam aleatoriamente a Express\xE3o atual do oponente, possibilitando
-    combos. Elas n\xE3o recuperam pontos das barras nem causam dano."
+    n\xE3o aos seus ataques. Cada carta jogada pode gerar mudan\xE7a de Express\xE3o
+    no seu oponente.\r\n"
   - "O bot\xE3o \u201CTerminar Turno\u201D passa a vez para o oponente. \n\nNo come\xE7o
     de cada turno, as cartas das m\xE3os dos jogadores voltar\xE3o para a pilha e
     ser\xE3o redistribu\xEDdas."
@@ -1995,7 +1992,6 @@ MonoBehaviour:
   - "\xCDcones das cartas"
   - Cartas de Vergonha
   - "Express\xE3o"
-  - "Carta de mudan\xE7a de Express\xE3o"
   - Passar o turno
   forwardButton: {fileID: 1179892578}
   backButton: {fileID: 497078000}
