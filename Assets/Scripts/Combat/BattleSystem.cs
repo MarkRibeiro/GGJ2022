@@ -148,7 +148,7 @@ public class BattleSystem : MonoBehaviour
         //Aplicar efeito
         ApplyEffect(playedCard.card.effect, currentChar);
 
-        Destroy(playedCard.gameObject);
+        //Destroy(playedCard.gameObject);
         VerifyCards(currentChar);
 
     }
