@@ -35,11 +35,12 @@ public class BattleSystem : MonoBehaviour
     {
         //Rolar dados
         RollDice(currentChar);
-
         //Comprar carta
         dm.DiscardHand(currentChar.currentHand);
         dm.Shuffle(currentChar.deck);
         dm.DrawHand(currentChar.deck, currentChar.currentHand, currentChar.handArea);
+        VerifyCards(currentChar);
+
     }
 
     private void PlayerTurn()
@@ -107,6 +108,7 @@ public class BattleSystem : MonoBehaviour
         //Subtrair custos da carta
         if (playedCard.card.brainsCost > currentChar.reason || playedCard.card.heartCost > currentChar.emotion)
         {
+
             return;
         }
 
@@ -117,6 +119,8 @@ public class BattleSystem : MonoBehaviour
         ApplyEffect(playedCard.card.effect, currentChar);
 
         Destroy(playedCard.gameObject);
+        VerifyCards(currentChar);
+
     }
 
     public void ApplyEffect(CardEffect effect, Character character)
@@ -215,6 +219,30 @@ public class BattleSystem : MonoBehaviour
         else
         {
             //Tela de derrota
+        }
+    }
+
+    public void VerifyCards(Character character)
+    {
+
+        foreach (GameObject card in character.currentHand)
+        {
+            CardInstance _instance = card.GetComponent<CardInstance>();
+
+            if (_instance.card.brainsCost > character.reason || _instance.card.heartCost > character.emotion)
+            {
+                card.GetComponent<CardDrag>().enabled = false;
+                if (_instance.card.brainsCost > character.reason)
+                {
+                    _instance.b_costText.color = Color.red;
+                }
+                if (_instance.card.heartCost > character.emotion)
+                {
+                    _instance.h_costText.color = Color.red;
+                }
+
+            }
+
         }
     }
 
