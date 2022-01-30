@@ -11,8 +11,9 @@ public class CardInstance : MonoBehaviour
     public TextMeshProUGUI description;
     public TextMeshProUGUI b_costText;
     public TextMeshProUGUI h_costText;
-    public TextMeshProUGUI effectText;
     public Image cardImage;
+    public Image typeImage;
+    public Image effectImage;
 
     // Start is called before the first frame update
     void Start()
@@ -21,10 +22,11 @@ public class CardInstance : MonoBehaviour
         description.text = card.description;
         b_costText.text = card.brainsCost.ToString();
         h_costText.text = card.brainsCost.ToString();
-        
-        effectText.text = card.effect.effectValue.ToString();
 
-        cardImage.sprite = card.sprite;
+        cardImage.sprite = card.mainSprite;
+        typeImage.sprite = card.typeSprite;
+        effectImage.sprite = card.effectSprite;
+
     }
 
     public void Play()
