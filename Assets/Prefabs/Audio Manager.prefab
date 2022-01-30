@@ -57,7 +57,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
     source: {fileID: 0}
   - name: Musica1
-    clip: {fileID: 8300000, guid: 58a5c609715663b4aac21f61cb452891, type: 3}
+    clip: {fileID: 8300000, guid: 267347a9c798260449579467e57b9c7b, type: 3}
     playOnAwake: 0
     isSFX: 0
     volume: 1
@@ -68,7 +68,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
     source: {fileID: 0}
   - name: Musica2
-    clip: {fileID: 8300000, guid: 532ed692e16409646810a79cc2c19991, type: 3}
+    clip: {fileID: 8300000, guid: 3b7cef2f49939ce4aa8e018b580b9de1, type: 3}
     playOnAwake: 0
     isSFX: 0
     volume: 1
@@ -113,6 +113,127 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: RolarDado
     clip: {fileID: 8300000, guid: 766af70b8f04c7e46b45e1a9d404f7ba, type: 3}
+    playOnAwake: 0
+    isSFX: 1
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
+    source: {fileID: 0}
+  - name: Sino
+    clip: {fileID: 8300000, guid: 1f9ed58c2d05739488acae30cb3d18ef, type: 3}
+    playOnAwake: 0
+    isSFX: 1
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
+    source: {fileID: 0}
+  - name: Hummp
+    clip: {fileID: 8300000, guid: 99034c127d5d87a4985c1e4e1c5b67b5, type: 3}
+    playOnAwake: 0
+    isSFX: 1
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
+    source: {fileID: 0}
+  - name: Lifeup
+    clip: {fileID: 8300000, guid: ca8e0ec0719c96148aca0fdbd1a67181, type: 3}
+    playOnAwake: 0
+    isSFX: 1
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 8300000, guid: 1f9ed58c2d05739488acae30cb3d18ef, type: 3}
+    playOnAwake: 0
+    isSFX: 1
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
+    source: {fileID: 0}
+  - name: Sino
+    clip: {fileID: 8300000, guid: 1f9ed58c2d05739488acae30cb3d18ef, type: 3}
+    playOnAwake: 0
+    isSFX: 1
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
+    source: {fileID: 0}
+  - name: Sino
+    clip: {fileID: 8300000, guid: 1f9ed58c2d05739488acae30cb3d18ef, type: 3}
+    playOnAwake: 0
+    isSFX: 1
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
+    source: {fileID: 0}
+  - name: Sino
+    clip: {fileID: 8300000, guid: 1f9ed58c2d05739488acae30cb3d18ef, type: 3}
+    playOnAwake: 0
+    isSFX: 1
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
+    source: {fileID: 0}
+  - name: Sino
+    clip: {fileID: 8300000, guid: 1f9ed58c2d05739488acae30cb3d18ef, type: 3}
+    playOnAwake: 0
+    isSFX: 1
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
+    source: {fileID: 0}
+  - name: Sino
+    clip: {fileID: 8300000, guid: 1f9ed58c2d05739488acae30cb3d18ef, type: 3}
+    playOnAwake: 0
+    isSFX: 1
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
+    source: {fileID: 0}
+  - name: Sino
+    clip: {fileID: 8300000, guid: 1f9ed58c2d05739488acae30cb3d18ef, type: 3}
+    playOnAwake: 0
+    isSFX: 1
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
+    source: {fileID: 0}
+  - name: Sino
+    clip: {fileID: 8300000, guid: 1f9ed58c2d05739488acae30cb3d18ef, type: 3}
     playOnAwake: 0
     isSFX: 1
     volume: 1
