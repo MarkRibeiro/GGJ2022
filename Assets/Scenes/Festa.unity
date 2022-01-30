@@ -5236,7 +5236,7 @@ MonoBehaviour:
   state: 0
   dm: {fileID: 1180588258}
   resource_limit: 10
-  endMatchScreen: {fileID: 0}
+  endMatchScreen: {fileID: 1239080396}
 --- !u!114 &1180588258
 MonoBehaviour:
   m_ObjectHideFlags: 0
