@@ -50,7 +50,7 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
 
         dices[0].SetActive(false);
-        dices[1].SetActive(false); 
+        dices[1].SetActive(false);
 
         //Comprar carta
         dm.Shuffle(currentChar.deck);
@@ -82,13 +82,13 @@ public class BattleSystem : MonoBehaviour
     {
         int reason_gain = 0;
         int emotion_gain = 0;
-        
+
         dices[0].SetActive(true);
         dices[1].SetActive(true);
-        
+
         for (int i = 0; i < 2; i++)
         {
-            for(int j = 0; j <= 20; j++)
+            for (int j = 0; j <= 20; j++)
             {
                 int randomSide = Random.Range(0, 6);
 
@@ -174,7 +174,7 @@ public class BattleSystem : MonoBehaviour
                 {
                     if (character.target.currShield > 0)
                     {
-                        if(character.target.currShield - effect.effectValue < 0)
+                        if (character.target.currShield - effect.effectValue < 0)
                         {
                             character.target.currShield = 0;
                         }
@@ -190,7 +190,7 @@ public class BattleSystem : MonoBehaviour
             case CardType.DEFENSE:
                 if (effect.AffectHp)
                 {
-                    if(character.currHP + effect.effectValue > character.maxHP)
+                    if (character.currHP + effect.effectValue > character.maxHP)
                     {
                         character.currHP = character.maxHP;
                     }
@@ -202,7 +202,7 @@ public class BattleSystem : MonoBehaviour
                 }
                 else
                 {
-                    if(character.currShield + effect.effectValue > character.maxShield)
+                    if (character.currShield + effect.effectValue > character.maxShield)
                     {
                         character.currShield = character.maxShield;
                     }
@@ -268,22 +268,33 @@ public class BattleSystem : MonoBehaviour
         endMatchScreen.SetActive(true);
         dm.player.handArea.gameObject.SetActive(false);
 
-        if(CharacterManager.playerID == 0)
-        {
-            endMatchScreen.transform.GetChild(0).GetComponent<Image>().sprite = y_endSprite;
-        }
-        else
-        {
-            endMatchScreen.transform.GetChild(0).GetComponent<Image>().sprite = p_endSprite;
-        }
+
 
         if (winner == dm.player)
         {
-            endMatchScreen.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = victoryText;
+            endMatchScreen.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>().text = victoryText;
+            if (CharacterManager.playerID == 0)
+            {
+                endMatchScreen.transform.GetChild(0).GetComponent<Image>().sprite = p_endSprite;
+            }
+            else
+            {
+
+                endMatchScreen.transform.GetChild(0).GetComponent<Image>().sprite = y_endSprite;
+            }
+
         }
         else
         {
-            endMatchScreen.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = defeatText;
+            endMatchScreen.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>().text = defeatText;
+            if (CharacterManager.playerID == 0)
+            {
+                endMatchScreen.transform.GetChild(0).GetComponent<Image>().sprite = y_endSprite;
+            }
+            else
+            {
+                endMatchScreen.transform.GetChild(0).GetComponent<Image>().sprite = p_endSprite;
+            }
         }
     }
 
