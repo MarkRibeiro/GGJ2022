@@ -15,8 +15,7 @@ public class BattleSystem : MonoBehaviour
     public static BattleSystem instance;
     public BattleState state;
     public DeckManager dm;
-
-    [SerializeField] private int resource_limit;
+    public int resource_limit;
 
     // Start is called before the first frame update
     void Start()
