@@ -480,7 +480,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -90}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 127.5, y: 180}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &2954368717867397020
@@ -580,7 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 159781c3eb9390a459c7e48af82d35a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: e960954a3898dc140b7f502ef988d45d, type: 2}
+  card: {fileID: 11400000, guid: 24d3e2044dd314e4189bd121e0b63885, type: 2}
   cardName: {fileID: 594785821629015695}
   description: {fileID: 5774055586735459425}
   b_costText: {fileID: 4476033615556728161}

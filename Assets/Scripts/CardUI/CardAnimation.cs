@@ -9,6 +9,16 @@ public class CardAnimation : MonoBehaviour
     [SerializeField]
     float positionTime;
     Coroutine positionCoroutine;
+    RectTransform _rect;
+    RectTransform rect
+    {
+        get
+        {
+            if (_rect == null)
+                _rect = GetComponent<RectTransform>();
+            return _rect;
+        }
+    }
 
 
 
@@ -27,7 +37,7 @@ public class CardAnimation : MonoBehaviour
         while (t < positionTime)
         {
             t += Time.deltaTime;
-            transform.position = Vector3.Lerp(startPosition, position, positionCurve.Evaluate(t/ positionTime));
+            rect.anchoredPosition3D = Vector3.Lerp(startPosition, position, positionCurve.Evaluate(t/ positionTime));
             yield return new WaitForEndOfFrame();
         }
         positionCoroutine = null;
