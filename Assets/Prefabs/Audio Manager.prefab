@@ -56,6 +56,28 @@ MonoBehaviour:
     loop: 1
     mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
     source: {fileID: 0}
+  - name: Musica1
+    clip: {fileID: 8300000, guid: 58a5c609715663b4aac21f61cb452891, type: 3}
+    playOnAwake: 0
+    isSFX: 0
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
+    source: {fileID: 0}
+  - name: Musica2
+    clip: {fileID: 8300000, guid: 532ed692e16409646810a79cc2c19991, type: 3}
+    playOnAwake: 0
+    isSFX: 0
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
+    source: {fileID: 0}
   - name: CardHover
     clip: {fileID: 8300000, guid: c8a869e070e8db147ad6da3c4b06abee, type: 3}
     playOnAwake: 0
@@ -91,6 +113,17 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: RolarDado
     clip: {fileID: 8300000, guid: 766af70b8f04c7e46b45e1a9d404f7ba, type: 3}
+    playOnAwake: 0
+    isSFX: 1
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
+    source: {fileID: 0}
+  - name: Sino
+    clip: {fileID: 8300000, guid: 1f9ed58c2d05739488acae30cb3d18ef, type: 3}
     playOnAwake: 0
     isSFX: 1
     volume: 1
