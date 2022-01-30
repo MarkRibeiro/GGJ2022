@@ -91,6 +91,9 @@ public class Character : MonoBehaviour
             case (Expressions.SMUG):
                 index = 2;
                 break;
+            case (Expressions.RANDOM):
+                index = Random.Range(0, 3);
+                break;
             default:
                 index = 0;
                 break;

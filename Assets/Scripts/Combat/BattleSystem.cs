@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public enum BattleState
 {
@@ -16,6 +17,7 @@ public class BattleSystem : MonoBehaviour
     public BattleState state;
     public DeckManager dm;
     public int resource_limit;
+    public GameObject endMatchScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -212,13 +214,15 @@ public class BattleSystem : MonoBehaviour
 
     public void EndMatch(Character winner)
     {
+        endMatchScreen.SetActive(true);
+        dm.player.handArea.gameObject.SetActive(false);
         if (winner == dm.player)
         {
-            //Tela de vitoria
+            endMatchScreen.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Você venceu";
         }
         else
         {
-            //Tela de derrota
+            endMatchScreen.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Você perdeu";
         }
     }
 
