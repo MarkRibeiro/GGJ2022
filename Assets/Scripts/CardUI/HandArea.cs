@@ -7,7 +7,7 @@ public class HandArea : MonoBehaviour
 {
     int lastChildCount;
     [SerializeField]
-    private float padding;
+    private float margin;
     private RectTransform _rect;
 
     RectTransform rect
@@ -61,18 +61,18 @@ public class HandArea : MonoBehaviour
             return;
         }
 
-        float step = rect.rect.width / (childrenCount + 1);
+        float step = (rect.rect.width - 2*margin) / (childrenCount + 1);
 
         foreach (RectTransform child in transform)
         {
             var anim = child.GetComponent<CardAnimation>();
             if (anim == null)
             {
-                child.position = new Vector2(rect.rect.xMin + step * (child.GetSiblingIndex() + 1 ), 0);
+                child.position = new Vector2(rect.rect.xMin + step * (child.GetSiblingIndex() + 1 ) + margin, 0);
             }
             else
             {
-                anim.GoToPosition(new Vector2(rect.rect.xMin + step * (child.GetSiblingIndex() + 1 ), 0));
+                anim.GoToPosition(new Vector2(rect.rect.xMin + step * (child.GetSiblingIndex() + 1 ) + margin, 0));
             }
         }
 
