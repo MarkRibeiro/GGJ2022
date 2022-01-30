@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: TrocaOlhares
   m_EditorClassIdentifier: 
   cardName: Troca de Olhares
-  description: Causa 5 de dano ao Orgulho da pessoa amada.
+  description: Causa 5 de dano ao <color=#83B32B><b>Orgulho</b></color> da pessoa
+    amada.
   brainsCost: 1
   heartCost: 3
   effect:

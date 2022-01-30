@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: QuebrarGelo
   m_EditorClassIdentifier: 
   cardName: Quebrar o Gelo
-  description: "Causa 2 de dano \xE0 Indiferen\xE7a da pessoa amada."
+  description: "Causa 2 de dano \xE0 <color=#7B83C9><b>Indiferen\xE7ada</b></color>
+    da pessoa amada."
   brainsCost: 1
   heartCost: 0
   effect:
