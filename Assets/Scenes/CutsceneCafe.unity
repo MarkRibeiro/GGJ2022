@@ -1435,17 +1435,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenes:
-  - {fileID: 21300000, guid: b74fb9781b234df4fb7c2ee1396b0638, type: 3}
-  - {fileID: 21300000, guid: fcabbffcf692e99468e2992dd0c92135, type: 3}
-  - {fileID: 21300000, guid: 857733f94ea4f8c46a7cf3ec7701dbcb, type: 3}
-  - {fileID: 21300000, guid: e82f4c2905e3b814dbe613db591887cb, type: 3}
-  - {fileID: 21300000, guid: ad253cf8a52e5a940bbc1bbc51705b4d, type: 3}
+  - {fileID: 21300000, guid: 678d8df903574b941856fa44c30a4259, type: 3}
+  - {fileID: 21300000, guid: a00d52836a0b66545aa0600e9a92c308, type: 3}
+  - {fileID: 21300000, guid: a00d52836a0b66545aa0600e9a92c308, type: 3}
+  - {fileID: 21300000, guid: a00d52836a0b66545aa0600e9a92c308, type: 3}
+  - {fileID: 21300000, guid: ea856856562023c418a27bbbd379d3f7, type: 3}
+  - {fileID: 21300000, guid: 751e40d288d741342822a73e390f0a7e, type: 3}
   descriptions:
-  - Era um lindo dia de festa
-  - Duas pessoas se apaixonaram
-  - Mas elas tem muito orgulho para admitir
-  - "Ent\xE3o resolveram decidir isso da \xFAnica maneira possivel"
-  - COM UM DUELO DE CARTAS
+  - "Depois de muita enrola\xE7\xE3o, finalmente algu\xE9m tomou coragem de chamar
+    pra sair. Sinceramente achei que n\xE3o chegariam nesse ponto... mas UHUU!"
+  - "Enquanto escolhe uma roupa, voc\xEA pensa que talvez seja melhor superar seu
+    orgulho e falar de uma vez o que sente..."
+  - ...
+  - "voc\xEA pensa de novo e... \xE9h melhor n\xE3o..."
+  - "\xC9 agora! O momento t\xE3o esperado: s\xF3 voc\xEAs dois num caf\xE9, o ambiente
+    perfeito para se humilh- Digo, se declarar!"
+  - "\xC9 hora da batalha final! Ser\xE1 voc\xEAs v\xE3o finalmente parar de jogar
+    cartas e partir para o romance?"
   imageDisplay: {fileID: 1667482437}
   textDiaplay: {fileID: 1892943796}
   nextScene: Cafe
