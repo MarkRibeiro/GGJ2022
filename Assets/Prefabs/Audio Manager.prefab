@@ -47,25 +47,14 @@ MonoBehaviour:
   mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
   sounds:
   - name: Musica menu
-    clip: {fileID: 8300000, guid: 08c03d444bc9e0e4d8a4aaf4b4fd1259, type: 3}
+    clip: {fileID: 8300000, guid: 0ad46e0096fba1741a8d03b7a3d7ad61, type: 3}
     playOnAwake: 1
     isSFX: 0
     volume: 1
     volumeVariance: 0
     pitch: 0
     pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
-    source: {fileID: 0}
-  - name: SFX
-    clip: {fileID: 8300000, guid: 69f6dd48e81b84141ae41b56cda6a62c, type: 3}
-    playOnAwake: 1
-    isSFX: 1
-    volume: 1
-    volumeVariance: 0
-    pitch: 0
-    pitchVariance: 0
-    loop: 0
+    loop: 1
     mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
     source: {fileID: 0}
   - name: CardHover

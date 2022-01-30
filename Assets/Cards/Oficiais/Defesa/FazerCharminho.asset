@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FazerCharminho
   m_EditorClassIdentifier: 
   cardName: Fazer Charminho
-  description: "Recupera 2 pontos da sua <color=#7B83C9><b>Indiferen\xE7ada</b></color>."
+  description: "Recupera 2 pontos da sua <color=#7B83C9><b>Indiferen\xE7a</b></color>."
   brainsCost: 1
   heartCost: 1
   effect:
