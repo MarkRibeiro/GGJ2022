@@ -91,17 +91,20 @@ public class BattleSystem : MonoBehaviour
         dices[0].SetActive(true);
         dices[1].SetActive(true);
 
+        AudioManager.PlaySound("RolarDado");
+        for (int j = 0; j <= 20; j++)
+        {
+            int randomSide1 = Random.Range(0, 6);
+            int randomSide2 = Random.Range(0, 6);
+
+            dices[0].GetComponent<Image>().sprite = diceSides[randomSide1];
+            dices[1].GetComponent<Image>().sprite = diceSides[randomSide2];
+
+            yield return new WaitForSeconds(0.05f);
+        }
+
         for (int i = 0; i < 2; i++)
         {
-            AudioManager.PlaySound("RolarDado");
-            for (int j = 0; j <= 20; j++)
-            {
-                int randomSide = Random.Range(0, 6);
-
-                dices[i].GetComponent<Image>().sprite = diceSides[randomSide];
-
-                yield return new WaitForSeconds(0.05f);
-            }
 
             int result = Random.Range(1, 7);
 
