@@ -2375,7 +2375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5774055586735459425, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_text
-      value: Creditos
+      value: "Cr\xE9ditos"
       objectReference: {fileID: 0}
     - target: {fileID: 5774055586735459425, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_fontSize
