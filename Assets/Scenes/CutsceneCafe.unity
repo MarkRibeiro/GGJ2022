@@ -560,8 +560,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: c603b17feeb8bba4baa28406b575d22d, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1455,8 +1455,8 @@ MonoBehaviour:
   imageDisplay: {fileID: 1667482437}
   textDiaplay: {fileID: 1892943796}
   nextScene: Cafe
-  backArrow: {fileID: 0}
-  nextArrow: {fileID: 0}
+  backArrow: {fileID: 538423927}
+  nextArrow: {fileID: 2053691777}
 --- !u!114 &2038799780
 MonoBehaviour:
   m_ObjectHideFlags: 0
