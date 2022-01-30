@@ -21,7 +21,7 @@ public class CardInstance : MonoBehaviour
         cardName.text = card.cardName;
         description.text = card.description;
         b_costText.text = card.brainsCost.ToString();
-        h_costText.text = card.brainsCost.ToString();
+        h_costText.text = card.heartCost.ToString();
 
         cardImage.sprite = card.mainSprite;
         typeImage.sprite = card.typeSprite;
