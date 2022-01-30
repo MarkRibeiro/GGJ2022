@@ -12,6 +12,7 @@ public class CardInstance : MonoBehaviour
     public TextMeshProUGUI b_costText;
     public TextMeshProUGUI h_costText;
     public Image cardImage;
+    public Image bgImage;
     public Image typeImage;
     public Image effectImage;
     public Image border;
@@ -24,7 +25,7 @@ public class CardInstance : MonoBehaviour
         b_costText.text = card.brainsCost.ToString();
         h_costText.text = card.heartCost.ToString();
 
-        if(CharacterManager.playerID == 0)
+        if (CharacterManager.playerID == 0)
         {
             cardImage.sprite = card.y_mainSprite;
         }
@@ -32,7 +33,7 @@ public class CardInstance : MonoBehaviour
         {
             cardImage.sprite = card.p_mainSprite;
         }
-        
+
         typeImage.sprite = card.typeSprite;
         effectImage.sprite = card.effectSprite;
 

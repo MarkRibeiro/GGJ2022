@@ -585,6 +585,7 @@ MonoBehaviour:
   b_costText: {fileID: 4476033615556728161}
   h_costText: {fileID: 2063177040799714737}
   cardImage: {fileID: 6893423245217358941}
+  bgImage: {fileID: 2954368719003132118}
   typeImage: {fileID: 8433446330490151735}
   effectImage: {fileID: 6967243267479832150}
   border: {fileID: 1380716043838897686}

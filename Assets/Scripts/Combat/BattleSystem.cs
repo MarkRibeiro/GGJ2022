@@ -14,6 +14,8 @@ public enum BattleState
 public class BattleSystem : MonoBehaviour
 {
     public static BattleSystem instance;
+    public Color InvalidField = Color.white;
+    public Color InvalidCard = Color.white;
     public BattleState state;
     public DeckManager dm;
     public int resource_limit;
@@ -231,14 +233,16 @@ public class BattleSystem : MonoBehaviour
 
         foreach (GameObject card in character.currentHand)
         {
+            if (card == null) continue;
             CardInstance _instance = card.GetComponent<CardInstance>();
 
             if (_instance.card.brainsCost > character.reason || _instance.card.heartCost > character.emotion)
             {
+                _instance.bgImage.color = InvalidCard;
                 card.GetComponent<CardDrag>().enabled = false;
                 if (_instance.card.brainsCost > character.reason)
                 {
-                    _instance.b_costText.color = Color.red;
+                    _instance.b_costText.color = InvalidField;
                 }
                 if (_instance.card.heartCost > character.emotion)
                 {
