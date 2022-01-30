@@ -263,7 +263,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &341072990
 GameObject:
@@ -492,7 +492,7 @@ RectTransform:
   m_Children:
   - {fileID: 566170333}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -695,8 +695,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 93032762b28237f4f9b36d1901b6f381, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -794,7 +794,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1179837289
 GameObject:
@@ -1837,17 +1837,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenes:
-  - {fileID: 21300000, guid: b74fb9781b234df4fb7c2ee1396b0638, type: 3}
-  - {fileID: 21300000, guid: fcabbffcf692e99468e2992dd0c92135, type: 3}
-  - {fileID: 21300000, guid: 857733f94ea4f8c46a7cf3ec7701dbcb, type: 3}
-  - {fileID: 21300000, guid: e82f4c2905e3b814dbe613db591887cb, type: 3}
-  - {fileID: 21300000, guid: ad253cf8a52e5a940bbc1bbc51705b4d, type: 3}
+  - {fileID: 21300000, guid: 637ea8ceabba9d641a6bc17d25d6460b, type: 3}
+  - {fileID: 21300000, guid: 65ab19c27e1058b409da3b74860adc3e, type: 3}
+  - {fileID: 21300000, guid: 26902b30c04b9d640ae1c510b5214903, type: 3}
+  - {fileID: 21300000, guid: 2055325a6b13ddc4d8e68c1a4af6b317, type: 3}
+  - {fileID: 21300000, guid: 6fbbed46e0187284ab0e258da41384a9, type: 3}
   descriptions:
-  - Era um lindo dia de festa
-  - Duas pessoas se apaixonaram
-  - Mas elas tem muito orgulho para admitir
-  - "Ent\xE3o resolveram decidir isso da \xFAnica maneira possivel"
-  - COM UM DUELO DE CARTAS
+  - "Burburinhos no corredor! Todos est\xE3o fofocando sobre quem pegou quem na \xFAltima
+    festa. Ou seja, n\xE3o est\xE3o fofocando sobre voc\xEA."
+  - "Afinal, voc\xEA e seu flerte s\xE3o dois bob\xF5es orgulhosos esperando que
+    o outro tome alguma iniciativa."
+  - "E, aparentemente, a primeira iniciativa que voc\xEA toma \xE9, sem querer, fazer
+    papel de bobo esbarrando no seu paquera. Que bela ideia!"
+  - "Agora, cara a cara, \xE9 s\xF3 superar o orgulho e falar o que quer! N\xE3o
+    \xE9?"
+  - "A esperan\xE7a \xE9 que algu\xE9m chame o outro para sair. Mas \xE9 claro que
+    ningu\xE9m quer fazer isso primeiro."
   imageDisplay: {fileID: 1667482437}
   textDiaplay: {fileID: 1892943796}
   nextScene: Escola
@@ -1875,5 +1880,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
