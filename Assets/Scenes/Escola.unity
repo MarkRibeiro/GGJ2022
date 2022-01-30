@@ -2228,8 +2228,8 @@ RectTransform:
   - {fileID: 1750394274}
   - {fileID: 2007543911}
   - {fileID: 556202248}
-  - {fileID: 1667598770}
   - {fileID: 1486512722}
+  - {fileID: 1667598770}
   - {fileID: 1793392881}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -2438,7 +2438,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Cafe
+          m_StringArgument: CutsceneCafe
           m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &695441318
@@ -4438,7 +4438,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 575837479}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.3263085}
   m_AnchorMax: {x: 1, y: 1}
