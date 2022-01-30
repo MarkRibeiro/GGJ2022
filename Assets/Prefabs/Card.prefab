@@ -185,7 +185,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1.4}
+  m_AnchoredPosition: {x: 0, y: -1.4000015}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8257292445328164340
@@ -503,7 +503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -548,6 +548,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6567063338097222062}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Use
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &6567063338097222062
 Animator:
   serializedVersion: 3
@@ -579,7 +591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 159781c3eb9390a459c7e48af82d35a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 24d3e2044dd314e4189bd121e0b63885, type: 2}
+  card: {fileID: 11400000, guid: 5546900e79322f84a9fa601ad12f49f7, type: 2}
   cardName: {fileID: 594785821629015695}
   description: {fileID: 5774055586735459425}
   b_costText: {fileID: 4476033615556728161}
@@ -813,7 +825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2646863, y: 0.05555556}
   m_AnchorMax: {x: 0.72731376, y: 0.19444445}
-  m_AnchoredPosition: {x: -0.11640167, y: -4.6}
+  m_AnchoredPosition: {x: -0.11640167, y: -4.600006}
   m_SizeDelta: {x: 1.2928, y: 0.21329999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4732017630882812993

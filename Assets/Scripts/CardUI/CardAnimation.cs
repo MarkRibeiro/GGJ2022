@@ -20,6 +20,11 @@ public class CardAnimation : MonoBehaviour
         }
     }
 
+    public void DestroySelf()
+    {
+        Destroy(gameObject);
+    }
+
 
 
     public void GoToPosition(Vector3 position)
