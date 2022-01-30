@@ -28,6 +28,7 @@ public class BattleSystem : MonoBehaviour
 
     [SerializeField] private string victoryText, defeatText;
     [SerializeField] private Sprite y_endSprite, p_endSprite, goodEnding;
+    [SerializeField] private float diceTime = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +52,7 @@ public class BattleSystem : MonoBehaviour
         //Rolar dados
         yield return StartCoroutine(RollDice(currentChar));
 
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(diceTime);
 
         dices[0].SetActive(false);
         dices[1].SetActive(false);
@@ -196,6 +197,7 @@ public class BattleSystem : MonoBehaviour
             case CardType.DEFENSE:
                 if (effect.AffectHp)
                 {
+                    AudioManager.PlaySound("Lifeup");
                     if (character.currHP + effect.effectValue > character.maxHP)
                     {
                         character.currHP = character.maxHP;
