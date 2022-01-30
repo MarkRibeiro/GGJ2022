@@ -22,7 +22,8 @@ MonoBehaviour:
     cardType: 2
     changeTo: 2
     RightExpression: 0
-  mainSprite: {fileID: 21300000, guid: ebad37df24bb7a64cb23d72b54a3c1f0, type: 3}
+  y_mainSprite: {fileID: 21300000, guid: ebad37df24bb7a64cb23d72b54a3c1f0, type: 3}
+  p_mainSprite: {fileID: 21300000, guid: 5485fa382d1daff41a8e518d171876f4, type: 3}
   typeSprite: {fileID: 21300000, guid: 465998e6caf46e54cb02c7639178043b, type: 3}
   effectSprite: {fileID: 21300000, guid: 7680c742940dd9b4499f2b79101b36bc, type: 3}
   color: {r: 0.5137255, g: 0.7019608, b: 0.16862746, a: 1}

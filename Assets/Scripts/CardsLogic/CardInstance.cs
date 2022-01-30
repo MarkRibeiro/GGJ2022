@@ -24,7 +24,15 @@ public class CardInstance : MonoBehaviour
         b_costText.text = card.brainsCost.ToString();
         h_costText.text = card.heartCost.ToString();
 
-        cardImage.sprite = card.mainSprite;
+        if(CharacterManager.playerID == 0)
+        {
+            cardImage.sprite = card.y_mainSprite;
+        }
+        else
+        {
+            cardImage.sprite = card.p_mainSprite;
+        }
+        
         typeImage.sprite = card.typeSprite;
         effectImage.sprite = card.effectSprite;
 
