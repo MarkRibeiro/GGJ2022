@@ -29,22 +29,26 @@ public class TutorialManager : MonoBehaviour
         imageDisplay.preserveAspect = true;
         textDisplay.text = descriptions[0];
         currentIndex = 0;
+        Navigate(0);
     }
 
     public void Navigate(int indexStep)
     {
         if(indexStep < 0 && currentIndex == 0)
         {
+
             return;
         }
 
         if(indexStep > 0 && currentIndex == scenes.Length - 1)
         {
-            SceneManager.LoadScene(nextScene);
+
             return;
         }
-
         currentIndex += indexStep;
+
+        backButton.gameObject.SetActive(currentIndex != 0);
+        forwardButton.gameObject.SetActive(currentIndex != scenes.Length - 1);
 
         tittleDisplay.text = tittle[currentIndex];
         imageDisplay.sprite = scenes[currentIndex];
