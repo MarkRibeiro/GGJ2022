@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4432532151965863355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4432532151965863353}
+  - component: {fileID: 4432532151965863354}
+  - component: {fileID: 4432532151965863352}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4432532151965863353
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4432532151965863355}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4432532151965863354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4432532151965863355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc5d77ead068e304b8f51015234c9227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
+  sounds:
+  - name: Musica menu
+    clip: {fileID: 8300000, guid: 08c03d444bc9e0e4d8a4aaf4b4fd1259, type: 3}
+    playOnAwake: 1
+    isSFX: 0
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
+    source: {fileID: 0}
+  - name: SFX
+    clip: {fileID: 8300000, guid: 69f6dd48e81b84141ae41b56cda6a62c, type: 3}
+    playOnAwake: 1
+    isSFX: 1
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
+    source: {fileID: 0}
+  - name: CardHover
+    clip: {fileID: 8300000, guid: c8a869e070e8db147ad6da3c4b06abee, type: 3}
+    playOnAwake: 0
+    isSFX: 1
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: e12d0e5ced785a9419e14b3bfd3b3c1e, type: 2}
+    source: {fileID: 0}
+--- !u!114 &4432532151965863352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4432532151965863355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41d024db74be9b14e889f237aa8ca27f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  geralSlider: {fileID: 0}
+  musicSlider: {fileID: 0}
+  sfxSlider: {fileID: 0}

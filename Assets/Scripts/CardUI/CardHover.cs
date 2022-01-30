@@ -30,6 +30,11 @@ public class CardHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     {
         _anim.SetBool("Hover", true);
         _canvas.sortingOrder = hoverSortingOrder;
+        var audio = AudioManager.instance;
+        if(audio != null)
+        {
+            audio.Play("CardHover");
+        }
     }
 
 
