@@ -1952,8 +1952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenes:
-  - {fileID: 21300000, guid: b74fb9781b234df4fb7c2ee1396b0638, type: 3}
-  - {fileID: 21300000, guid: b74fb9781b234df4fb7c2ee1396b0638, type: 3}
+  - {fileID: 21300000, guid: bf21c40aa28573141a889d538f1d2cf1, type: 3}
   - {fileID: 21300000, guid: b74fb9781b234df4fb7c2ee1396b0638, type: 3}
   - {fileID: 21300000, guid: b74fb9781b234df4fb7c2ee1396b0638, type: 3}
   - {fileID: 21300000, guid: b74fb9781b234df4fb7c2ee1396b0638, type: 3}
@@ -1986,9 +1985,9 @@ MonoBehaviour:
     Express\xE3o no seu oponente.\r\n"
   - "Cartas que mudam aleatoriamente a Express\xE3o atual do oponente, possibilitando
     combos. Elas n\xE3o recuperam pontos das barras nem causam dano."
-  - "O bot\xE3o \u201CTerminar Turno\u201D passa a vez para o oponente."
-  - "No come\xE7o de cada turno, as cartas das m\xE3os dos jogadores voltar\xE3o
-    para a pilha e ser\xE3o redistribu\xEDdas."
+  - "O bot\xE3o \u201CTerminar Turno\u201D passa a vez para o oponente. \n\nNo come\xE7o
+    de cada turno, as cartas das m\xE3os dos jogadores voltar\xE3o para a pilha e
+    ser\xE3o redistribu\xEDdas."
   tittle:
   - "Barras de Indiferen\xE7a e Orgulho"
   - Uso de recursos
@@ -1998,7 +1997,6 @@ MonoBehaviour:
   - "Express\xE3o"
   - "Carta de mudan\xE7a de Express\xE3o"
   - Passar o turno
-  - Descarte de cartas
   forwardButton: {fileID: 1179892578}
   backButton: {fileID: 497078000}
   tittleDisplay: {fileID: 1727186523}

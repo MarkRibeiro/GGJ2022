@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RaksScene2.unity
     guid: b51d49e6cb48ccf4d9f1cb081d74545a
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 6850e4ce6e8365041838666c44f8eecf
   m_configObjects: {}
