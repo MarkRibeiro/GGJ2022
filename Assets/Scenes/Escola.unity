@@ -1693,7 +1693,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7060667406775343766, guid: 7471f86cd3a31d541a4ea4e6a4b6ed84, type: 3}
       propertyPath: maxHP
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7060667406775343766, guid: 7471f86cd3a31d541a4ea4e6a4b6ed84, type: 3}
       propertyPath: target
@@ -1709,7 +1709,7 @@ PrefabInstance:
       objectReference: {fileID: 1817850817}
     - target: {fileID: 7060667406775343766, guid: 7471f86cd3a31d541a4ea4e6a4b6ed84, type: 3}
       propertyPath: maxShield
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7060667406775343766, guid: 7471f86cd3a31d541a4ea4e6a4b6ed84, type: 3}
       propertyPath: shieldBar
@@ -1850,7 +1850,7 @@ PrefabInstance:
     - target: {fileID: 7060667406775343766, guid: 7471f86cd3a31d541a4ea4e6a4b6ed84, type: 3}
       propertyPath: spriteSheet.Array.data[4]
       value: 
-      objectReference: {fileID: 21300000, guid: 610b17487aae4f04aa4e18cb36e35394, type: 3}
+      objectReference: {fileID: 21300000, guid: 4c065a930ec4da346aef6091125161b1, type: 3}
     - target: {fileID: 7060667406775343766, guid: 7471f86cd3a31d541a4ea4e6a4b6ed84, type: 3}
       propertyPath: spriteSheet.Array.data[5]
       value: 
@@ -3597,6 +3597,7 @@ MonoBehaviour:
   y_endSprite: {fileID: 21300000, guid: d6206c2acffc02e43af9f9fc18876564, type: 3}
   p_endSprite: {fileID: 21300000, guid: 0f9b1814075bc4f42b8f9fe95e7048a3, type: 3}
   goodEnding: {fileID: 0}
+  diceTime: 1
 --- !u!114 &1180588258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6079,7 +6080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7060667406775343766, guid: 7471f86cd3a31d541a4ea4e6a4b6ed84, type: 3}
       propertyPath: maxHP
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7060667406775343766, guid: 7471f86cd3a31d541a4ea4e6a4b6ed84, type: 3}
       propertyPath: target
@@ -6095,7 +6096,7 @@ PrefabInstance:
       objectReference: {fileID: 56682417}
     - target: {fileID: 7060667406775343766, guid: 7471f86cd3a31d541a4ea4e6a4b6ed84, type: 3}
       propertyPath: maxShield
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7060667406775343766, guid: 7471f86cd3a31d541a4ea4e6a4b6ed84, type: 3}
       propertyPath: shieldBar

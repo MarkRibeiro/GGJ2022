@@ -1844,7 +1844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7060667406775343766, guid: 7471f86cd3a31d541a4ea4e6a4b6ed84, type: 3}
       propertyPath: maxHP
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7060667406775343766, guid: 7471f86cd3a31d541a4ea4e6a4b6ed84, type: 3}
       propertyPath: target
@@ -1860,7 +1860,7 @@ PrefabInstance:
       objectReference: {fileID: 1817850817}
     - target: {fileID: 7060667406775343766, guid: 7471f86cd3a31d541a4ea4e6a4b6ed84, type: 3}
       propertyPath: maxShield
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7060667406775343766, guid: 7471f86cd3a31d541a4ea4e6a4b6ed84, type: 3}
       propertyPath: shieldBar
@@ -3364,6 +3364,7 @@ MonoBehaviour:
   y_endSprite: {fileID: 21300000, guid: de50bf03864bc2440bac8c0eba54e1f6, type: 3}
   p_endSprite: {fileID: 21300000, guid: 384a7e32678df4344af052c5b88da07c, type: 3}
   goodEnding: {fileID: 0}
+  diceTime: 1
 --- !u!114 &1180588258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6088,7 +6089,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7060667406775343766, guid: 7471f86cd3a31d541a4ea4e6a4b6ed84, type: 3}
       propertyPath: maxHP
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7060667406775343766, guid: 7471f86cd3a31d541a4ea4e6a4b6ed84, type: 3}
       propertyPath: target
@@ -6104,7 +6105,7 @@ PrefabInstance:
       objectReference: {fileID: 56682417}
     - target: {fileID: 7060667406775343766, guid: 7471f86cd3a31d541a4ea4e6a4b6ed84, type: 3}
       propertyPath: maxShield
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7060667406775343766, guid: 7471f86cd3a31d541a4ea4e6a4b6ed84, type: 3}
       propertyPath: shieldBar
