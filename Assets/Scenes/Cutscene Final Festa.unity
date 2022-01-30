@@ -928,6 +928,8 @@ MonoBehaviour:
   imageDisplay: {fileID: 711736814}
   textDiaplay: {fileID: 1422871410}
   nextScene: Festa
+  backArrow: {fileID: 0}
+  nextArrow: {fileID: 0}
 --- !u!114 &692866897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1340,7 +1342,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -55
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
