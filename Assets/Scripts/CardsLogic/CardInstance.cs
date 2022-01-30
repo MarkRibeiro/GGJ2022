@@ -44,5 +44,10 @@ public class CardInstance : MonoBehaviour
     {
         DeckManager dm = FindObjectOfType<DeckManager>();
         BattleSystem.instance.PlayCard(gameObject.GetComponent<CardInstance>(), dm.player);
+        var instance = AudioManager.instance;
+        if(instance != null)
+        {
+            instance.Play("CardPlay");
+        }
     }
 }
