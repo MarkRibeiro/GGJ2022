@@ -17,7 +17,9 @@ public class SelectedCharacterManager : MonoBehaviour
             player.spriteSheet = enemy.spriteSheet;
             enemy.spriteSheet = temp;
 
-
+            Card[] tempDeck = player.deck;
+            player.deck = enemy.deck;
+            enemy.deck = tempDeck;
 
             player.transform.rotation = Quaternion.Euler(0, 180, 0);
 

@@ -14,7 +14,9 @@ public class Card : ScriptableObject
     public int heartCost;
     [SerializeField]
     public CardEffect effect;
-    public Sprite mainSprite;
+    public Sprite y_mainSprite;
+    public Sprite p_mainSprite;
+
     public Sprite typeSprite;
     public Sprite effectSprite;
     public Color color;
