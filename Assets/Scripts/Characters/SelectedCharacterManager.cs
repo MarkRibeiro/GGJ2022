@@ -21,6 +21,13 @@ public class SelectedCharacterManager : MonoBehaviour
             player.deck = enemy.deck;
             enemy.deck = tempDeck;
 
+            // RectTransform tempRectTransform = player.GetComponent<RectTransform>();
+            // RectTransform playerTransform = player.GetComponent<RectTransform>();
+            // RectTransform EnemyTransform = enemy.GetComponent<RectTransform>();
+            // playerTransform.anchoredPosition = EnemyTransform.anchoredPosition;
+            // EnemyTransform.anchoredPosition = tempRectTransform.anchoredPosition;
+            // player.GetComponent<RectTransform>().anchoredPosition = enemy.GetComponent<RectTransform>().anchoredPosition;
+
             player.transform.rotation = Quaternion.Euler(0, 180, 0);
 
             enemy.transform.rotation = Quaternion.Euler(0, 180, 0);
