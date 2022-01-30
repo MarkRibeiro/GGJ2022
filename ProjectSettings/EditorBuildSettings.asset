@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/ChooseCharacter.unity
     guid: a61922aaa91380742bb8f119127f9d83
   - enabled: 1
-    path: Assets/Scenes/RaksScene.unity
+    path: Assets/Scenes/Cafe.unity
     guid: 038e9cf68e196794fbd54e32a7e54433
   - enabled: 1
     path: Assets/Scenes/RaksScene2.unity
