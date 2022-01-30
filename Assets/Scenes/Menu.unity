@@ -1063,7 +1063,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2106086600099195846, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_OverrideSorting
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2106086600099195846, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
@@ -1173,6 +1173,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.22668457
       objectReference: {fileID: 0}
+    - target: {fileID: 6893423245217358941, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 21a256d77a3f66545a6246dead67e5b9, type: 3}
     - target: {fileID: 8013889656830906239, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1874,19 +1878,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 792056372}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 134590178}
-        m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
-        m_MethodName: GoToScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ChooseCharacter
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &792056372 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2954368717867397021, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
@@ -2149,7 +2141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2106086600099195846, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_OverrideSorting
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2106086600099195846, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_OverridePixelPerfect
@@ -2263,6 +2255,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.22668457
       objectReference: {fileID: 0}
+    - target: {fileID: 6893423245217358941, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e06f87175cf590046ab8e03e3ea2df4b, type: 3}
     - target: {fileID: 8013889656830906239, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2786,7 +2782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2106086600099195846, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_OverrideSorting
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2106086600099195846, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
@@ -2896,6 +2892,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.22668457
       objectReference: {fileID: 0}
+    - target: {fileID: 6893423245217358941, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0ad98218869f28c4e88b57c0cf30ddd6, type: 3}
     - target: {fileID: 8013889656830906239, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2947,7 +2947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2106086600099195846, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_OverrideSorting
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2106086600099195846, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
@@ -3057,6 +3057,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.22668457
       objectReference: {fileID: 0}
+    - target: {fileID: 6893423245217358941, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a862603bd74d39b439482282caf2f131, type: 3}
     - target: {fileID: 8013889656830906239, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3812,7 +3816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2106086600099195846, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_OverrideSorting
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2106086600099195846, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
