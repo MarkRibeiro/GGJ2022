@@ -196,6 +196,7 @@ public class BattleSystem : MonoBehaviour
             case CardType.DEFENSE:
                 if (effect.AffectHp)
                 {
+                    AudioManager.PlaySound("Lifeup");
                     if (character.currHP + effect.effectValue > character.maxHP)
                     {
                         character.currHP = character.maxHP;
