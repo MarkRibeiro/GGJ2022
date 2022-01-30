@@ -25,6 +25,9 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private Sprite[] diceSides;
     [SerializeField] private GameObject[] dices;
 
+    [SerializeField] private string victoryText, defeatText;
+    [SerializeField] private Sprite y_endSprite, p_endSprite;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -264,13 +267,23 @@ public class BattleSystem : MonoBehaviour
     {
         endMatchScreen.SetActive(true);
         dm.player.handArea.gameObject.SetActive(false);
-        if (winner == dm.player)
+
+        if(CharacterManager.playerID == 0)
         {
-            endMatchScreen.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Você venceu";
+            endMatchScreen.transform.GetChild(0).GetComponent<Image>().sprite = y_endSprite;
         }
         else
         {
-            endMatchScreen.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Você perdeu";
+            endMatchScreen.transform.GetChild(0).GetComponent<Image>().sprite = p_endSprite;
+        }
+
+        if (winner == dm.player)
+        {
+            endMatchScreen.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = victoryText;
+        }
+        else
+        {
+            endMatchScreen.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = defeatText;
         }
     }
 

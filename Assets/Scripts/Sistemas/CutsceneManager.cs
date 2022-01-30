@@ -11,7 +11,6 @@ public class CutsceneManager : MonoBehaviour
 
     [TextArea(3, 10)]
     public string[] descriptions;
-    public Button forwardButton, backButton;
 
     [SerializeField] private Image imageDisplay;
     [SerializeField] private TextMeshProUGUI textDiaplay;
