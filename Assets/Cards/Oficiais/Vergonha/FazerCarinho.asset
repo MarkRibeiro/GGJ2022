@@ -15,7 +15,7 @@ MonoBehaviour:
   cardName: Fazer Carinho
   description: "Se jogada no momento certo, causa 5 de dano diretamente ao Orgulho
     da pessoa amada. Caso contr\xE1rio, leve 5 de dano no seu Orgulho."
-  brainsCost: 0
+  brainsCost: 1
   heartCost: 3
   effect:
     effectValue: 5

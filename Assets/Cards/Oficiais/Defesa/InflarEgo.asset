@@ -26,4 +26,4 @@ MonoBehaviour:
   p_mainSprite: {fileID: 21300000, guid: df13da187611d52498662259ab0ec8c1, type: 3}
   typeSprite: {fileID: 21300000, guid: 2d8064e908302af4fbbfba633625e8d3, type: 3}
   effectSprite: {fileID: 21300000, guid: 7f929b1c91836154f8216588e3c60f3e, type: 3}
-  color: {r: 0.48235294, g: 0.5137255, b: 0.7882353, a: 1}
+  color: {r: 0.5137255, g: 0.7019608, b: 0.16862746, a: 1}
