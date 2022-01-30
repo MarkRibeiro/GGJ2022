@@ -14,6 +14,7 @@ public class CardInstance : MonoBehaviour
     public Image cardImage;
     public Image typeImage;
     public Image effectImage;
+    public Image border;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class CardInstance : MonoBehaviour
         typeImage.sprite = card.typeSprite;
         effectImage.sprite = card.effectSprite;
 
+        border.color = card.color;
     }
 
     public void Play()

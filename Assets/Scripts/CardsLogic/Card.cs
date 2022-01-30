@@ -17,4 +17,5 @@ public class Card : ScriptableObject
     public Sprite mainSprite;
     public Sprite typeSprite;
     public Sprite effectSprite;
+    public Color color;
 }

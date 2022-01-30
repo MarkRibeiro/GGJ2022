@@ -587,6 +587,7 @@ MonoBehaviour:
   cardImage: {fileID: 6893423245217358941}
   typeImage: {fileID: 8433446330490151735}
   effectImage: {fileID: 6967243267479832150}
+  border: {fileID: 1380716043838897686}
 --- !u!114 &6878734196340987262
 MonoBehaviour:
   m_ObjectHideFlags: 0
