@@ -1454,8 +1454,8 @@ MonoBehaviour:
   imageDisplay: {fileID: 1667482437}
   textDiaplay: {fileID: 1892943796}
   nextScene: Escola
-  backArrow: {fileID: 0}
-  nextArrow: {fileID: 0}
+  backArrow: {fileID: 1452120453}
+  nextArrow: {fileID: 2141089756}
 --- !u!114 &2038799780
 MonoBehaviour:
   m_ObjectHideFlags: 0
