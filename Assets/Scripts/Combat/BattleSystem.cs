@@ -148,7 +148,14 @@ public class BattleSystem : MonoBehaviour
                 {
                     if (character.target.currShield > 0)
                     {
-                        character.target.currShield -= effect.effectValue;
+                        if(character.target.currShield - effect.effectValue < 0)
+                        {
+                            character.target.currShield = 0;
+                        }
+                        else
+                        {
+                            character.target.currShield -= effect.effectValue;
+                        }
                         character.target.shieldBar.SetValue(character.target.currShield);
                     }
                 }
@@ -157,12 +164,27 @@ public class BattleSystem : MonoBehaviour
             case CardType.DEFENSE:
                 if (effect.AffectHp)
                 {
-                    character.currHP += effect.effectValue;
+                    if(character.currHP + effect.effectValue > character.maxHP)
+                    {
+                        character.currHP = character.maxHP;
+                    }
+                    else
+                    {
+                        character.currHP += effect.effectValue;
+                    }
                     character.healthBar.SetValue(character.currHP);
                 }
                 else
                 {
-                    character.currShield += effect.effectValue;
+                    if(character.currShield + effect.effectValue > character.maxShield)
+                    {
+                        character.currShield = character.maxShield;
+                    }
+                    else
+                    {
+                        character.currShield += effect.effectValue;
+                    }
+
                     character.shieldBar.SetValue(character.currShield);
                 }
                 if (effect.changeTo != Expressions.KEEP)
