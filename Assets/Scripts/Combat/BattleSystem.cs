@@ -15,8 +15,8 @@ public enum BattleState
 public class BattleSystem : MonoBehaviour
 {
     public static BattleSystem instance;
-    public Color InvalidField = Color.white;
-    public Color InvalidCard = Color.white;
+    public Color InvalidField = Color.grey;
+    public Color InvalidCard = Color.red;
     public BattleState state;
     public bool FinalMatch = false;
     public DeckManager dm;
@@ -102,9 +102,9 @@ public class BattleSystem : MonoBehaviour
             int randomSide1 = Random.Range(0, 6);
             int randomSide2 = Random.Range(0, 6);
 
-            if(currentChar == dm.player)
+            if (currentChar == dm.player)
             {
-                if(CharacterManager.playerID == 0)
+                if (CharacterManager.playerID == 0)
                 {
                     dices[0].GetComponent<Image>().sprite = y_diceSides[randomSide1];
                     dices[1].GetComponent<Image>().sprite = y_diceSides[randomSide2];
@@ -117,7 +117,7 @@ public class BattleSystem : MonoBehaviour
             }
             else
             {
-                if(CharacterManager.playerID == 0)
+                if (CharacterManager.playerID == 0)
                 {
                     dices[0].GetComponent<Image>().sprite = p_diceSides[randomSide1];
                     dices[1].GetComponent<Image>().sprite = p_diceSides[randomSide2];
@@ -158,9 +158,9 @@ public class BattleSystem : MonoBehaviour
                     break;
             }
 
-            if(currentChar == dm.player)
+            if (currentChar == dm.player)
             {
-                if(CharacterManager.playerID == 0)
+                if (CharacterManager.playerID == 0)
                 {
                     dices[i].GetComponent<Image>().sprite = y_diceSides[result - 1];
                 }
@@ -171,7 +171,7 @@ public class BattleSystem : MonoBehaviour
             }
             else
             {
-                if(CharacterManager.playerID == 0)
+                if (CharacterManager.playerID == 0)
                 {
                     dices[i].GetComponent<Image>().sprite = p_diceSides[result - 1];
                 }
@@ -205,7 +205,7 @@ public class BattleSystem : MonoBehaviour
         currentChar.reason -= playedCard.card.brainsCost;
         currentChar.emotion -= playedCard.card.heartCost;
 
-        if(currentChar == dm.enemy)
+        if (currentChar == dm.enemy)
         {
             playedCard.gameObject.transform.position = enemyCardArea.transform.position;
         }
@@ -324,7 +324,7 @@ public class BattleSystem : MonoBehaviour
         }
         else if (state == BattleState.ENEMY_TURN)
         {
-            state = BattleState.PLAYER_TURN;            
+            state = BattleState.PLAYER_TURN;
             turnText.text = "Seu turno";
             PlayerTurn();
         }
@@ -418,7 +418,7 @@ public class BattleSystem : MonoBehaviour
                 }
                 if (_instance.card.heartCost > character.emotion)
                 {
-                    _instance.h_costText.color = Color.red;
+                    _instance.h_costText.color = InvalidField;
                 }
 
             }
