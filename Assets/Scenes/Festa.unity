@@ -1346,6 +1346,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354513520}
   m_CullTransparentMesh: 1
+--- !u!1 &355005745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 355005746}
+  m_Layer: 0
+  m_Name: EnemyCardArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &355005746
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355005745}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -50, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 575837479}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &362677692
 GameObject:
   m_ObjectHideFlags: 0
@@ -2179,6 +2209,7 @@ RectTransform:
   - {fileID: 444755487}
   - {fileID: 1793392881}
   - {fileID: 1667598770}
+  - {fileID: 355005746}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3417,6 +3448,7 @@ MonoBehaviour:
   p_endSprite: {fileID: 21300000, guid: 384a7e32678df4344af052c5b88da07c, type: 3}
   goodEnding: {fileID: 0}
   diceTime: 1
+  enemyCardArea: {fileID: 355005745}
 --- !u!114 &1180588258
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -29,6 +29,7 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private string victoryText, defeatText;
     [SerializeField] private Sprite y_endSprite, p_endSprite, goodEnding;
     [SerializeField] private float diceTime = 1.0f;
+    [SerializeField] private GameObject enemyCardArea;
 
     // Start is called before the first frame update
     void Start()
@@ -79,6 +80,7 @@ public class BattleSystem : MonoBehaviour
             CardInstance instance = card.GetComponent<CardInstance>();
             PlayCard(instance, dm.enemy);
             yield return new WaitForSeconds(1.0f);
+            card.transform.position = dm.enemy.handArea.transform.position;
         }
 
         EndTurn(dm.enemy);
@@ -195,19 +197,22 @@ public class BattleSystem : MonoBehaviour
         //Subtrair custos da carta
         if (playedCard.card.brainsCost > currentChar.reason || playedCard.card.heartCost > currentChar.emotion)
         {
-
             return;
         }
 
         currentChar.reason -= playedCard.card.brainsCost;
         currentChar.emotion -= playedCard.card.heartCost;
 
+        if(currentChar == dm.enemy)
+        {
+            playedCard.gameObject.transform.position = enemyCardArea.transform.position;
+        }
+
         //Aplicar efeito
         ApplyEffect(playedCard.card.effect, currentChar);
 
         //Destroy(playedCard.gameObject);
         VerifyCards(currentChar);
-
     }
 
     public void ApplyEffect(CardEffect effect, Character character)

@@ -2024,6 +2024,7 @@ RectTransform:
   - {fileID: 1917837617}
   - {fileID: 1788695671}
   - {fileID: 1793392881}
+  - {fileID: 1950501459}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3597,6 +3598,7 @@ MonoBehaviour:
   p_endSprite: {fileID: 21300000, guid: 0f9b1814075bc4f42b8f9fe95e7048a3, type: 3}
   goodEnding: {fileID: 0}
   diceTime: 1
+  enemyCardArea: {fileID: 1950501458}
 --- !u!114 &1180588258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5526,6 +5528,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1920639573}
   m_CullTransparentMesh: 1
+--- !u!1 &1950501458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1950501459}
+  m_Layer: 0
+  m_Name: EnemyCardArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1950501459
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950501458}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -50, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 575837479}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1965060908
 GameObject:
   m_ObjectHideFlags: 0
