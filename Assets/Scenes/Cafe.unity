@@ -2885,8 +2885,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be7d1e68f3a0e4a4bae2b2483e16277c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InvalidField: {r: 1, g: 1, b: 1, a: 1}
-  InvalidCard: {r: 1, g: 1, b: 1, a: 1}
+  InvalidField: {r: 1, g: 0.33333334, b: 0.33333334, a: 1}
+  InvalidCard: {r: 0.69803923, g: 0.69803923, b: 0.69803923, a: 1}
   state: 0
   FinalMatch: 1
   dm: {fileID: 758477563}
