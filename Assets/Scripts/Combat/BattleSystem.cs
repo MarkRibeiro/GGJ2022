@@ -267,7 +267,7 @@ public class BattleSystem : MonoBehaviour
                 }
                 else
                 {
-                    AudioManager.instance.Play("GainShield");
+                    AudioManager.PlaySound("GainShield");
                     if (character.currShield + effect.effectValue > character.maxShield)
                     {
                         character.currShield = character.maxShield;
