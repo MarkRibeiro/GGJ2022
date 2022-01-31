@@ -33,7 +33,6 @@ public class CardDrag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log(transform.name + " was clicked.");
         _dragging = true;
         _offset = Input.mousePosition - transform.position;
         _startPosition = transform.position;
