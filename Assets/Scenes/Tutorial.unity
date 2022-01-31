@@ -1692,7 +1692,7 @@ MonoBehaviour:
   descriptions:
   - "Existem dois tipos de barra de vida: a de Indiferen\xE7a, barra superior, e
     a de Orgulho, barra inferior. Aquele que levar a barra de Orgulho do oponente
-    \xE0 0 primeiro, ganha a partida. Por\xE9m, para dar dano \xE0 barra de Orgulho,
+    a 0 primeiro, ganha a partida. Por\xE9m, para dar dano \xE0 barra de Orgulho,
     \xE9 necess\xE1rio levar a barra de Indiferen\xE7a \xE0 0 antes."
   - "No jogo h\xE1 dois tipos de recursos: Raz\xE3o e Emo\xE7\xE3o. Esses recursos
     s\xE3o obtidos com o lan\xE7amento de dados no come\xE7o de cada turno.\r\nCada
