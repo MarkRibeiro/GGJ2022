@@ -21,7 +21,7 @@ MonoBehaviour:
     effectValue: 1
     AffectHp: 1
     cardType: 2
-    changeTo: 1
+    changeTo: 0
     RightExpression: 0
   y_mainSprite: {fileID: 21300000, guid: 3d7ecc47995879f4eb2052420546a27c, type: 3}
   p_mainSprite: {fileID: 21300000, guid: f359ce1eadf0819488e2802837f1532f, type: 3}
