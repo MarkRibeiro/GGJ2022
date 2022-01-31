@@ -78,6 +78,7 @@ public class BattleSystem : MonoBehaviour
         {
             CardInstance instance = card.GetComponent<CardInstance>();
             PlayCard(instance, dm.enemy);
+            yield return new WaitForSeconds(1.0f);
         }
 
         EndTurn(dm.enemy);
