@@ -30,6 +30,7 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private Sprite y_endSprite, p_endSprite, goodEnding;
     [SerializeField] private float diceTime = 1.0f;
     [SerializeField] private GameObject enemyCardArea;
+    [SerializeField] private TextMeshProUGUI turnText;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +45,7 @@ public class BattleSystem : MonoBehaviour
 
 
         state = BattleState.PLAYER_TURN;
+        turnText.text = "Seu turno";
         PlayerTurn();
 
     }
@@ -317,12 +319,13 @@ public class BattleSystem : MonoBehaviour
         if (state == BattleState.PLAYER_TURN)
         {
             state = BattleState.ENEMY_TURN;
+            turnText.text = "Turno do oponente";
             StartCoroutine(EnemyTurn());
         }
         else if (state == BattleState.ENEMY_TURN)
         {
-            Debug.Log("Fim do turno do oponente");
-            state = BattleState.PLAYER_TURN;
+            state = BattleState.PLAYER_TURN;            
+            turnText.text = "Seu turno";
             PlayerTurn();
         }
     }
@@ -331,8 +334,6 @@ public class BattleSystem : MonoBehaviour
     {
         endMatchScreen.SetActive(true);
         dm.player.handArea.gameObject.SetActive(false);
-
-        Debug.Log("END");
 
         if (winner == dm.player)
         {
@@ -369,16 +370,13 @@ public class BattleSystem : MonoBehaviour
         }
         if (FinalMatch)
         {
-            Debug.Log("AAA");
             if (PlayerVictory())
             {
-                Debug.Log("AAA");
                 endMatchScreen.transform.GetChild(0).GetComponent<Image>().sprite = goodEnding;
                 endMatchScreen.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>().text = victoryText;
             }
             else
             {
-                Debug.Log("bbb");
                 if (CharacterManager.playerID == 0)
                 {
                     endMatchScreen.transform.GetChild(0).GetComponent<Image>().sprite = y_endSprite;

@@ -40,9 +40,7 @@ public class HandArea : MonoBehaviour
 
     private void UpdatePositions()
     {
-        Debug.Log("Updating positions");
         int childrenCount = transform.childCount;
-        Debug.Log(childrenCount);
         lastChildCount = childrenCount;
         if (childrenCount == 0)
         {
@@ -53,10 +51,6 @@ public class HandArea : MonoBehaviour
             RectTransform child = transform.GetChild(0) as RectTransform;
             var anim = child.GetComponent<CardAnimation>();
             Vector2 position = rect.rect.center;
-            Debug.Log(position);
-            Debug.Log(rect.rect.xMin);
-            Debug.Log(rect.rect.xMax);
-            Debug.Log(rect.rect.width);
             if (anim == null)
             {
                 child.position = position;
