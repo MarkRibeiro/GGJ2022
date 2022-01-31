@@ -69,9 +69,9 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(StartTurn(dm.player));
     }
 
-    private void EnemyTurn()
+    private IEnumerator EnemyTurn()
     {
-        StartCoroutine(StartTurn(dm.enemy));
+        yield return StartCoroutine(StartTurn(dm.enemy));
 
         //Jogar cartas da sua mao, se possivel
         foreach (GameObject card in dm.enemy.currentHand)
@@ -97,15 +97,31 @@ public class BattleSystem : MonoBehaviour
             int randomSide1 = Random.Range(0, 6);
             int randomSide2 = Random.Range(0, 6);
 
-            if(CharacterManager.playerID == 0)
+            if(currentChar == dm.player)
             {
-                dices[0].GetComponent<Image>().sprite = y_diceSides[randomSide1];
-                dices[1].GetComponent<Image>().sprite = y_diceSides[randomSide2];
+                if(CharacterManager.playerID == 0)
+                {
+                    dices[0].GetComponent<Image>().sprite = y_diceSides[randomSide1];
+                    dices[1].GetComponent<Image>().sprite = y_diceSides[randomSide2];
+                }
+                else
+                {
+                    dices[0].GetComponent<Image>().sprite = p_diceSides[randomSide1];
+                    dices[1].GetComponent<Image>().sprite = p_diceSides[randomSide2];
+                }
             }
             else
             {
-                dices[0].GetComponent<Image>().sprite = p_diceSides[randomSide1];
-                dices[1].GetComponent<Image>().sprite = p_diceSides[randomSide2];
+                if(CharacterManager.playerID == 0)
+                {
+                    dices[0].GetComponent<Image>().sprite = p_diceSides[randomSide1];
+                    dices[1].GetComponent<Image>().sprite = p_diceSides[randomSide2];
+                }
+                else
+                {
+                    dices[0].GetComponent<Image>().sprite = y_diceSides[randomSide1];
+                    dices[1].GetComponent<Image>().sprite = y_diceSides[randomSide2];
+                }
             }
 
             yield return new WaitForSeconds(0.05f);
@@ -137,13 +153,27 @@ public class BattleSystem : MonoBehaviour
                     break;
             }
 
-            if(CharacterManager.playerID == 0)
+            if(currentChar == dm.player)
             {
-                dices[i].GetComponent<Image>().sprite = y_diceSides[result - 1];
+                if(CharacterManager.playerID == 0)
+                {
+                    dices[i].GetComponent<Image>().sprite = y_diceSides[result - 1];
+                }
+                else
+                {
+                    dices[i].GetComponent<Image>().sprite = p_diceSides[result - 1];
+                }
             }
             else
             {
-                dices[i].GetComponent<Image>().sprite = p_diceSides[result - 1];
+                if(CharacterManager.playerID == 0)
+                {
+                    dices[i].GetComponent<Image>().sprite = p_diceSides[result - 1];
+                }
+                else
+                {
+                    dices[i].GetComponent<Image>().sprite = y_diceSides[result - 1];
+                }
             }
 
         }
@@ -281,7 +311,7 @@ public class BattleSystem : MonoBehaviour
         if (state == BattleState.PLAYER_TURN)
         {
             state = BattleState.ENEMY_TURN;
-            EnemyTurn();
+            StartCoroutine(EnemyTurn());
         }
         else if (state == BattleState.ENEMY_TURN)
         {
