@@ -24,6 +24,12 @@ public class HandArea : MonoBehaviour
     {
         UpdatePositions();
     }
+    private void Start() {
+        UpdatePositions();
+    }
+    private void OnEnable() {
+        UpdatePositions();
+    }
     private void LateUpdate()
     {
         if (transform.childCount != lastChildCount)
@@ -34,7 +40,9 @@ public class HandArea : MonoBehaviour
 
     private void UpdatePositions()
     {
+        Debug.Log("Updating positions");
         int childrenCount = transform.childCount;
+        Debug.Log(childrenCount);
         lastChildCount = childrenCount;
         if (childrenCount == 0)
         {
