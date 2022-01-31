@@ -2682,13 +2682,20 @@ MonoBehaviour:
   dm: {fileID: 758477563}
   resource_limit: 10
   endMatchScreen: {fileID: 222087910}
-  diceSides:
-  - {fileID: 21300000, guid: de8dbe92e09250c4aba6f53a6fa7d3f0, type: 3}
-  - {fileID: 21300000, guid: a8a0e86981b85ea4592099ec8148653c, type: 3}
-  - {fileID: 21300000, guid: 70aa04eb6f0be394f8353ba2a9d6012e, type: 3}
-  - {fileID: 21300000, guid: 73a2bff90494fe14aa25b4e287dec723, type: 3}
-  - {fileID: 21300000, guid: bd208fb11df21ce498aa8205eca0a102, type: 3}
-  - {fileID: 21300000, guid: bd208fb11df21ce498aa8205eca0a102, type: 3}
+  y_diceSides:
+  - {fileID: 21300000, guid: 931f8131654117c4aab86bb546357d87, type: 3}
+  - {fileID: 21300000, guid: d147a16d06823274e8e9f8dbb8f6aee9, type: 3}
+  - {fileID: 21300000, guid: 9e4e55dfe59a02c46b27fd2438e44a53, type: 3}
+  - {fileID: 21300000, guid: cf82e8052c0a500448b932a37c9fa478, type: 3}
+  - {fileID: 21300000, guid: 9b0ce603dfcb89342b9f0e3a706a593c, type: 3}
+  - {fileID: 21300000, guid: 9b0ce603dfcb89342b9f0e3a706a593c, type: 3}
+  p_diceSides:
+  - {fileID: 21300000, guid: 79034501acb8f614a907b40f206e1910, type: 3}
+  - {fileID: 21300000, guid: aa6c6c5f1bbd8a7428377573ecd2f182, type: 3}
+  - {fileID: 21300000, guid: d9dd31f3b646c9347b71ee9b0d690ed4, type: 3}
+  - {fileID: 21300000, guid: 2439e6111f7c3cb4991bb71cd7a877d0, type: 3}
+  - {fileID: 21300000, guid: dd01d083a8447b643a4f95848118cf03, type: 3}
+  - {fileID: 21300000, guid: dd01d083a8447b643a4f95848118cf03, type: 3}
   dices:
   - {fileID: 504811815}
   - {fileID: 1803577958}

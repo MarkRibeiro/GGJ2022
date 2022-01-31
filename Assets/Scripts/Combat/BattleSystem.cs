@@ -23,7 +23,7 @@ public class BattleSystem : MonoBehaviour
     public int resource_limit;
     public GameObject endMatchScreen;
 
-    [SerializeField] private Sprite[] diceSides;
+    [SerializeField] private Sprite[] y_diceSides, p_diceSides;
     [SerializeField] private GameObject[] dices;
 
     [SerializeField] private string victoryText, defeatText;
@@ -97,8 +97,16 @@ public class BattleSystem : MonoBehaviour
             int randomSide1 = Random.Range(0, 6);
             int randomSide2 = Random.Range(0, 6);
 
-            dices[0].GetComponent<Image>().sprite = diceSides[randomSide1];
-            dices[1].GetComponent<Image>().sprite = diceSides[randomSide2];
+            if(CharacterManager.playerID == 0)
+            {
+                dices[0].GetComponent<Image>().sprite = y_diceSides[randomSide1];
+                dices[1].GetComponent<Image>().sprite = y_diceSides[randomSide2];
+            }
+            else
+            {
+                dices[0].GetComponent<Image>().sprite = p_diceSides[randomSide1];
+                dices[1].GetComponent<Image>().sprite = p_diceSides[randomSide2];
+            }
 
             yield return new WaitForSeconds(0.05f);
         }
@@ -128,7 +136,15 @@ public class BattleSystem : MonoBehaviour
                     emotion_gain += 1;
                     break;
             }
-            dices[i].GetComponent<Image>().sprite = diceSides[result - 1];
+
+            if(CharacterManager.playerID == 0)
+            {
+                dices[i].GetComponent<Image>().sprite = y_diceSides[result - 1];
+            }
+            else
+            {
+                dices[i].GetComponent<Image>().sprite = p_diceSides[result - 1];
+            }
 
         }
 
