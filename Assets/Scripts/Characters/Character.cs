@@ -69,7 +69,19 @@ public class Character : MonoBehaviour
                 currentExpression = Expressions.SMUG;
                 break;
             case (Expressions.RANDOM):
-                currentExpression = Expressions.RANDOM;
+                var rand = Random.Range(0, 3);
+                switch (rand)
+                {
+                    case (0):
+                        currentExpression = Expressions.NORMAL;
+                        break;
+                    case (1):
+                        currentExpression = Expressions.SHAME;
+                        break;
+                    case (2):
+                        currentExpression = Expressions.SMUG;
+                        break;
+                }
                 break;
             default:
                 currentExpression = Expressions.NORMAL;
