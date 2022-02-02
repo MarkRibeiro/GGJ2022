@@ -11,6 +11,7 @@ public class CutsceneManager : MonoBehaviour
 
     [TextArea(3, 10)]
     public string[] descriptions;
+    public TextMeshProUGUI buttonText;
 
     [SerializeField] private Image imageDisplay;
     [SerializeField] private TextMeshProUGUI textDiaplay;
@@ -50,6 +51,7 @@ public class CutsceneManager : MonoBehaviour
             backArrow.SetActive(currentIndex != 0);
             nextArrow.SetActive(currentIndex != scenes.Length - 1);
         }
+        buttonText.text = currentIndex == scenes.Length-1?"Próximo":"Pular";
 
         imageDisplay.sprite = scenes[currentIndex];
         textDiaplay.text = descriptions[currentIndex];
