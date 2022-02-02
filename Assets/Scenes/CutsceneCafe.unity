@@ -696,7 +696,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -100, y: 40}
+  m_AnchoredPosition: {x: -700, y: 40}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1444990327
@@ -1184,6 +1184,7 @@ MonoBehaviour:
     perfeito para se humilh- Digo, se declarar!"
   - "\xC9 hora da batalha final! Ser\xE1 voc\xEAs v\xE3o finalmente parar de jogar
     cartas e partir para o romance?"
+  buttonText: {fileID: 1816243937}
   imageDisplay: {fileID: 1667482437}
   textDiaplay: {fileID: 1892943796}
   nextScene: Cafe
