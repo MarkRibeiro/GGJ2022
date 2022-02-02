@@ -166,6 +166,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4802712725629121865, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4802712725838096013, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: m_Name
       value: BattleScene
@@ -221,6 +225,10 @@ PrefabInstance:
     - target: {fileID: 4802712726425253182, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802712726490084638, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -400
       objectReference: {fileID: 0}
     - target: {fileID: 5987410981182542405, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: m_AnchorMax.x
