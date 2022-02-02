@@ -4907,6 +4907,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4802712726023862726}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4802712726801238155
 GameObject:
   m_ObjectHideFlags: 0
@@ -6070,6 +6082,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4802712726890472357}
     - target: {fileID: 8320319251247605976, guid: a2fe04ef8fc301642b82903f74565257, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 4802712726023862726}
+    - target: {fileID: 8320319251247605976, guid: a2fe04ef8fc301642b82903f74565257, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
@@ -6384,6 +6400,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4802712725211917927}
     m_Modifications:
+    - target: {fileID: 1317049160158389371, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
+      propertyPath: card
+      value: 
+      objectReference: {fileID: 11400000, guid: 5546900e79322f84a9fa601ad12f49f7, type: 2}
     - target: {fileID: 2954368717867397018, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
