@@ -38,11 +38,11 @@ public class CardAnimation : MonoBehaviour
     private IEnumerator GoToPositionCoroutine(Vector3 position)
     {
         float t = 0;
-        Vector3 startPosition = transform.position;
+        Vector2 startPosition = rect.anchoredPosition;
         while (t < positionTime)
         {
             t += Time.deltaTime;
-            rect.anchoredPosition3D = Vector3.Lerp(startPosition, position, positionCurve.Evaluate(t/ positionTime));
+            rect.anchoredPosition = Vector2.Lerp(startPosition, new Vector2(position.x,0), positionCurve.Evaluate(t/ positionTime));
             yield return new WaitForEndOfFrame();
         }
         positionCoroutine = null;

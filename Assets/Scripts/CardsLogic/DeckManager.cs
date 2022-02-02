@@ -26,9 +26,8 @@ public class DeckManager : MonoBehaviour
         for(int i = 0; i < handSize; i++)
         {
             newCard.card = deck[i];
-            GameObject instance = Instantiate(cardPrefab, handArea.transform.position, Quaternion.identity);
+            GameObject instance = Instantiate(cardPrefab, handArea.transform);
             currentHand.Add(instance);
-            instance.transform.SetParent(handArea.transform);
         }
     }
 

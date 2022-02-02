@@ -24,18 +24,10 @@ public class HandArea : MonoBehaviour
     {
         UpdatePositions();
     }
-    private void Start() {
-        UpdatePositions();
-    }
-    private void OnEnable() {
-        UpdatePositions();
-    }
+
     private void LateUpdate()
     {
-        if (transform.childCount != lastChildCount)
-        {
-            UpdatePositions();
-        }
+        UpdatePositions();
     }
 
     private void UpdatePositions()
@@ -63,18 +55,26 @@ public class HandArea : MonoBehaviour
             return;
         }
 
-        float step = (rect.rect.width - 2*margin) / (childrenCount + 1);
 
-        foreach (RectTransform child in transform)
+        float childWidth = transform.GetChild(0).GetComponent<RectTransform>().rect.width;
+        float r2 = (rect.rect.width + margin - childrenCount *(childWidth + margin)) ;
+        float start = r2 / 2 + childWidth / 2;
+
+        // Debug.Log((childWidth + margin)*childrenCount - margin);
+        // Debug.Log(rect.rect.width);
+
+        foreach(RectTransform child in transform)
         {
             var anim = child.GetComponent<CardAnimation>();
+            float xposition = rect.rect.xMin + start;
             if (anim == null)
             {
-                child.position = new Vector2(rect.rect.xMin + step * (child.GetSiblingIndex() + 1 ) + margin, 0);
+                child.anchoredPosition = new Vector2(xposition + child.GetSiblingIndex() * Mathf.Min(childWidth + margin, rect.rect.width! / (float)childrenCount ), rect.rect.center.y);
             }
             else
             {
-                anim.GoToPosition(new Vector2(rect.rect.xMin + step * (child.GetSiblingIndex() + 1 ) + margin, 0));
+                anim.GoToPosition(new Vector2(xposition + child.GetSiblingIndex() * Mathf.Min(childWidth + margin, rect.rect.width! / (float)childrenCount ), rect.rect.center.y));
+                anim.SetRotation(Quaternion.identity);
             }
         }
 
