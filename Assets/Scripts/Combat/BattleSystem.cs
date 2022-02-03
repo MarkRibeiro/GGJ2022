@@ -29,6 +29,8 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private string victoryText, defeatText;
     [SerializeField] private Sprite y_endSprite, p_endSprite, goodEnding;
     [SerializeField] private float diceTime = 1.0f;
+    [SerializeField] private float enemyTime = 1.0f;
+
     [SerializeField] private GameObject enemyCardArea;
     [SerializeField] private TextMeshProUGUI turnText;
     [SerializeField] private GameObject turnTextBox;
@@ -99,7 +101,7 @@ public class BattleSystem : MonoBehaviour
         {
             CardInstance instance = card.GetComponent<CardInstance>();
             PlayCard(instance, dm.enemy);
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(enemyTime);
             card.transform.position = dm.enemy.handArea.transform.position;
         }
 
