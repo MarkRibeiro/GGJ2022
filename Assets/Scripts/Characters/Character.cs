@@ -57,6 +57,7 @@ public class Character : MonoBehaviour
 
     public void ChangeExpression(Expressions emotion)
     {
+        Debug.Log(emotion);
         switch (emotion)
         {
             case (Expressions.NORMAL):
@@ -72,19 +73,7 @@ public class Character : MonoBehaviour
                 currentExpression = Expressions.DEFEAT;
                 break;
             case (Expressions.RANDOM):
-                var rand = Random.Range(0, 3);
-                switch (rand)
-                {
-                    case (0):
-                        currentExpression = Expressions.NORMAL;
-                        break;
-                    case (1):
-                        currentExpression = Expressions.SHAME;
-                        break;
-                    case (2):
-                        currentExpression = Expressions.SMUG;
-                        break;
-                }
+                currentExpression = Expressions.RANDOM;
                 break;
             default:
                 currentExpression = Expressions.NORMAL;
