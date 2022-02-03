@@ -250,5 +250,9 @@ PrefabInstance:
       propertyPath: deck
       value: 
       objectReference: {fileID: 11400000, guid: 4ce0e2d800ee1254587f9a9977098c53, type: 2}
+    - target: {fileID: 8394204836274476426, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
