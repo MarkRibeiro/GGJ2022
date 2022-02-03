@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc478351a038a804e8badf6ae2009c41, type: 3}
   m_Name: DesviarOlhar
   m_EditorClassIdentifier: 
-  cardName: Desviar o Olhar
+  cardName: Desviar o olhar
   description: "Recupera 1 ponto da sua <color=#7B83C9><b>Indiferen\xE7a</b></color>."
   brainsCost: 0
   heartCost: 1
