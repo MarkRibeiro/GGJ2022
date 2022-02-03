@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8171b3c052307f44bfc4e87c513c5a1, type: 3}
-  m_Name: Deck Defensivo
+  m_Name: Deck Defensivo 1
   m_EditorClassIdentifier: 
   cards:
   - {fileID: 11400000, guid: d7cfe8a00cb9668408a168012cf1cb28, type: 2}
