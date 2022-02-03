@@ -68,6 +68,9 @@ public class Character : MonoBehaviour
             case (Expressions.SMUG):
                 currentExpression = Expressions.SMUG;
                 break;
+            case (Expressions.DEFEAT):
+                currentExpression = Expressions.DEFEAT;
+                break;
             case (Expressions.RANDOM):
                 var rand = Random.Range(0, 3);
                 switch (rand)
@@ -102,6 +105,9 @@ public class Character : MonoBehaviour
                 break;
             case (Expressions.SMUG):
                 index = 2;
+                break;
+            case (Expressions.DEFEAT):
+                index = 3;
                 break;
             case (Expressions.RANDOM):
                 index = Random.Range(0, 3);

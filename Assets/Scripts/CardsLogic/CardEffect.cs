@@ -15,6 +15,7 @@ public enum Expressions
     SHAME,
     SMUG,
     NORMAL,
+    DEFEAT,
     KEEP,
     RANDOM
 }

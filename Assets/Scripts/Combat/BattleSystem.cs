@@ -254,7 +254,7 @@ public class BattleSystem : MonoBehaviour
                         character.target.healthBar.SetValue(character.target.currHP);
                         if (character.target.currHP <= 0)
                         {
-                            EndMatch(character);
+                            StartCoroutine(EndMatch(character));
                         }
                     }
                 }
@@ -317,7 +317,7 @@ public class BattleSystem : MonoBehaviour
                     character.target.healthBar.SetValue(character.target.currHP);
                     if (character.target.currHP <= 0)
                     {
-                        EndMatch(character);
+                        StartCoroutine(EndMatch(character));
                     }
                 }
                 else
@@ -327,7 +327,7 @@ public class BattleSystem : MonoBehaviour
                     character.healthBar.SetValue(character.currHP);
                     if (character.currHP <= 0)
                     {
-                        EndMatch(character.target);
+                        StartCoroutine(EndMatch(character.target));
                     }
                 }
                 break;
@@ -357,8 +357,11 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    public void EndMatch(Character winner)
+    public IEnumerator EndMatch(Character winner)
     {
+        var loser = winner == dm.player ? dm.enemy : dm.player;
+        loser.ChangeExpression(Expressions.DEFEAT);
+        yield return new WaitForSeconds(1f);
         endMatchScreen.SetActive(true);
         dm.player.handArea.gameObject.SetActive(false);
 
