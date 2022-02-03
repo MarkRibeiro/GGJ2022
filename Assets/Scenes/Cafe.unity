@@ -350,6 +350,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4802712725629121867, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5b988f918e0b62044919cd810b7cf045, type: 3}
     - target: {fileID: 4802712725838096013, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: m_Name
       value: BattleScene
