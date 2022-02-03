@@ -85,6 +85,10 @@ public class BattleSystem : MonoBehaviour
         dm.DrawHand(currentChar.deck.cards, currentChar.currentHand, currentChar.handArea);
         VerifyCards(currentChar);
 
+        if(currentChar == dm.player)
+        {
+            endTurnButton.SetActive(true);
+        }
     }
 
     private void PlayerTurn()
@@ -347,7 +351,6 @@ public class BattleSystem : MonoBehaviour
         else if (state == BattleState.ENEMY_TURN)
         {
             state = BattleState.PLAYER_TURN;
-            endTurnButton.SetActive(true);
             turnTextBox.GetComponent<Image>().color = playerColor;
             turnText.text = "Seu turno";
             PlayerTurn();
