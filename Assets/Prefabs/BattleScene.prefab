@@ -1541,6 +1541,10 @@ MonoBehaviour:
   p_ReasonImage: {fileID: 4802712725729257982}
   e_EmotionImage: {fileID: 4802712726073577768}
   e_ReasonImage: {fileID: 4802712725578205091}
+  p_EmotionBox: {fileID: 4802712726411823743}
+  p_ReasonBox: {fileID: 4802712726019840279}
+  e_EmotionBox: {fileID: 4802712726677322126}
+  e_ReasonBox: {fileID: 4802712726469932512}
   p_EmotionText: {fileID: 4802712726255236988}
   p_ReasonText: {fileID: 4802712725883155255}
   e_EmotionText: {fileID: 4802712724924601135}
@@ -1549,6 +1553,8 @@ MonoBehaviour:
   p_ReasonSprite: {fileID: 21300000, guid: 8131fe6630f6301408df700b9e02b337, type: 3}
   y_EmotionSprite: {fileID: 21300000, guid: 3b887af96f93a2442ac0aa05d5485c80, type: 3}
   y_ReasonSprite: {fileID: 21300000, guid: 0343003e597fd2f499ab9c4a1a107a9c, type: 3}
+  p_BoxSprite: {fileID: 21300000, guid: 5986a721eca73904589f90a7ce44532f, type: 3}
+  y_BoxSprite: {fileID: 21300000, guid: 0e8702d30156d2a4cbc724805c2ba7ca, type: 3}
 --- !u!1 &4802712725271968304
 GameObject:
   m_ObjectHideFlags: 0
