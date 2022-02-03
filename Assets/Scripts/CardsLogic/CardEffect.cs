@@ -24,9 +24,9 @@ public enum Expressions
 public class CardEffect
 {
     public int effectValue;
-    public bool AffectHp;
+    public bool affectHp;
     public CardType cardType;
     public Expressions changeTo;
-    public Expressions RightExpression;
+    public Expressions rightExpression;
 
 }

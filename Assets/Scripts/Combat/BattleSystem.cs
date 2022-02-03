@@ -30,6 +30,7 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private Sprite y_endSprite, p_endSprite, goodEnding;
     [SerializeField] private float diceTime = 1.0f;
     [SerializeField] private float enemyTime = 1.0f;
+    [SerializeField] [Range(0,1)] private float wrongShameChance = 0.3f;
 
     [SerializeField] private GameObject enemyCardArea;
     [SerializeField] private TextMeshProUGUI turnText;
@@ -45,7 +46,7 @@ public class BattleSystem : MonoBehaviour
         instance = this;
         state = BattleState.START;
 
-        if(CharacterManager.playerID == 0)
+        if (CharacterManager.playerID == 0)
         {
             ColorUtility.TryParseHtmlString("#BCA0F0", out enemyColor);
             ColorUtility.TryParseHtmlString("#F1CF87", out playerColor);
@@ -85,7 +86,7 @@ public class BattleSystem : MonoBehaviour
         dm.DrawHand(currentChar.deck.cards, currentChar.currentHand, currentChar.handArea);
         VerifyCards(currentChar);
 
-        if(currentChar == dm.player)
+        if (currentChar == dm.player)
         {
             endTurnButton.SetActive(true);
         }
@@ -96,17 +97,60 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(StartTurn(dm.player));
     }
 
+    private GameObject ChooseCard(List<GameObject> allPossibleCards)
+    {
+        var enemy = dm.enemy;
+        var player = dm.player;
+        List<GameObject> eligibleCards = new List<GameObject>();
+
+        foreach (GameObject cardGO in dm.enemy.currentHand)
+        {
+            Card card = cardGO.GetComponent<CardInstance>().card;
+            if (enemy.currShield >= enemy.maxShield && card.effect.cardType == CardType.DEFENSE && !card.effect.affectHp)
+            {
+                continue;
+            }
+            if (enemy.currHP >= enemy.maxHP && card.effect.cardType == CardType.DEFENSE && card.effect.affectHp)
+            {
+                continue;
+            }
+            if(player.currShield > 0 && (card.effect.cardType == CardType.ATTACK) && card.effect.affectHp)
+            {
+                continue;
+            }
+            if(player.currShield <= 0 && (card.effect.cardType == CardType.ATTACK) && !card.effect.affectHp)
+            {
+                continue;
+            }
+            if(card.effect.cardType == CardType.SHAME && (player.currentExpression != card.effect.rightExpression))
+            {
+                if(Random.Range(0.0f, 1.0f) < wrongShameChance)
+                {
+                    continue;
+                }
+            }
+            eligibleCards.Add(cardGO);
+        }
+        if(eligibleCards.Count == 0)
+        {
+            return null;
+        }
+        return eligibleCards[Random.Range(0, eligibleCards.Count)];
+    }
+
     private IEnumerator EnemyTurn()
     {
+
         yield return StartCoroutine(StartTurn(dm.enemy));
 
-        //Jogar cartas da sua mao, se possivel
-        foreach (GameObject card in dm.enemy.currentHand)
+        var currentCard = ChooseCard(dm.enemy.currentHand);
+
+        while (currentCard != null)
         {
-            CardInstance instance = card.GetComponent<CardInstance>();
-            PlayCard(instance, dm.enemy);
+            dm.enemy.currentHand.Remove(currentCard);
+            PlayCard(currentCard.GetComponent<CardInstance>(), dm.enemy);
             yield return new WaitForSeconds(enemyTime);
-            card.transform.position = dm.enemy.handArea.transform.position;
+            currentCard = ChooseCard(dm.enemy.currentHand);
         }
 
         EndTurn(dm.enemy);
@@ -231,13 +275,16 @@ public class BattleSystem : MonoBehaviour
 
         if (currentChar == dm.enemy)
         {
+            playedCard.transform.SetParent(enemyCardArea.transform);
             playedCard.gameObject.transform.position = enemyCardArea.transform.position;
+            playedCard.GetComponent<Animator>().SetTrigger("Use");
         }
 
         //Aplicar efeito
         ApplyEffect(playedCard.card.effect, currentChar);
 
-        //Destroy(playedCard.gameObject);
+        // CARTA É DESTRUIDA POR EVENTO DE ANIMAÇÃO
+
         VerifyCards(currentChar);
     }
 
@@ -246,7 +293,7 @@ public class BattleSystem : MonoBehaviour
         switch (effect.cardType)
         {
             case CardType.ATTACK:
-                if (effect.AffectHp)
+                if (effect.affectHp)
                 {
                     if (character.target.currShield <= 0)
                     {
@@ -276,7 +323,7 @@ public class BattleSystem : MonoBehaviour
                 character.target.ChangeExpression(effect.changeTo);
                 break;
             case CardType.DEFENSE:
-                if (effect.AffectHp)
+                if (effect.affectHp)
                 {
                     AudioManager.PlaySound("Lifeup");
                     if (character.currHP + effect.effectValue > character.maxHP)
@@ -310,7 +357,7 @@ public class BattleSystem : MonoBehaviour
                 break;
             case CardType.SHAME:
                 //verificar se a expression atual e a correta
-                if (character.target.currentExpression == effect.RightExpression)
+                if (character.target.currentExpression == effect.rightExpression)
                 {
                     character.target.currHP -= effect.effectValue;
                     character.target.ChangeExpression(effect.changeTo);
