@@ -22,7 +22,7 @@ public class HealthBar : MonoBehaviour
         bar.value = value;
 
         fill.color = gradient.Evaluate(bar.normalizedValue);
-        if(value == 0)
+        if(value <= 0)
         {
             fill.color = Color.clear;
         }
