@@ -5981,6 +5981,7 @@ MonoBehaviour:
   enemyCardArea: {fileID: 4802712725605797489}
   turnText: {fileID: 4802712725882676557}
   turnTextBox: {fileID: 4802712726023862726}
+  endTurnButton: {fileID: 4802712726372790276}
 --- !u!114 &4802712726890472356
 MonoBehaviour:
   m_ObjectHideFlags: 0

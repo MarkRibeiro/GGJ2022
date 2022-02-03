@@ -32,6 +32,8 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private GameObject enemyCardArea;
     [SerializeField] private TextMeshProUGUI turnText;
     [SerializeField] private GameObject turnTextBox;
+    [SerializeField] private GameObject endTurnButton;
+
 
     private Color playerColor, enemyColor;
 
@@ -335,6 +337,7 @@ public class BattleSystem : MonoBehaviour
         if (state == BattleState.PLAYER_TURN)
         {
             state = BattleState.ENEMY_TURN;
+            endTurnButton.SetActive(false);
             turnTextBox.GetComponent<Image>().color = enemyColor;
             turnText.text = "Turno do oponente";
             StartCoroutine(EnemyTurn());
@@ -342,6 +345,7 @@ public class BattleSystem : MonoBehaviour
         else if (state == BattleState.ENEMY_TURN)
         {
             state = BattleState.PLAYER_TURN;
+            endTurnButton.SetActive(true);
             turnTextBox.GetComponent<Image>().color = playerColor;
             turnText.text = "Seu turno";
             PlayerTurn();
