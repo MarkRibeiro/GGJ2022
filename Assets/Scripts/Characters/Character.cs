@@ -21,7 +21,7 @@ public class Character : MonoBehaviour
     private Image image;
 
     //Cartas
-    public Card[] deck;
+    public Deck deck;
     public List<GameObject> currentHand;
 
     public RectTransform handArea;

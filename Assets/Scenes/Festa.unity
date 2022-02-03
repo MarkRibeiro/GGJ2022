@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2547399528705127252, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: deck
+      value: 
+      objectReference: {fileID: 11400000, guid: 7d92989462d451d48a12a8b0d4414fba, type: 2}
     - target: {fileID: 3370133481026725487, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -242,5 +246,9 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6811903639672604542, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: deck
+      value: 
+      objectReference: {fileID: 11400000, guid: 4ce0e2d800ee1254587f9a9977098c53, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}

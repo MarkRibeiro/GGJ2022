@@ -8,18 +8,18 @@ public class DeckManager : MonoBehaviour
     [SerializeField] private int handSize;
     [SerializeField] private GameObject cardPrefab;
 
-    public void Shuffle(Card[] deck)
+    public void Shuffle(List<Card> deck)
     {
-        for(int i = 0; i < deck.Length - 1; i++)
+        for(int i = 0; i < deck.Count - 1; i++)
         {
-            int index = Random.Range(i, deck.Length);
+            int index = Random.Range(i, deck.Count);
             Card randomCard = deck[index];
             deck[index] = deck[i];
             deck[i] = randomCard;
         }
     }
 
-    public void DrawHand(Card[] deck, List<GameObject> currentHand, RectTransform handArea)
+    public void DrawHand(List<Card> deck, List<GameObject> currentHand, RectTransform handArea)
     {
         CardInstance newCard = cardPrefab.GetComponent<CardInstance>();
 

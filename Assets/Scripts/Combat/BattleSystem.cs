@@ -61,8 +61,8 @@ public class BattleSystem : MonoBehaviour
         dices[1].SetActive(false);
 
         //Comprar carta
-        dm.Shuffle(currentChar.deck);
-        dm.DrawHand(currentChar.deck, currentChar.currentHand, currentChar.handArea);
+        dm.Shuffle(currentChar.deck.cards);
+        dm.DrawHand(currentChar.deck.cards, currentChar.currentHand, currentChar.handArea);
         VerifyCards(currentChar);
 
     }

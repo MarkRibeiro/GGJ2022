@@ -17,7 +17,7 @@ public class SelectedCharacterManager : MonoBehaviour
             player.spriteSheet = enemy.spriteSheet;
             enemy.spriteSheet = temp;
 
-            Card[] tempDeck = player.deck;
+            Deck tempDeck = player.deck;
             player.deck = enemy.deck;
             enemy.deck = tempDeck;
 
