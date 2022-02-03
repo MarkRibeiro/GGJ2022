@@ -31,12 +31,27 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private float diceTime = 1.0f;
     [SerializeField] private GameObject enemyCardArea;
     [SerializeField] private TextMeshProUGUI turnText;
+    [SerializeField] private GameObject turnTextBox;
+
+    private Color playerColor, enemyColor;
 
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
         state = BattleState.START;
+
+        if(CharacterManager.playerID == 0)
+        {
+            ColorUtility.TryParseHtmlString("#BCA0F0", out enemyColor);
+            ColorUtility.TryParseHtmlString("#F1CF87", out playerColor);
+        }
+        else
+        {
+            ColorUtility.TryParseHtmlString("#BCA0F0", out playerColor);
+            ColorUtility.TryParseHtmlString("#F1CF87", out enemyColor);
+        }
+
         BeginBattle();
     }
 
@@ -45,6 +60,7 @@ public class BattleSystem : MonoBehaviour
 
 
         state = BattleState.PLAYER_TURN;
+        turnTextBox.GetComponent<Image>().color = playerColor;
         turnText.text = "Seu turno";
         PlayerTurn();
 
@@ -319,12 +335,14 @@ public class BattleSystem : MonoBehaviour
         if (state == BattleState.PLAYER_TURN)
         {
             state = BattleState.ENEMY_TURN;
+            turnTextBox.GetComponent<Image>().color = enemyColor;
             turnText.text = "Turno do oponente";
             StartCoroutine(EnemyTurn());
         }
         else if (state == BattleState.ENEMY_TURN)
         {
             state = BattleState.PLAYER_TURN;
+            turnTextBox.GetComponent<Image>().color = playerColor;
             turnText.text = "Seu turno";
             PlayerTurn();
         }
