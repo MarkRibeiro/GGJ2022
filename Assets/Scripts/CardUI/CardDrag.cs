@@ -17,12 +17,15 @@ public class CardDrag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     private int _startIndex;
     private Transform _startParent;
     private CardAnimation _anim;
+    private RectTransform rectTransform;
     private void Start()
     {
         _dragging = false;
         _anim = GetComponent<CardAnimation>();
         playArea = GameObject.FindGameObjectWithTag("PlayArea").GetComponent<RectTransform>();
+        rectTransform = gameObject.GetComponent<RectTransform>();
         Assert.IsNotNull(playArea);
+        Assert.IsNotNull(rectTransform);
     }
     private void LateUpdate()
     {
@@ -46,7 +49,15 @@ public class CardDrag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         _dragging = false;
         var mousePosition = Input.mousePosition;
-        var normalizedMousePosition = new Vector2(mousePosition.x / Screen.width, mousePosition.y / Screen.height);
+        var normalizedMousePosition = new Vector2(rectTransform.position.x / Screen.width, (rectTransform.position.y + (rectTransform.rect.height / 2.0f)) / Screen.height);
+        Debug.Log(normalizedMousePosition.x);
+        Debug.Log(normalizedMousePosition.y);
+        Debug.Log(playArea.anchorMin.x);
+        Debug.Log(playArea.anchorMax.x);
+        Debug.Log(playArea.anchorMin.y);
+        Debug.Log(playArea.anchorMax.y);
+
+
         if (normalizedMousePosition.x > playArea.anchorMin.x &&
             normalizedMousePosition.x < playArea.anchorMax.x &&
             normalizedMousePosition.y > playArea.anchorMin.y &&
