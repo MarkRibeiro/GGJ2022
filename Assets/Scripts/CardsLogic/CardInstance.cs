@@ -17,9 +17,14 @@ public class CardInstance : MonoBehaviour
     public Image effectImage;
     public Image border;
 
+    private DeckManager dm;
+
     // Start is called before the first frame update
     void Start()
     {
+        dm = FindObjectOfType<DeckManager>();
+        float margin = gameObject.transform.parent.GetComponent<HandArea>().GetMargin();
+        
         cardName.text = card.cardName;
         description.text = card.description;
         b_costText.text = card.brainsCost.ToString();
@@ -28,10 +33,18 @@ public class CardInstance : MonoBehaviour
         if (CharacterManager.playerID == 0)
         {
             cardImage.sprite = card.y_mainSprite;
+            if(margin == 100)
+            {
+                cardImage.sprite = card.p_mainSprite;
+            }
         }
         else
         {
             cardImage.sprite = card.p_mainSprite;
+            if(margin == 100)
+            {
+                cardImage.sprite = card.y_mainSprite;
+            }
         }
 
         typeImage.sprite = card.typeSprite;
