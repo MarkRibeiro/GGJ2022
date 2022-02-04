@@ -2185,7 +2185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5774055586735459425, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_text
-      value: "Configura\xE7\xF5es"
+      value: Ajustes
       objectReference: {fileID: 0}
     - target: {fileID: 5774055586735459425, guid: 19f08f9eab5bf0149adc18f0f210fe83, type: 3}
       propertyPath: m_fontSize
@@ -3103,6 +3103,10 @@ PrefabInstance:
     - target: {fileID: 726105140283823602, guid: f43a697cbf83a1f4cac77f53b16cd0fd, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 726105140283823605, guid: f43a697cbf83a1f4cac77f53b16cd0fd, type: 3}
+      propertyPath: m_text
+      value: Ajustes
       objectReference: {fileID: 0}
     - target: {fileID: 726105140459424182, guid: f43a697cbf83a1f4cac77f53b16cd0fd, type: 3}
       propertyPath: m_AnchorMax.y
