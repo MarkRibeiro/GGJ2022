@@ -106,9 +106,9 @@ public class BattleSystem : MonoBehaviour
         foreach (GameObject cardGO in allPossibleCards)
         {
             Card card = cardGO.GetComponent<CardInstance>().card;
-            if(card.effect.cardType == CardType.ATTACK)
+            if (card.effect.cardType == CardType.ATTACK)
             {
-                if(card.effect.affectHp)
+                if (card.effect.affectHp)
                 {
                     Debug.Log(card.name);
                 }
@@ -272,6 +272,13 @@ public class BattleSystem : MonoBehaviour
             currentChar.emotion += emotion_gain;
     }
 
+    private IEnumerator WaitThenUse(CardInstance card)
+    {
+        yield return new WaitForSeconds(1f);
+        card.GetComponent<Animator>().SetTrigger("Use");
+        card.GetComponent<Animator>().speed = 0.5f;
+    }
+
     public bool PlayCard(CardInstance playedCard, Character currentChar)
     {
         //Subtrair custos da carta
@@ -286,10 +293,13 @@ public class BattleSystem : MonoBehaviour
         if (currentChar == dm.enemy)
         {
             playedCard.transform.SetParent(enemyCardArea.transform);
-            playedCard.gameObject.transform.position = enemyCardArea.transform.position;
-            playedCard.GetComponent<Animator>().SetTrigger("Use");
-            playedCard.GetComponent<Animator>().speed = 0.5f;
-
+            playedCard.transform.localPosition = new Vector3( playedCard.transform.localPosition.x, playedCard.transform.localPosition.y, 0);
+            //playedCard.transform.localPosition = Vector3.zero;
+            var rect = playedCard.GetComponent<RectTransform>();
+            rect.offsetMax = new Vector2(rect.offsetMax.x, 0);
+            rect.offsetMin = new Vector2(rect.offsetMin.x, 0);
+            playedCard.GetComponent<Canvas>().overrideSorting = false;
+            StartCoroutine(WaitThenUse(playedCard));
         }
 
         //Aplicar efeito
