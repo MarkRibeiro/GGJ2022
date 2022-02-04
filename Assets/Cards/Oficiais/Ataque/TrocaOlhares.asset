@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc478351a038a804e8badf6ae2009c41, type: 3}
   m_Name: TrocaOlhares
   m_EditorClassIdentifier: 
-  cardName: Troca de Olhares
+  cardName: Troca de olhares
   description: Causa 5 de dano ao <color=#83B32B><b>Orgulho</b></color> da pessoa
     amada.
   brainsCost: 1

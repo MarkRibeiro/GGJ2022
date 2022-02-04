@@ -79,5 +79,10 @@ public class HandArea : MonoBehaviour
         }
 
     }
+
+    public float GetMargin()
+    {
+        return margin;
+    }
 }
 
