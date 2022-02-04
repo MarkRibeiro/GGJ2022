@@ -1690,10 +1690,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f06e992c3494ea14f83df2ee2f5596ec, type: 3}
   - {fileID: 21300000, guid: b91e3cdb5c62a8d4f8940ac1b5da5ed6, type: 3}
   descriptions:
-  - "Existem dois tipos de barra de vida: a de Indiferen\xE7a, barra superior, e
-    a de Orgulho, barra inferior. Aquele que levar a barra de Orgulho do oponente
-    a 0 primeiro, ganha a partida. Por\xE9m, para dar dano \xE0 barra de Orgulho,
-    \xE9 necess\xE1rio levar a barra de Indiferen\xE7a \xE0 0 antes."
+  - "Existem dois tipos de barra de vida: a de <color=#7B83C9>Indiferen\xE7a</color>,
+    e a de <color=#83B32B>Orgulho</color>. Aquele que levar a barra de <color=#83B32B>Orgulho</color>
+    do oponente a 0 primeiro, ganha a partida. Por\xE9m, para dar dano \xE0 barra
+    de <color=#83B32B>Orgulho</color>, \xE9 necess\xE1rio levar a barra de <color=#7B83C9>Indiferen\xE7a</color>
+    \xE0 0 antes."
   - "No jogo h\xE1 dois tipos de recursos: Raz\xE3o e Emo\xE7\xE3o. Esses recursos
     s\xE3o obtidos com o lan\xE7amento de dados no come\xE7o de cada turno.\r\nCada
     carta necessita de uma certa quantidade de Raz\xE3o e/ou Emo\xE7\xE3o para ser
@@ -1702,19 +1703,19 @@ MonoBehaviour:
   - "Cartas com um \xEDcone de Espada, cartas de ataque, s\xE3o usadas para causar
     dano \xE0s barras advers\xE1rias.\r\n\r\nCartas com um \xEDcone de Escudo, cartas
     de defesa, s\xE3o usadas para regenerar suas barras.\r"
-  - "Cartas com \xEDcone de Gelo afetam a barra de Indiferen\xE7a, seja atacando
-    ou recuperando.\r\n\r\nCartas com \xEDcone de Fogo afetam a barra de Orgulho,
-    seja atacando ou recuperando.\r"
+  - "Cartas com \xEDcone de Gelo afetam a barra de <color=#7B83C9>Indiferen\xE7a</color>,
+    seja atacando ou recuperando.\r\n\r\nCartas com \xEDcone de Fogo afetam a barra
+    de <color=#83B32B>Orgulho</color>, seja atacando ou recuperando.\r"
   - "Existem tamb\xE9m cartas de Vergonha. Essas cartas infligem dano diretamente
-    no Orgulho, independentemente do estado da barra de Indiferen\xE7a. Por\xE9m,
-    esse efeito apenas acontecer\xE1 em momentos espec\xEDficos. Caso n\xE3o seja
-    o momento adequado, todos os efeitos da carta afetar\xE3o quem a jogou."
+    no <color=#83B32B>Orgulho</color>, independentemente do estado da barra de <color=#7B83C9>Indiferen\xE7a</color>.
+    Por\xE9m, esse efeito apenas acontecer\xE1 em momentos espec\xEDficos. Caso n\xE3o
+    seja o momento adequado, todos os efeitos da carta afetar\xE3o quem a jogou."
   - "As express\xF5es do seu advers\xE1rio indicam se ele est\xE1 mais aberto ou
     n\xE3o aos seus ataques. Cada carta jogada pode gerar mudan\xE7a de Express\xE3o
-    no seu oponente.\r\n"
-  - "O bot\xE3o \u201CTerminar Turno\u201D passa a vez para o oponente. \n\nNo come\xE7o
-    de cada turno, as cartas das m\xE3os dos jogadores voltar\xE3o para a pilha e
-    ser\xE3o redistribu\xEDdas."
+    no seu oponente."
+  - "O bot\xE3o \u201CTerminar Turno\u201D passa a vez para o oponente. \r\n\r\nNo
+    come\xE7o de cada turno, as cartas das m\xE3os dos jogadores voltar\xE3o para
+    a pilha e ser\xE3o redistribu\xEDdas.\r"
   tittle:
   - "Barras de Indiferen\xE7a e Orgulho"
   - Uso de recursos
