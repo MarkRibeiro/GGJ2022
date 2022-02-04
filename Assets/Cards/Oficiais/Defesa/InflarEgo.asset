@@ -18,10 +18,10 @@ MonoBehaviour:
   heartCost: 2
   effect:
     effectValue: 3
-    AffectHp: 1
+    affectHp: 1
     cardType: 3
     changeTo: 3
-    RightExpression: 0
+    rightExpression: 0
   y_mainSprite: {fileID: 21300000, guid: f85a17f273fbed54390d6fa4532094b5, type: 3}
   p_mainSprite: {fileID: 21300000, guid: df13da187611d52498662259ab0ec8c1, type: 3}
   typeSprite: {fileID: 21300000, guid: 2d8064e908302af4fbbfba633625e8d3, type: 3}

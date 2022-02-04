@@ -140,11 +140,15 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 75a9445a695bcd8499da00197a49b68e, type: 2}
     - target: {fileID: 2547399528705127252, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: currHP
-      value: 10
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547399528705127252, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: maxShield
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2547399528705127252, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: currShield
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2547399528705127252, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: deck.Array.data[1]
@@ -354,6 +358,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 5b988f918e0b62044919cd810b7cf045, type: 3}
+    - target: {fileID: 4802712725729257981, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.3000488
+      objectReference: {fileID: 0}
     - target: {fileID: 4802712725838096013, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: m_Name
       value: BattleScene
@@ -430,6 +438,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 4802712726801238156, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.6282043
+      objectReference: {fileID: 0}
     - target: {fileID: 4802712726890472353, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: FinalMatch
       value: 1
@@ -455,6 +467,10 @@ PrefabInstance:
       propertyPath: y_endSprite
       value: 
       objectReference: {fileID: 21300000, guid: 40ac6ba51a160de408fc854cc407997a, type: 3}
+    - target: {fileID: 4802712726890472353, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: wrongShameChance
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5987410981182542405, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

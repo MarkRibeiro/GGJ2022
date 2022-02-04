@@ -30,7 +30,7 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private Sprite y_endSprite, p_endSprite, goodEnding;
     [SerializeField] private float diceTime = 1.0f;
     [SerializeField] private float enemyTime = 1.0f;
-    [SerializeField] [Range(0,1)] private float wrongShameChance = 0.3f;
+    [SerializeField] [Range(0, 1)] private float wrongShameChance = 0.3f;
 
     [SerializeField] private GameObject enemyCardArea;
     [SerializeField] private TextMeshProUGUI turnText;
@@ -103,9 +103,17 @@ public class BattleSystem : MonoBehaviour
         var player = dm.player;
         List<GameObject> eligibleCards = new List<GameObject>();
 
-        foreach (GameObject cardGO in dm.enemy.currentHand)
+        foreach (GameObject cardGO in allPossibleCards)
         {
             Card card = cardGO.GetComponent<CardInstance>().card;
+            if(card.effect.cardType == CardType.ATTACK)
+            {
+                if(card.effect.affectHp)
+                {
+                    Debug.Log(card.name);
+                }
+            }
+
             if (enemy.currShield >= enemy.maxShield && card.effect.cardType == CardType.DEFENSE && !card.effect.affectHp)
             {
                 continue;
@@ -114,24 +122,24 @@ public class BattleSystem : MonoBehaviour
             {
                 continue;
             }
-            if(player.currShield > 0 && (card.effect.cardType == CardType.ATTACK) && card.effect.affectHp)
+            if (player.currShield > 0 && (card.effect.cardType == CardType.ATTACK) && card.effect.affectHp)
             {
                 continue;
             }
-            if(player.currShield <= 0 && (card.effect.cardType == CardType.ATTACK) && !card.effect.affectHp)
+            if (player.currShield <= 0 && (card.effect.cardType == CardType.ATTACK) && !card.effect.affectHp)
             {
                 continue;
             }
-            if(card.effect.cardType == CardType.SHAME && (player.currentExpression != card.effect.rightExpression))
+            if (card.effect.cardType == CardType.SHAME && (player.currentExpression != card.effect.rightExpression))
             {
-                if(Random.Range(0.0f, 1.0f) < wrongShameChance)
+                if (Random.Range(0.0f, 1.0f) > wrongShameChance)
                 {
                     continue;
                 }
             }
             eligibleCards.Add(cardGO);
         }
-        if(eligibleCards.Count == 0)
+        if (eligibleCards.Count == 0)
         {
             return null;
         }
@@ -148,8 +156,10 @@ public class BattleSystem : MonoBehaviour
         while (currentCard != null)
         {
             dm.enemy.currentHand.Remove(currentCard);
-            PlayCard(currentCard.GetComponent<CardInstance>(), dm.enemy);
-            yield return new WaitForSeconds(enemyTime);
+            if (PlayCard(currentCard.GetComponent<CardInstance>(), dm.enemy))
+            {
+                yield return new WaitForSeconds(enemyTime);
+            }
             currentCard = ChooseCard(dm.enemy.currentHand);
         }
 
@@ -262,12 +272,12 @@ public class BattleSystem : MonoBehaviour
             currentChar.emotion += emotion_gain;
     }
 
-    public void PlayCard(CardInstance playedCard, Character currentChar)
+    public bool PlayCard(CardInstance playedCard, Character currentChar)
     {
         //Subtrair custos da carta
         if (playedCard.card.brainsCost > currentChar.reason || playedCard.card.heartCost > currentChar.emotion)
         {
-            return;
+            return false;
         }
 
         currentChar.reason -= playedCard.card.brainsCost;
@@ -278,6 +288,8 @@ public class BattleSystem : MonoBehaviour
             playedCard.transform.SetParent(enemyCardArea.transform);
             playedCard.gameObject.transform.position = enemyCardArea.transform.position;
             playedCard.GetComponent<Animator>().SetTrigger("Use");
+            playedCard.GetComponent<Animator>().speed = 0.5f;
+
         }
 
         //Aplicar efeito
@@ -286,6 +298,7 @@ public class BattleSystem : MonoBehaviour
         // CARTA É DESTRUIDA POR EVENTO DE ANIMAÇÃO
 
         VerifyCards(currentChar);
+        return true;
     }
 
     public void ApplyEffect(CardEffect effect, Character character)

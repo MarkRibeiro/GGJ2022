@@ -124,9 +124,9 @@ public class Character : MonoBehaviour
                 index = 0;
                 break;
         }
-        Debug.Log(index);
-        Debug.Log(spriteSheet);
-        Debug.Log(image);
+        // Debug.Log(index);
+        // Debug.Log(spriteSheet);
+        // Debug.Log(image);
         image.sprite = spriteSheet[index];
     }
 }
