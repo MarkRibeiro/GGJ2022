@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1251113526 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8873717767252747933, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+  m_PrefabInstance: {fileID: 1965380015}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1965380015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -474,6 +479,14 @@ PrefabInstance:
     - target: {fileID: 4802712726890472353, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: wrongShameChance
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239108035264350283, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1251113526}
+    - target: {fileID: 5239108035264350283, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 5987410981182542405, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: m_AnchorMax.x
