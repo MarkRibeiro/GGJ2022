@@ -438,6 +438,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 4802712726724040244, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: m_text
+      value: Fim
+      objectReference: {fileID: 0}
     - target: {fileID: 4802712726801238156, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -1.6282043
