@@ -1703,16 +1703,20 @@ MonoBehaviour:
   - "Cartas com um \xEDcone de Espada, cartas de ataque, s\xE3o usadas para causar
     dano \xE0s barras advers\xE1rias.\r\n\r\nCartas com um \xEDcone de Escudo, cartas
     de defesa, s\xE3o usadas para regenerar suas barras.\r"
-  - "Cartas com \xEDcone de Gelo afetam a barra de <color=#7B83C9>Indiferen\xE7a</color>,
-    seja atacando ou recuperando.\r\n\r\nCartas com \xEDcone de Fogo afetam a barra
-    de <color=#83B32B>Orgulho</color>, seja atacando ou recuperando.\r"
+  - "Cartas com \xEDcone de Fogo afetam a barra de <color=#83B32B>Orgulho</color>,
+    seja atacando ou recuperando.\r\n\nCartas com \xEDcone de Gelo afetam a barra
+    de <color=#7B83C9>Indiferen\xE7a</color>, seja atacando ou recuperando.\r"
   - "Existem tamb\xE9m cartas de Vergonha. Essas cartas infligem dano diretamente
     no <color=#83B32B>Orgulho</color>, independentemente do estado da barra de <color=#7B83C9>Indiferen\xE7a</color>.
-    Por\xE9m, esse efeito apenas acontecer\xE1 em momentos espec\xEDficos. Caso n\xE3o
-    seja o momento adequado, todos os efeitos da carta afetar\xE3o quem a jogou."
+    \n\nPor\xE9m, esse efeito apenas acontecer\xE1 em momentos espec\xEDficos. Caso
+    n\xE3o seja o momento adequado, todos os efeitos da carta afetar\xE3o quem a
+    jogou."
   - "As express\xF5es do seu advers\xE1rio indicam se ele est\xE1 mais aberto ou
     n\xE3o aos seus ataques. Cada carta jogada pode gerar mudan\xE7a de Express\xE3o
     no seu oponente."
+  - "O bot\xE3o \u201CTerminar Turno\u201D passa a vez para o oponente. \r\n\r\nNo
+    come\xE7o de cada turno, as cartas das m\xE3os dos jogadores voltar\xE3o para
+    a pilha e ser\xE3o redistribu\xEDdas.\r"
   - "O bot\xE3o \u201CTerminar Turno\u201D passa a vez para o oponente. \r\n\r\nNo
     come\xE7o de cada turno, as cartas das m\xE3os dos jogadores voltar\xE3o para
     a pilha e ser\xE3o redistribu\xEDdas.\r"
