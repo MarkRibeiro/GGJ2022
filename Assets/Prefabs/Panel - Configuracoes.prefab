@@ -1607,7 +1607,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Configura\xE7\xF5es"
+  m_text: Ajustes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 04f7bd154dd41fd47b5cf5a2a825719b, type: 2}
   m_sharedMaterial: {fileID: -5740727359274831070, guid: 04f7bd154dd41fd47b5cf5a2a825719b, type: 2}
@@ -3256,7 +3256,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1b6451eab3572704aba9a5077721134d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f6cd5daf0367be4ea1db53abd577733, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
