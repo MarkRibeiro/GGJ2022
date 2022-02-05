@@ -11,15 +11,18 @@ public class CardHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public int defaultSortingOrder;
     public int hoverSortingOrder;
+    public bool isHovered;
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        isHovered = false;
         _anim.SetBool("Hover", false);
         _canvas.sortingOrder = defaultSortingOrder;
     }
 
     private void Awake()
     {
+        isHovered = false;
         _anim = GetComponent<Animator>();
         _canvas = GetComponentInParent<Canvas>();
         Assert.IsNotNull(_anim);
@@ -28,6 +31,7 @@ public class CardHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     }
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
     {
+        isHovered = true;
         _anim.SetBool("Hover", true);
         _canvas.sortingOrder = hoverSortingOrder;
         var audio = AudioManager.instance;

@@ -307,6 +307,11 @@ public class BattleSystem : MonoBehaviour
             StartCoroutine(WaitThenUse(playedCard));
         }
 
+        else
+        {
+            CardHere.cartasJogadas++;
+        }
+
         //Aplicar efeito
         ApplyEffect(playedCard.card.effect, currentChar);
 
