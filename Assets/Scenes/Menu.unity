@@ -3853,7 +3853,7 @@ PrefabInstance:
     - target: {fileID: 4432532151965863354, guid: 4add30f584abeb4499779e82d135f81b, type: 3}
       propertyPath: sounds.Array.data[18].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 1f9ed58c2d05739488acae30cb3d18ef, type: 3}
+      objectReference: {fileID: 8300000, guid: 50eba2ec3cbb8064880fb1d37d7668a8, type: 3}
     - target: {fileID: 4432532151965863354, guid: 4add30f584abeb4499779e82d135f81b, type: 3}
       propertyPath: sounds.Array.data[18].name
       value: mudar cena
