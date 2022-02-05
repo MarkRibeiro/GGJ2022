@@ -34,5 +34,17 @@ MonoBehaviour:
     m_Localized: General
     m_Metadata:
       m_Items: []
+  - m_Id: 2360911839232
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2940698869760
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3340327960576
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

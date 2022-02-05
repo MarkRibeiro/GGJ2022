@@ -30,5 +30,19 @@ MonoBehaviour:
     m_Localized: Geral
     m_Metadata:
       m_Items: []
+  - m_Id: 2360911839232
+    m_Localized: "M\xFAsica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2940698869760
+    m_Localized: 'Voltar
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3340327960576
+    m_Localized: Creditos
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
