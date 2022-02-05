@@ -17,6 +17,9 @@ public class CardInstance : MonoBehaviour
     public Image effectImage;
     public Image border;
 
+    public Image Overlay;
+
+
     private DeckManager dm;
 
     // Start is called before the first frame update
@@ -24,7 +27,7 @@ public class CardInstance : MonoBehaviour
     {
         dm = FindObjectOfType<DeckManager>();
         float margin = gameObject.transform.parent.GetComponent<HandArea>().GetMargin();
-        
+
         cardName.text = card.cardName;
         description.text = card.description;
         b_costText.text = card.brainsCost.ToString();
@@ -33,7 +36,7 @@ public class CardInstance : MonoBehaviour
         if (CharacterManager.playerID == 0)
         {
             cardImage.sprite = card.y_mainSprite;
-            if(margin == 100)
+            if (margin == 100)
             {
                 cardImage.sprite = card.p_mainSprite;
             }
@@ -41,7 +44,7 @@ public class CardInstance : MonoBehaviour
         else
         {
             cardImage.sprite = card.p_mainSprite;
-            if(margin == 100)
+            if (margin == 100)
             {
                 cardImage.sprite = card.y_mainSprite;
             }
@@ -58,7 +61,7 @@ public class CardInstance : MonoBehaviour
         DeckManager dm = FindObjectOfType<DeckManager>();
         BattleSystem.instance.PlayCard(gameObject.GetComponent<CardInstance>(), dm.player);
         var instance = AudioManager.instance;
-        if(instance != null)
+        if (instance != null)
         {
             instance.Play("CardPlay");
         }
