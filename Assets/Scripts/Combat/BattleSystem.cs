@@ -165,6 +165,7 @@ public class BattleSystem : MonoBehaviour
             currentCard = ChooseCard(dm.enemy.currentHand);
         }
 
+        yield return new WaitForSeconds(enemyCardTime);
         EndTurn(dm.enemy);
     }
 
@@ -278,7 +279,7 @@ public class BattleSystem : MonoBehaviour
     {
         yield return new WaitForSeconds(enemyCardTime);
         card.GetComponent<Animator>().SetTrigger("Use");
-        card.GetComponent<Animator>().speed = 0.5f;
+        card.GetComponent<Animator>().speed = 0.75f;
     }
 
     public bool PlayCard(CardInstance playedCard, Character currentChar)
