@@ -38,6 +38,8 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private TextMeshProUGUI turnText;
     [SerializeField] private GameObject turnTextBox;
     [SerializeField] private GameObject endTurnButton;
+    [SerializeField] private GameObject blockSprite;
+
 
 
     private Color playerColor, enemyColor;
@@ -330,6 +332,10 @@ public class BattleSystem : MonoBehaviour
                             StartCoroutine(EndMatch(character));
                         }
                     }
+                    else
+                    {
+                        blockSprite.GetComponent<Animator>().SetTrigger("CantPlay");
+                    }
                 }
                 else
                 {
@@ -344,6 +350,10 @@ public class BattleSystem : MonoBehaviour
                             character.target.currShield -= effect.effectValue;
                         }
                         character.target.shieldBar.SetValue(character.target.currShield);
+                    }
+                    else
+                    {
+                        blockSprite.GetComponent<Animator>().SetTrigger("CantPlay");
                     }
                 }
                 character.target.ChangeExpression(effect.changeTo);
