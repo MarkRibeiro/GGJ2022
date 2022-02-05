@@ -6018,7 +6018,8 @@ MonoBehaviour:
   p_endSprite: {fileID: 21300000, guid: 384a7e32678df4344af052c5b88da07c, type: 3}
   goodEnding: {fileID: 0}
   diceTime: 1
-  enemyTime: 1
+  enemyTime: 1.5
+  enemyCardTime: 1.5
   wrongShameChance: 0.3
   enemyCardArea: {fileID: 4802712725605797489}
   turnText: {fileID: 4802712725882676557}
