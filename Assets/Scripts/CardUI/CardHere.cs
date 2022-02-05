@@ -5,7 +5,7 @@ using UnityEngine;
 public class CardHere : MonoBehaviour
 {
 
-    public GameObject jogueAqui;
+    public Animator jogueAqui;
     public int numeroDeVezesDaAjuda;
     [HideInInspector]
     public static int cartasJogadas = 0;
@@ -27,12 +27,12 @@ public class CardHere : MonoBehaviour
                     CardInstance cardInstance = card.GetComponent<CardInstance>();
                     if (cardHover.isHovered && cardInstance.card.brainsCost <= dm.player.reason && cardInstance.card.heartCost <= dm.player.emotion)
                     {
-                        jogueAqui.SetActive(true);
+                        jogueAqui.SetTrigger("liga");
                         return;
                     }
                 }
             }
-            jogueAqui.SetActive(false);
+            jogueAqui.SetTrigger("desliga");
         }
     }
 }
