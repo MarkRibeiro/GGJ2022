@@ -27,12 +27,12 @@ public class CardHere : MonoBehaviour
                     CardInstance cardInstance = card.GetComponent<CardInstance>();
                     if (cardHover.isHovered && cardInstance.card.brainsCost <= dm.player.reason && cardInstance.card.heartCost <= dm.player.emotion)
                     {
-                        jogueAqui.SetTrigger("liga");
+                        jogueAqui.SetBool("ligado", true);
                         return;
                     }
                 }
             }
-            jogueAqui.SetTrigger("desliga");
+            jogueAqui.SetBool("ligado",false);
         }
     }
 }
