@@ -30,12 +30,16 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private Sprite y_endSprite, p_endSprite, goodEnding;
     [SerializeField] private float diceTime = 1.0f;
     [SerializeField] private float enemyTime = 1.0f;
+    [SerializeField] private float enemyCardTime = 1.5f;
+
     [SerializeField] [Range(0, 1)] private float wrongShameChance = 0.3f;
 
     [SerializeField] private GameObject enemyCardArea;
     [SerializeField] private TextMeshProUGUI turnText;
     [SerializeField] private GameObject turnTextBox;
     [SerializeField] private GameObject endTurnButton;
+    [SerializeField] private GameObject blockSprite;
+
 
 
     private Color playerColor, enemyColor;
@@ -163,6 +167,7 @@ public class BattleSystem : MonoBehaviour
             currentCard = ChooseCard(dm.enemy.currentHand);
         }
 
+        yield return new WaitForSeconds(enemyCardTime);
         EndTurn(dm.enemy);
     }
 
@@ -274,9 +279,9 @@ public class BattleSystem : MonoBehaviour
 
     private IEnumerator WaitThenUse(CardInstance card)
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(enemyCardTime);
         card.GetComponent<Animator>().SetTrigger("Use");
-        card.GetComponent<Animator>().speed = 0.5f;
+        card.GetComponent<Animator>().speed = 0.75f;
     }
 
     public bool PlayCard(CardInstance playedCard, Character currentChar)
@@ -327,6 +332,10 @@ public class BattleSystem : MonoBehaviour
                             StartCoroutine(EndMatch(character));
                         }
                     }
+                    else
+                    {
+                        blockSprite.GetComponent<Animator>().SetTrigger("CantPlay");
+                    }
                 }
                 else
                 {
@@ -341,6 +350,10 @@ public class BattleSystem : MonoBehaviour
                             character.target.currShield -= effect.effectValue;
                         }
                         character.target.shieldBar.SetValue(character.target.currShield);
+                    }
+                    else
+                    {
+                        blockSprite.GetComponent<Animator>().SetTrigger("CantPlay");
                     }
                 }
                 character.target.ChangeExpression(effect.changeTo);
