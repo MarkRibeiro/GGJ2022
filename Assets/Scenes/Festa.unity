@@ -279,6 +279,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4802712726372790276, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802712726372790279, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3f6cd5daf0367be4ea1db53abd577733, type: 3}
+    - target: {fileID: 4802712726372790279, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: m_Color.a
+      value: 0.9019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802712726372790279, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802712726372790279, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802712726372790279, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4802712726425253182, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
