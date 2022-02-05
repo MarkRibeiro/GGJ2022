@@ -15,12 +15,13 @@ public enum BattleState
 public class BattleSystem : MonoBehaviour
 {
     public static BattleSystem instance;
-    public Color InvalidField = Color.grey;
-    public Color InvalidCard = Color.red;
+    public Color InvalidField;
+
     public BattleState state;
     public bool FinalMatch = false;
     public DeckManager dm;
     public int resource_limit;
+    public float cardOverlay;
     public GameObject endMatchScreen;
 
     [SerializeField] private Sprite[] y_diceSides, p_diceSides;
@@ -298,7 +299,7 @@ public class BattleSystem : MonoBehaviour
         if (currentChar == dm.enemy)
         {
             playedCard.transform.SetParent(enemyCardArea.transform);
-            playedCard.transform.localPosition = new Vector3( playedCard.transform.localPosition.x, playedCard.transform.localPosition.y, 0);
+            playedCard.transform.localPosition = new Vector3(playedCard.transform.localPosition.x, playedCard.transform.localPosition.y, 0);
             //playedCard.transform.localPosition = Vector3.zero;
             var rect = playedCard.GetComponent<RectTransform>();
             rect.offsetMax = new Vector2(rect.offsetMax.x, 0);
@@ -528,17 +529,16 @@ public class BattleSystem : MonoBehaviour
 
             if (_instance.card.brainsCost > character.reason || _instance.card.heartCost > character.emotion)
             {
-                _instance.bgImage.color = InvalidCard;
+                Color tempColor = _instance.Overlay.color;
+                tempColor.a = cardOverlay;
+                _instance.Overlay.color = tempColor;
                 card.GetComponent<CardDrag>().enabled = false;
-                if (_instance.card.brainsCost > character.reason)
-                {
-                    _instance.b_costText.color = InvalidField;
-                }
-                if (_instance.card.heartCost > character.emotion)
-                {
-                    _instance.h_costText.color = InvalidField;
-                }
-
+            }
+            else
+            {
+                Color tempColor = _instance.Overlay.color;
+                tempColor.a = 0;
+                _instance.Overlay.color = tempColor;
             }
 
         }
