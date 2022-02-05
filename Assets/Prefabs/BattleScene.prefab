@@ -6084,11 +6084,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InvalidField: {r: 1, g: 0.33333334, b: 0.33333334, a: 1}
-  InvalidCard: {r: 0.69803923, g: 0.69803923, b: 0.69803923, a: 1}
   state: 0
   FinalMatch: 0
   dm: {fileID: 4802712726890472354}
   resource_limit: 10
+  cardOverlay: 0.4
   endMatchScreen: {fileID: 4802712725629121865}
   y_diceSides:
   - {fileID: 21300000, guid: 931f8131654117c4aab86bb546357d87, type: 3}
