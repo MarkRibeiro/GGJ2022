@@ -1683,7 +1683,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenes:
   - {fileID: 21300000, guid: 341ff555d32dc19469adc2b124348c45, type: 3}
-  - {fileID: 21300000, guid: e310f5c24d17e914a831443a8e72fe50, type: 3}
+  - {fileID: 21300000, guid: ac7632575cbf1d345b20350a05c35bf3, type: 3}
+  - {fileID: 21300000, guid: ac7632575cbf1d345b20350a05c35bf3, type: 3}
   - {fileID: 21300000, guid: 9cf2e0f7c0d127e479e8e0ccad52590c, type: 3}
   - {fileID: 21300000, guid: ab0a0cf914fb0f444ba184b043bc5a04, type: 3}
   - {fileID: 21300000, guid: 3b951743db82cc54cb682bf0599fbfda, type: 3}
@@ -1692,14 +1693,14 @@ MonoBehaviour:
   descriptions:
   - "Existem dois tipos de barra de vida: a de <color=#7B83C9>Indiferen\xE7a</color>,
     e a de <color=#83B32B>Orgulho</color>. Aquele que levar a barra de <color=#83B32B>Orgulho</color>
-    do oponente a 0 primeiro, ganha a partida. Por\xE9m, para dar dano \xE0 barra
+    do oponente a 0 primeiro, ganha a partida. \n\nPor\xE9m, para dar dano \xE0 barra
     de <color=#83B32B>Orgulho</color>, \xE9 necess\xE1rio levar a barra de <color=#7B83C9>Indiferen\xE7a</color>
     \xE0 0 antes."
-  - "No jogo h\xE1 dois tipos de recursos: Raz\xE3o e Emo\xE7\xE3o. Esses recursos
-    s\xE3o obtidos com o lan\xE7amento de dados no come\xE7o de cada turno.\r\nCada
-    carta necessita de uma certa quantidade de Raz\xE3o e/ou Emo\xE7\xE3o para ser
-    jogada. Caso sobre recursos no final da jogada, eles permanecer\xE3o para o pr\xF3ximo
-    turno, havendo um limite de 10 por recurso.\r"
+  - "No jogo h\xE1 dois tipos de recursos: Raz\xE3o e Emo\xE7\xE3o.\nEsses recursos
+    s\xE3o obtidos com o lan\xE7amento de dados no come\xE7o de cada turno.\r\n"
+  - "Cada carta necessita de uma certa quantidade de Raz\xE3o e/ou Emo\xE7\xE3o para
+    ser jogada. Caso sobre recursos no final da jogada, eles permanecer\xE3o para
+    o pr\xF3ximo turno, havendo um limite de 10 por recurso.\r"
   - "Cartas com um \xEDcone de Espada, cartas de ataque, s\xE3o usadas para causar
     dano \xE0s barras advers\xE1rias.\r\n\r\nCartas com um \xEDcone de Escudo, cartas
     de defesa, s\xE3o usadas para regenerar suas barras.\r"
@@ -1717,11 +1718,9 @@ MonoBehaviour:
   - "O bot\xE3o \u201CTerminar Turno\u201D passa a vez para o oponente. \r\n\r\nNo
     come\xE7o de cada turno, as cartas das m\xE3os dos jogadores voltar\xE3o para
     a pilha e ser\xE3o redistribu\xEDdas.\r"
-  - "O bot\xE3o \u201CTerminar Turno\u201D passa a vez para o oponente. \r\n\r\nNo
-    come\xE7o de cada turno, as cartas das m\xE3os dos jogadores voltar\xE3o para
-    a pilha e ser\xE3o redistribu\xEDdas.\r"
   tittle:
   - "Barras de Indiferen\xE7a e Orgulho"
+  - Uso de recursos
   - Uso de recursos
   - "\xCDcones das cartas"
   - "\xCDcones das cartas"
