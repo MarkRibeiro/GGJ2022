@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: InflarEgo
   m_EditorClassIdentifier: 
   cardName: Inflar o ego
-  description: Recupera 3 pontos do seu <color=#83B32B><b>Orgulho</b></color>.
+  description: Recupera 2 pontos do seu <color=#83B32B><b>Orgulho</b></color>.
   brainsCost: 1
   heartCost: 2
   effect:
-    effectValue: 3
+    effectValue: 2
     affectHp: 1
     cardType: 3
     changeTo: 4
