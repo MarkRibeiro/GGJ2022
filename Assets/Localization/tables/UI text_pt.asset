@@ -44,5 +44,9 @@ MonoBehaviour:
     m_Localized: Creditos
     m_Metadata:
       m_Items: []
+  - m_Id: 18649357205504
+    m_Localized: Pular
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

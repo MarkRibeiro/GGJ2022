@@ -46,12 +46,13 @@ public class CutsceneManager : MonoBehaviour
 
         currentIndex += indexStep;
 
-        if(backArrow != null && nextArrow != null)
+        if (backArrow != null && nextArrow != null)
         {
             backArrow.SetActive(currentIndex != 0);
             nextArrow.SetActive(currentIndex != scenes.Length - 1);
         }
-        buttonText.text = currentIndex == scenes.Length-1?"Próximo":"Pular";
+
+        buttonText.text = currentIndex == scenes.Length - 1 ? "Próximo" : "Pular";
 
         imageDisplay.sprite = scenes[currentIndex];
         textDiaplay.text = descriptions[currentIndex];
