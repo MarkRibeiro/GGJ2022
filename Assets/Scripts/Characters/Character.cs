@@ -75,6 +75,8 @@ public class Character : MonoBehaviour
             case (Expressions.RANDOM):
                 currentExpression = Expressions.RANDOM;
                 break;
+            case (Expressions.KEEP):
+                break;
             default:
                 currentExpression = Expressions.NORMAL;
                 break;
@@ -108,9 +110,22 @@ public class Character : MonoBehaviour
                         index = 0;
                     }
                 }
+                switch(index)
+                {
+                    case (0):
+                        currentExpression = Expressions.NORMAL;
+                        break;
+                    case (1):
+                        currentExpression = Expressions.SHAME;
+                        break;
+                    case (2):
+                        currentExpression = Expressions.SMUG;
+                        break;
+                }
                 break;
             default:
                 index = 0;
+                currentExpression = Expressions.NORMAL;
                 break;
         }
         // Debug.Log(index);
