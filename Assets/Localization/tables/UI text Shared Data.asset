@@ -39,6 +39,10 @@ MonoBehaviour:
     m_Key: Creditos
     m_Metadata:
       m_Items: []
+  - m_Id: 18649357205504
+    m_Key: Pular
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

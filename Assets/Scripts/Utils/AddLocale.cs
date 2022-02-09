@@ -31,12 +31,13 @@ public class AddLocale : ScriptableWizard
     void AddLocalizedStringEvent(Transform t)
     {
         TextMeshProUGUI text = t.GetComponent<TextMeshProUGUI>();
-        if(text != null)
+        if (text != null)
         {
             var lse = t.GetComponent<LocalizeStringEvent>();
-            if(lse == null)
+            if (lse == null)
             {
                 lse = t.gameObject.AddComponent<LocalizeStringEvent>();
+                LocalizeStringEvent loc = t.gameObject.GetComponent<LocalizeStringEvent>();
             }
         }
         foreach (Transform child in t)
