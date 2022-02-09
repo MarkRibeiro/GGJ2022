@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Localization.Settings;
 
 public class CardInstance : MonoBehaviour
 {
@@ -28,8 +29,8 @@ public class CardInstance : MonoBehaviour
         dm = FindObjectOfType<DeckManager>();
         float margin = gameObject.transform.parent.GetComponent<HandArea>().GetMargin();
 
-        cardName.text = card.cardName;
-        description.text = card.description;
+        UpdateLocale();
+
         b_costText.text = card.brainsCost.ToString();
         h_costText.text = card.heartCost.ToString();
 
@@ -54,6 +55,23 @@ public class CardInstance : MonoBehaviour
         effectImage.sprite = card.effectSprite;
 
         border.color = card.color;
+    }
+
+    public void UpdateLocale()
+    {
+        var selectedLocale = LocalizationSettings.SelectedLocale;
+        switch (selectedLocale.Identifier.Code)
+        {
+            case "en":
+                cardName.text = card.cardNameEN;
+                description.text = card.descriptionEN;
+                break;
+            default:
+            case "pt":
+                cardName.text = card.cardName;
+                description.text = card.description;
+                break;
+        }
     }
 
     public void Play()

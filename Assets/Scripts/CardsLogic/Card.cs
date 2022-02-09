@@ -20,4 +20,8 @@ public class Card : ScriptableObject
     public Sprite typeSprite;
     public Sprite effectSprite;
     public Color color;
+
+    [TextArea]
+    public string descriptionEN;
+    public string cardNameEN;
 }
