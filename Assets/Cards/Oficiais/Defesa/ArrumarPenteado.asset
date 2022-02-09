@@ -27,3 +27,5 @@ MonoBehaviour:
   typeSprite: {fileID: 21300000, guid: 2d8064e908302af4fbbfba633625e8d3, type: 3}
   effectSprite: {fileID: 21300000, guid: 7680c742940dd9b4499f2b79101b36bc, type: 3}
   color: {r: 0.48235294, g: 0.5137255, b: 0.7882353, a: 1}
+  descriptionEN: Recover 1 point from your Coldness.
+  cardNameEN: Tidy up
