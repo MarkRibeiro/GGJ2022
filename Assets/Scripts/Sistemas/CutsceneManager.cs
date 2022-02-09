@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.Localization.Settings;
 
 public class CutsceneManager : MonoBehaviour
 {
@@ -22,17 +23,43 @@ public class CutsceneManager : MonoBehaviour
     [SerializeField]
     GameObject backArrow, nextArrow;
 
+    [TextArea(3, 10)]
+    public string[] descriptionsEN;
+
+    private string[] _descriptions;
+    private string _skipText;
+    private string _nextText;
+
+    void UpdateLocale()
+    {
+        var selectedLocale = LocalizationSettings.SelectedLocale;
+        _skipText = LocalizationSettings.StringDatabase.GetLocalizedString("Pular");
+        _nextText = LocalizationSettings.StringDatabase.GetLocalizedString("Proximo");
+        switch (selectedLocale.Identifier.Code)
+        {
+            case "en":
+               _descriptions = descriptionsEN;
+                break;
+            default:
+            case "pt":
+                _descriptions = descriptions;
+                break;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        UpdateLocale();
         imageDisplay.sprite = scenes[0];
-        textDiaplay.text = descriptions[0];
+        textDiaplay.text = _descriptions[0];
         currentIndex = 0;
         Navigate(0);
     }
 
     public void Navigate(int indexStep)
     {
+        UpdateLocale();
         if (indexStep < 0 && currentIndex == 0)
         {
             return;
@@ -52,9 +79,9 @@ public class CutsceneManager : MonoBehaviour
             nextArrow.SetActive(currentIndex != scenes.Length - 1);
         }
 
-        buttonText.text = currentIndex == scenes.Length - 1 ? "Próximo" : "Pular";
+        buttonText.text = currentIndex == scenes.Length - 1 ? _nextText : _skipText;
 
         imageDisplay.sprite = scenes[currentIndex];
-        textDiaplay.text = descriptions[currentIndex];
+        textDiaplay.text = _descriptions[currentIndex];
     }
 }

@@ -48,5 +48,9 @@ MonoBehaviour:
     m_Localized: Pular
     m_Metadata:
       m_Items: []
+  - m_Id: 1155497668165632
+    m_Localized: "Pr\xF3ximo"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

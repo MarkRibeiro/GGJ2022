@@ -15,12 +15,16 @@ MonoBehaviour:
   m_TableCollectionName: UI text
   m_TableCollectionNameGuidString: 1fe2004c74d4243419ee4765de37ecc0
   m_Entries:
+  - m_Id: 306340413440
+    m_Key: Ajustes
+    m_Metadata:
+      m_Items: []
   - m_Id: 62470995968
     m_Key: Config
     m_Metadata:
       m_Items: []
-  - m_Id: 306340413440
-    m_Key: New Entry
+  - m_Id: 3340327960576
+    m_Key: Creditos
     m_Metadata:
       m_Items: []
   - m_Id: 1243012382720
@@ -31,16 +35,16 @@ MonoBehaviour:
     m_Key: Music
     m_Metadata:
       m_Items: []
+  - m_Id: 18649357205504
+    m_Key: Pular
+    m_Metadata:
+      m_Items: []
   - m_Id: 2940698869760
     m_Key: Voltar
     m_Metadata:
       m_Items: []
-  - m_Id: 3340327960576
-    m_Key: Creditos
-    m_Metadata:
-      m_Items: []
-  - m_Id: 18649357205504
-    m_Key: Pular
+  - m_Id: 1155497668165632
+    m_Key: Proximo
     m_Metadata:
       m_Items: []
   m_Metadata:
