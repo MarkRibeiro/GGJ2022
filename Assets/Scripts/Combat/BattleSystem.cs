@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Localization.Settings;
 
 public enum BattleState
 {
@@ -68,10 +69,9 @@ public class BattleSystem : MonoBehaviour
     private void BeginBattle()
     {
 
-
         state = BattleState.PLAYER_TURN;
         turnTextBox.GetComponent<Image>().color = playerColor;
-        turnText.text = "Seu turno";
+        turnText.text = LocalizationSettings.StringDatabase.GetLocalizedString("Seu Turno");
         PlayerTurn();
 
     }
@@ -434,14 +434,14 @@ public class BattleSystem : MonoBehaviour
             state = BattleState.ENEMY_TURN;
             endTurnButton.SetActive(false);
             turnTextBox.GetComponent<Image>().color = enemyColor;
-            turnText.text = "Turno do oponente";
+            turnText.text = LocalizationSettings.StringDatabase.GetLocalizedString("Turno do Oponente");
             StartCoroutine(EnemyTurn());
         }
         else if (state == BattleState.ENEMY_TURN)
         {
             state = BattleState.PLAYER_TURN;
             turnTextBox.GetComponent<Image>().color = playerColor;
-            turnText.text = "Seu turno";
+            turnText.text = LocalizationSettings.StringDatabase.GetLocalizedString("Seu Turno");
             PlayerTurn();
         }
     }
