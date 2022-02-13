@@ -71,6 +71,10 @@ MonoBehaviour:
     m_Key: Main menu
     m_Metadata:
       m_Items: []
+  - m_Id: 2900034944901120
+    m_Key: Fim de turno
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

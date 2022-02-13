@@ -29,5 +29,6 @@ MonoBehaviour:
   effectSprite: {fileID: 21300000, guid: 7f929b1c91836154f8216588e3c60f3e, type: 3}
   color: {r: 0.77254903, g: 0.20784314, b: 0.20784314, a: 1}
   descriptionEN: If played at the right time, it causes 3 damage directly to the
-    Ego of your crush. Otherwise, you take 3 damage to your Ego.
+    <color=#83B32B><b>Ego</b></color> of your crush. Otherwise, you take 3 damage
+    to your <color=#83B32B><b>Ego</b></color>.
   cardNameEN: Stretch

@@ -78,5 +78,9 @@ MonoBehaviour:
     m_Localized: Main Menu
     m_Metadata:
       m_Items: []
+  - m_Id: 2900034944901120
+    m_Localized: End Turn
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
