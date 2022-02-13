@@ -47,6 +47,22 @@ MonoBehaviour:
     m_Key: Proximo
     m_Metadata:
       m_Items: []
+  - m_Id: 2893321596444672
+    m_Key: Jogar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2893931670544384
+    m_Key: Como Jogar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2894307731841024
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2894694215983104
+    m_Key: Sair
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -54,5 +54,17 @@ MonoBehaviour:
     m_Localized: Next
     m_Metadata:
       m_Items: []
+  - m_Id: 2893321596444672
+    m_Localized: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2893931670544384
+    m_Localized: How to Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2894694215983104
+    m_Localized: Quit
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

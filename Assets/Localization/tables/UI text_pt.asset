@@ -52,5 +52,17 @@ MonoBehaviour:
     m_Localized: "Pr\xF3ximo"
     m_Metadata:
       m_Items: []
+  - m_Id: 2893321596444672
+    m_Localized: Jogar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2893931670544384
+    m_Localized: Como Jogar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2894694215983104
+    m_Localized: Sair
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
