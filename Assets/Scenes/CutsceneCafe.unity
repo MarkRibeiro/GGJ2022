@@ -1177,7 +1177,7 @@ MonoBehaviour:
   - "Depois de muita enrola\xE7\xE3o, finalmente algu\xE9m tomou coragem de chamar
     pra sair. Sinceramente achei que n\xE3o chegariam nesse ponto... mas UHUU!"
   - "Enquanto escolhe uma roupa, voc\xEA pensa que talvez seja melhor superar seu
-    orgulho e falar de uma vez o que sente..."
+    orgulho e falar de uma vez o que sente."
   - ...
   - "Voc\xEA pensa de novo e... \xE9 melhor n\xE3o..."
   - "\xC9 agora! O momento t\xE3o esperado: s\xF3 voc\xEAs dois num caf\xE9, o ambiente
@@ -1190,6 +1190,18 @@ MonoBehaviour:
   nextScene: Cafe
   backArrow: {fileID: 538423927}
   nextArrow: {fileID: 2053691777}
+  descriptionsEN:
+  - After postponing a lot, someone finally had the guts to ask the other out. Honestly
+    I thought you wouldn't get to that point... but YAAAAY!
+  - While choosing an outfit, you think that maybe it's better to get over your ego
+    and express your feelings.
+  - ...
+  - "you think twice and... yeah never mind, that doesn\u2019t sound like a good
+    idea... "
+  - 'The most awaited moment has come: just you two in a cafe, the perfect environment
+    to humiliati-- I mean, confess yourself!'
+  - It's time for the final battle! Will you finally stop playing games and move
+    on to romance?
 --- !u!114 &2038799780
 MonoBehaviour:
   m_ObjectHideFlags: 0

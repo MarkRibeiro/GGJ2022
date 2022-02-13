@@ -82,5 +82,9 @@ MonoBehaviour:
     m_Localized: End Turn
     m_Metadata:
       m_Items: []
+  - m_Id: 2904723052699648
+    m_Localized: Drag Here
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

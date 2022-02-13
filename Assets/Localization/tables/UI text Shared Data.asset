@@ -75,6 +75,10 @@ MonoBehaviour:
     m_Key: Fim de turno
     m_Metadata:
       m_Items: []
+  - m_Id: 2904723052699648
+    m_Key: Jogue aqui
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

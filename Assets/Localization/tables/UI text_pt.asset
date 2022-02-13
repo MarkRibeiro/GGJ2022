@@ -80,5 +80,9 @@ MonoBehaviour:
     m_Localized: Finalizar Turno
     m_Metadata:
       m_Items: []
+  - m_Id: 2904723052699648
+    m_Localized: Jogue Aqui
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

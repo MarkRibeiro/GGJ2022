@@ -1401,7 +1401,16 @@ MonoBehaviour:
   nextScene: Festa
   backArrow: {fileID: 497077998}
   nextArrow: {fileID: 1179892576}
-  descriptionsEN: []
+  descriptionsEN:
+  - Friday nights are always a reason for students to celebrate! You are literally
+    celebrating it at a frat party. The perfect scenario to hook up two opposites
+    secretly in love.
+  - Yellow and Purple meet and their hearts melt. That's right, Yellow and Purple
+    are a match made in heaven, but they don't know that they both feel the same
+    way.
+  - 'Here comes the twist: they are too proud to take the first step!'
+  - 'And so begins the ultimate challenge: make the other confess to you! '
+  - But, for now, getting their phone number is enough.
 --- !u!114 &2038799780
 MonoBehaviour:
   m_ObjectHideFlags: 0

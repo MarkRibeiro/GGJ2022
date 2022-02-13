@@ -1190,6 +1190,16 @@ MonoBehaviour:
   nextScene: Escola
   backArrow: {fileID: 1452120453}
   nextArrow: {fileID: 2141089756}
+  descriptionsEN:
+  - Chit chat in the hallways! Everyone's talking about who made out with who at
+    the party. Which means they are not talking about you.
+  - After all, you and your crush are both too stupid to take the first step.
+  - 'And, apparently, the first move you take is, accidentally, making a fool of
+    yourself bumping into your crush. What a nice idea! '
+  - 'Now, face to face, all you have to do is overcome your ego and say what you
+    want! Isn''t it? '
+  - 'They hope the other will ask them out, but of course nobody wants to make the
+    first move. '
 --- !u!114 &2038799780
 MonoBehaviour:
   m_ObjectHideFlags: 0
