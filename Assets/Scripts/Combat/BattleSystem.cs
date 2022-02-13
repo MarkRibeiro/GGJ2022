@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Localization.Settings;
+using UnityEngine.Localization;
 
 public enum BattleState
 {
@@ -29,6 +30,7 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private GameObject[] dices;
 
     [SerializeField] private string victoryText, defeatText;
+    [SerializeField] LocalizedString victoryText_LS, defeatText_LS;
     [SerializeField] private Sprite y_endSprite, p_endSprite, goodEnding;
     [SerializeField] private float diceTime = 1.0f;
     [SerializeField] private float enemyTime = 1.0f;
@@ -457,7 +459,15 @@ public class BattleSystem : MonoBehaviour
         if (winner == dm.player)
         {
             CharacterManager.PlayerPoints++;
-            endMatchScreen.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>().text = victoryText;
+            if (victoryText_LS == null)
+            {
+                endMatchScreen.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>().text = victoryText;
+
+            }
+            else
+            {
+                endMatchScreen.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>().text = victoryText_LS.GetLocalizedString();
+            }
 
             {
                 if (CharacterManager.playerID == 0)
@@ -475,7 +485,15 @@ public class BattleSystem : MonoBehaviour
         }
         else
         {
-            endMatchScreen.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>().text = defeatText;
+            if (defeatText_LS == null)
+            {
+                endMatchScreen.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>().text = defeatText;
+            }
+            else
+            {
+                endMatchScreen.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>().text = defeatText_LS.GetLocalizedString();
+            }
+
             if (CharacterManager.playerID == 0)
             {
                 endMatchScreen.transform.GetChild(0).GetComponent<Image>().sprite = y_endSprite;

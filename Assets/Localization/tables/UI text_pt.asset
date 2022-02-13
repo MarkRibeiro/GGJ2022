@@ -96,5 +96,35 @@ MonoBehaviour:
     m_Localized: Turno do Oponente
     m_Metadata:
       m_Items: []
+  - m_Id: 2934572709548032
+    m_Localized: "Ah n\xE3o! Voc\xEA abriu m\xE3o do orgulho e acabou pedindo o n\xFAmero!\r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2934803002003456
+    m_Localized: "Boa! Conseguiu que seu flerte superasse o orgulho e pedisse seu
+      n\xFAmero.\r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2934917791715328
+    m_Localized: 'Boa! Conseguiu que seu flerte superasse o orgulho e ganhou um encontro!
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2934978143555584
+    m_Localized: "Ah n\xE3o! Voc\xEA abriu m\xE3o do orgulho e acabou chamando seu
+      flerte para sair!\r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2935000897654784
+    m_Localized: "Olha s\xF3! Voc\xEAs decidem superar o orgulho e se declararam
+      ao mesmo tempo!\r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2935022322159616
+    m_Localized: "Ah n\xE3o! Voc\xEA n\xE3o tem coragem de se declarar e sai correndo
+      com vergonha.\r\n"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

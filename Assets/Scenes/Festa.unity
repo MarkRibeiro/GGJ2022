@@ -663,6 +663,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -1.6282043
       objectReference: {fileID: 0}
+    - target: {fileID: 4802712726890472353, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: defeatText_LS.m_TableEntryReference.m_KeyId
+      value: 2934572709548032
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802712726890472353, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: victoryText_LS.m_TableEntryReference.m_KeyId
+      value: 2934803002003456
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802712726890472353, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: defeatText_LS.m_TableReference.m_TableCollectionName
+      value: GUID:1fe2004c74d4243419ee4765de37ecc0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802712726890472353, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: victoryText_LS.m_TableReference.m_TableCollectionName
+      value: GUID:1fe2004c74d4243419ee4765de37ecc0
+      objectReference: {fileID: 0}
     - target: {fileID: 5239108035264350283, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 

@@ -98,5 +98,40 @@ MonoBehaviour:
     m_Localized: Opponent's Turn
     m_Metadata:
       m_Items: []
+  - m_Id: 2934572709548032
+    m_Localized: Oh no! You gave up on your ego and asked your crush's number.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2934803002003456
+    m_Localized: 'Nice! You managed to get your crush to overcome their ego and ask
+      for your number.
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2934917791715328
+    m_Localized: 'Nice! You managed to get your crush to overcome their ego and ask
+      you for a date.
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2934978143555584
+    m_Localized: 'Oh no! You gave up on your ego and asked your crush out.
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2935000897654784
+    m_Localized: "Look at that! Both of you decide to overcome your egos and confess
+      at the same time! What a twist huh?\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2935022322159616
+    m_Localized: 'Oh no! You don''t have the guts to confess and run away ashamed.
+
+'
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

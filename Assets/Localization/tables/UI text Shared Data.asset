@@ -91,6 +91,30 @@ MonoBehaviour:
     m_Key: Turno do Oponente
     m_Metadata:
       m_Items: []
+  - m_Id: 2934572709548032
+    m_Key: FESTA_DERROTA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2934803002003456
+    m_Key: FESTA_VITORIA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2934917791715328
+    m_Key: ESCOLA_VITORIA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2934978143555584
+    m_Key: ESCOLA_DERROTA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2935000897654784
+    m_Key: CAFE_VITORIA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2935022322159616
+    m_Key: CAFE_DERROTA
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -379,6 +379,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.099975586
       objectReference: {fileID: 0}
+    - target: {fileID: 4802712726153919037, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.85009766
+      objectReference: {fileID: 0}
     - target: {fileID: 4802712726425253182, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -431,6 +435,22 @@ PrefabInstance:
     - target: {fileID: 4802712726890472353, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: wrongShameChance
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802712726890472353, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: defeatText_LS.m_TableEntryReference.m_KeyId
+      value: 2935022322159616
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802712726890472353, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: victoryText_LS.m_TableEntryReference.m_KeyId
+      value: 2935000897654784
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802712726890472353, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: defeatText_LS.m_TableReference.m_TableCollectionName
+      value: GUID:1fe2004c74d4243419ee4765de37ecc0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802712726890472353, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: victoryText_LS.m_TableReference.m_TableCollectionName
+      value: GUID:1fe2004c74d4243419ee4765de37ecc0
       objectReference: {fileID: 0}
     - target: {fileID: 5239108035264350283, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
