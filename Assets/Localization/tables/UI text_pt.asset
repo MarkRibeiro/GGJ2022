@@ -84,5 +84,9 @@ MonoBehaviour:
     m_Localized: Jogue Aqui
     m_Metadata:
       m_Items: []
+  - m_Id: 2909673023479808
+    m_Localized: Paquerar
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
