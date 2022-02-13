@@ -56,11 +56,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2894307731841024
-    m_Key: New Entry
+    m_Key: Escolha seu personagem
     m_Metadata:
       m_Items: []
   - m_Id: 2894694215983104
     m_Key: Sair
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2898167531708416
+    m_Key: Resume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2898786401263616
+    m_Key: Main menu
     m_Metadata:
       m_Items: []
   m_Metadata:

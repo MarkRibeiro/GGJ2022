@@ -66,5 +66,17 @@ MonoBehaviour:
     m_Localized: Quit
     m_Metadata:
       m_Items: []
+  - m_Id: 2894307731841024
+    m_Localized: Choose your character
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2898167531708416
+    m_Localized: Resume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2898786401263616
+    m_Localized: Main Menu
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

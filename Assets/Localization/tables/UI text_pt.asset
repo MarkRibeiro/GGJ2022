@@ -64,5 +64,17 @@ MonoBehaviour:
     m_Localized: Sair
     m_Metadata:
       m_Items: []
+  - m_Id: 2894307731841024
+    m_Localized: Escolha seu personagem
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2898167531708416
+    m_Localized: Voltar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2898786401263616
+    m_Localized: Menu Principal
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
