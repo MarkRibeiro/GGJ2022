@@ -79,6 +79,18 @@ MonoBehaviour:
     m_Key: Jogue aqui
     m_Metadata:
       m_Items: []
+  - m_Id: 2909673023479808
+    m_Key: "Come\xE7ar partida"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2912134115237888
+    m_Key: Seu turno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2912256584720384
+    m_Key: Turno do Oponente
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

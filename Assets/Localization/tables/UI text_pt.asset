@@ -84,5 +84,17 @@ MonoBehaviour:
     m_Localized: Jogue Aqui
     m_Metadata:
       m_Items: []
+  - m_Id: 2909673023479808
+    m_Localized: Paquerar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2912134115237888
+    m_Localized: Seu Turno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2912256584720384
+    m_Localized: Turno do Oponente
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
