@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.Localization.Settings;
 
 public class TutorialManager : MonoBehaviour
 {
@@ -11,20 +12,48 @@ public class TutorialManager : MonoBehaviour
 
     [TextArea(3, 10)]
     public string[] descriptions;
-    public string[] tittle;
+    public string[] titles;
     public Button forwardButton, backButton;
 
-    [SerializeField] private TextMeshProUGUI tittleDisplay;
+    [SerializeField] private TextMeshProUGUI titleDisplay;
     [SerializeField] private Image imageDisplay;
     [SerializeField] private TextMeshProUGUI textDisplay;
     [SerializeField] private string nextScene;
 
     private int currentIndex;
+    
+    public Sprite[] scenesEN;
 
-    // Start is called before the first frame update
+    [TextArea(3, 10)]
+    public string[] descriptionsEN;
+    public string[] titlesEN;
+    private Sprite[] _scenes;
+    private string[] _descriptions;
+    private string[] _titles;
+
+    void UpdateLocale()
+    {
+        var selectedLocale = LocalizationSettings.SelectedLocale;
+        switch (selectedLocale.Identifier.Code)
+        {
+            case "en":
+                _scenes = scenesEN;
+                _descriptions = descriptionsEN;
+                _titles = titlesEN;
+
+                break;
+            default:
+            case "pt":
+                _scenes = scenes;
+                _descriptions = descriptions;
+                _titles = titles;
+                break;
+        }
+    }
+
     void Start()
     {
-        tittleDisplay.text = tittle[0];
+        titleDisplay.text = titles[0];
         imageDisplay.sprite = scenes[0];
         imageDisplay.preserveAspect = true;
         textDisplay.text = descriptions[0];
@@ -34,15 +63,14 @@ public class TutorialManager : MonoBehaviour
 
     public void Navigate(int indexStep)
     {
-        if(indexStep < 0 && currentIndex == 0)
+        UpdateLocale();
+        if (indexStep < 0 && currentIndex == 0)
         {
-
             return;
         }
 
-        if(indexStep > 0 && currentIndex == scenes.Length - 1)
+        if (indexStep > 0 && currentIndex == scenes.Length - 1)
         {
-
             return;
         }
         currentIndex += indexStep;
@@ -50,9 +78,9 @@ public class TutorialManager : MonoBehaviour
         backButton.gameObject.SetActive(currentIndex != 0);
         forwardButton.gameObject.SetActive(currentIndex != scenes.Length - 1);
 
-        tittleDisplay.text = tittle[currentIndex];
-        imageDisplay.sprite = scenes[currentIndex];
+        titleDisplay.text = _titles[currentIndex];
+        imageDisplay.sprite = _scenes[currentIndex];
         imageDisplay.preserveAspect = true;
-        textDisplay.text = descriptions[currentIndex];
+        textDisplay.text = _descriptions[currentIndex];
     }
 }

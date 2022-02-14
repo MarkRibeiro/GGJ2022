@@ -1180,7 +1180,7 @@ GameObject:
   - component: {fileID: 1727186522}
   - component: {fileID: 1727186523}
   m_Layer: 5
-  m_Name: Tittle
+  m_Name: Titles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1727,14 +1727,14 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ac7632575cbf1d345b20350a05c35bf3, type: 3}
   - {fileID: 21300000, guid: 9cf2e0f7c0d127e479e8e0ccad52590c, type: 3}
   - {fileID: 21300000, guid: ab0a0cf914fb0f444ba184b043bc5a04, type: 3}
-  - {fileID: 21300000, guid: 3b951743db82cc54cb682bf0599fbfda, type: 3}
+  - {fileID: 21300000, guid: 25c2d0554f89f1c42a3c1f95905cc907, type: 3}
   - {fileID: 21300000, guid: f06e992c3494ea14f83df2ee2f5596ec, type: 3}
-  - {fileID: 21300000, guid: b91e3cdb5c62a8d4f8940ac1b5da5ed6, type: 3}
+  - {fileID: 21300000, guid: 2924fa3d16c876e4ea7c7fff32ca9fde, type: 3}
   descriptions:
   - "Existem dois tipos de barra de vida: a de <color=#7B83C9>Indiferen\xE7a</color>,
     e a de <color=#83B32B>Orgulho</color>. Aquele que levar a barra de <color=#83B32B>Orgulho</color>
     do oponente a 0 primeiro, ganha a partida. \n\nPor\xE9m, para dar dano \xE0 barra
-    de <color=#83B32B>Orgulho</color>, \xE9 necess\xE1rio levar a barra de <color=#7B83C9>Indiferen\xE7a</color>
+    de <color=#83B32B>Orgulho</color> \xE9 necess\xE1rio levar a barra de <color=#7B83C9>Indiferen\xE7a</color>
     \xE0 0 antes."
   - "No jogo h\xE1 dois tipos de recursos: Raz\xE3o e Emo\xE7\xE3o.\nEsses recursos
     s\xE3o obtidos com o lan\xE7amento de dados no come\xE7o de cada turno.\r\n"
@@ -1747,18 +1747,18 @@ MonoBehaviour:
   - "Cartas com \xEDcone de Fogo afetam a barra de <color=#83B32B>Orgulho</color>,
     seja atacando ou recuperando.\r\n\nCartas com \xEDcone de Gelo afetam a barra
     de <color=#7B83C9>Indiferen\xE7a</color>, seja atacando ou recuperando.\r"
-  - "Existem tamb\xE9m cartas de Vergonha. Essas cartas infligem dano diretamente
+  - "Existem tamb\xE9m cartas de vergonha. Essas cartas infligem dano diretamente
     no <color=#83B32B>Orgulho</color>, independentemente do estado da barra de <color=#7B83C9>Indiferen\xE7a</color>.
-    \n\nPor\xE9m, esse efeito apenas acontecer\xE1 em momentos espec\xEDficos. Caso
-    n\xE3o seja o momento adequado, todos os efeitos da carta afetar\xE3o quem a
-    jogou."
-  - "As express\xF5es do seu advers\xE1rio indicam se ele est\xE1 mais aberto ou
-    n\xE3o aos seus ataques. Cada carta jogada pode gerar mudan\xE7a de Express\xE3o
-    no seu oponente."
+    \n\nPor\xE9m, esse efeito apenas acontecer\xE1 em <color=#C53535>momentos espec\xEDficos</color>.
+    Caso n\xE3o seja o momento adequado, todos os efeitos da carta afetar\xE3o quem
+    a jogou."
+  - "As <color=#C53535>Express\xF5es</color> do seu advers\xE1rio indicam se ele
+    est\xE1 mais aberto ou n\xE3o aos seus ataques. Cada carta jogada pode gerar
+    mudan\xE7a de <color=#C53535>Express\xE3o</color> no seu oponente."
   - "O bot\xE3o \u201CTerminar Turno\u201D passa a vez para o oponente. \r\n\r\nNo
     come\xE7o de cada turno, as cartas das m\xE3os dos jogadores voltar\xE3o para
     a pilha e ser\xE3o redistribu\xEDdas.\r"
-  tittle:
+  titles:
   - "Barras de Indiferen\xE7a e Orgulho"
   - Uso de recursos
   - Uso de recursos
@@ -1769,10 +1769,57 @@ MonoBehaviour:
   - Passar o turno
   forwardButton: {fileID: 1179892578}
   backButton: {fileID: 497078000}
-  tittleDisplay: {fileID: 1727186523}
+  titleDisplay: {fileID: 1727186523}
   imageDisplay: {fileID: 1667482437}
   textDisplay: {fileID: 1892943796}
   nextScene: Cafe
+  scenesEN:
+  - {fileID: 21300000, guid: 4ad00a05715dbbf4596afc96fba045d7, type: 3}
+  - {fileID: 21300000, guid: ac7632575cbf1d345b20350a05c35bf3, type: 3}
+  - {fileID: 21300000, guid: ac7632575cbf1d345b20350a05c35bf3, type: 3}
+  - {fileID: 21300000, guid: 9cf2e0f7c0d127e479e8e0ccad52590c, type: 3}
+  - {fileID: 21300000, guid: ab0a0cf914fb0f444ba184b043bc5a04, type: 3}
+  - {fileID: 21300000, guid: 7c90e6f42ff08664d957ecc4a57180a5, type: 3}
+  - {fileID: 21300000, guid: f06e992c3494ea14f83df2ee2f5596ec, type: 3}
+  - {fileID: 21300000, guid: f3b8766656b84b34fb466798c51eedba, type: 3}
+  descriptionsEN:
+  - "There are two types of health bars: <color=#7B83C9>Coldness</color> and <color=#83B32B>Ego</color>.
+    Whoever brings the opponent's Ego bar to 0 first, wins the game. \n\nHowever,
+    in order to damage the <color=#83B32B>Ego</color> bar it\u2019s necessary to
+    bring the <color=#7B83C9>Coldness</color> bar to 0 first."
+  - "There are two types of resources in the game: Sense and Emotion. These resources
+    are obtained by rolling the dice at the start of each turn.\r"
+  - "Each card needs a certain amount of Sense and/or Emotion to be played. At the
+    end of the turn, if you still have resources, you\u2019ll keep them for the next
+    turn, with a limit of 10 per resource."
+  - "Cards with a Sword icon are attack cards, they are used to damage the opponent
+    bars.\r\n\nCards with a Shield icon are defense cards, they are used to regenerate
+    your bars.\r"
+  - 'Cards with a Fire icon affect the <color=#83B32B>Ego</color> bar, whether attacking
+    or recovering it.
+
+
+    Cards with an Ice icon affect the <color=#7B83C9>Coldness</color>
+    bar, whether attacking or recovering it.'
+  - "There are also shame cards. These cards inflict damage directly on the opponent\u2019s
+    <color=#83B32B>Ego</color>, regardless of the <color=#7B83C9>Coldness</color>
+    bar\u2019s state. \n\nHowever, be careful! This effect will only happen at <color=#C53535>specific
+    moments</color>. If played at the wrong time, the card will affect who played
+    it."
+  - "Your opponent\u2019s <color=#C53535>Expression</color> indicates whether or
+    not they are open to your attacks. Each played card can change their <color=#C53535>Expression</color>."
+  - "The \u201CEnd Turn\u201D button ends your turn, allowing your opponent to play.\r\n\nAt
+    the beginning of each turn, the cards in the player\u2019s hands will return
+    to the pile and be redistributed.\r"
+  titlesEN:
+  - Coldness and Ego Bars
+  - Use of resources
+  - Use of resources
+  - Card icons
+  - Card icons
+  - Shame Cards
+  - Expression
+  - End Turn
 --- !u!114 &2038799780
 MonoBehaviour:
   m_ObjectHideFlags: 0
