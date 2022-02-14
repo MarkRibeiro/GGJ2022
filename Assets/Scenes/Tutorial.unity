@@ -1727,9 +1727,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ac7632575cbf1d345b20350a05c35bf3, type: 3}
   - {fileID: 21300000, guid: 9cf2e0f7c0d127e479e8e0ccad52590c, type: 3}
   - {fileID: 21300000, guid: ab0a0cf914fb0f444ba184b043bc5a04, type: 3}
-  - {fileID: 21300000, guid: 3b951743db82cc54cb682bf0599fbfda, type: 3}
+  - {fileID: 21300000, guid: 25c2d0554f89f1c42a3c1f95905cc907, type: 3}
   - {fileID: 21300000, guid: f06e992c3494ea14f83df2ee2f5596ec, type: 3}
-  - {fileID: 21300000, guid: b91e3cdb5c62a8d4f8940ac1b5da5ed6, type: 3}
+  - {fileID: 21300000, guid: 2924fa3d16c876e4ea7c7fff32ca9fde, type: 3}
   descriptions:
   - "Existem dois tipos de barra de vida: a de <color=#7B83C9>Indiferen\xE7a</color>,
     e a de <color=#83B32B>Orgulho</color>. Aquele que levar a barra de <color=#83B32B>Orgulho</color>
@@ -1779,9 +1779,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ac7632575cbf1d345b20350a05c35bf3, type: 3}
   - {fileID: 21300000, guid: 9cf2e0f7c0d127e479e8e0ccad52590c, type: 3}
   - {fileID: 21300000, guid: ab0a0cf914fb0f444ba184b043bc5a04, type: 3}
-  - {fileID: 21300000, guid: 3b951743db82cc54cb682bf0599fbfda, type: 3}
+  - {fileID: 21300000, guid: 7c90e6f42ff08664d957ecc4a57180a5, type: 3}
   - {fileID: 21300000, guid: f06e992c3494ea14f83df2ee2f5596ec, type: 3}
-  - {fileID: 21300000, guid: b91e3cdb5c62a8d4f8940ac1b5da5ed6, type: 3}
+  - {fileID: 21300000, guid: f3b8766656b84b34fb466798c51eedba, type: 3}
   descriptionsEN:
   - "There are two types of health bars: <color=#7B83C9>Coldness</color> and <color=#83B32B>Ego</color>.
     Whoever brings the opponent's Ego bar to 0 first, wins the game. \n\nHowever,
