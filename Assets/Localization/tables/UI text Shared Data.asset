@@ -115,6 +115,10 @@ MonoBehaviour:
     m_Key: CAFE_DERROTA
     m_Metadata:
       m_Items: []
+  - m_Id: 3338115495018496
+    m_Key: Idioma
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
