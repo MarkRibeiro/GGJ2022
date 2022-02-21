@@ -130,5 +130,9 @@ MonoBehaviour:
     m_Localized: Idioma
     m_Metadata:
       m_Items: []
+  - m_Id: 5843119908896768
+    m_Localized: Fim
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

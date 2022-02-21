@@ -271,6 +271,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3408060497179595220, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 5843119908896768
+      objectReference: {fileID: 0}
     - target: {fileID: 3589685020754978550, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -309,7 +313,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4802712725629121865, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4802712725629121867, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: m_Sprite
@@ -398,6 +402,10 @@ PrefabInstance:
     - target: {fileID: 4802712726490084639, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802712726724040242, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4802712726724040244, guid: a49c5105ac5172041b93690db91ffc0b, type: 3}
       propertyPath: m_text
