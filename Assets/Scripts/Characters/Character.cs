@@ -48,11 +48,11 @@ public class Character : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("space"))
-        {
-            currHP -= 10;
-            healthBar.SetValue(currHP);
-        }
+        // if (Input.GetKeyDown("space"))
+        // {
+        //     currHP -= 10;
+        //     healthBar.SetValue(currHP);
+        // }
     }
 
     public void ChangeExpression(Expressions emotion)
