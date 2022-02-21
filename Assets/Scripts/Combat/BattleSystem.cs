@@ -510,7 +510,14 @@ public class BattleSystem : MonoBehaviour
             if (PlayerVictory())
             {
                 endMatchScreen.transform.GetChild(0).GetComponent<Image>().sprite = goodEnding;
-                endMatchScreen.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>().text = victoryText;
+                if (victoryText_LS == null)
+                {
+                    endMatchScreen.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>().text = victoryText;
+                }
+                else
+                {
+                    endMatchScreen.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>().text = victoryText_LS.GetLocalizedString();
+                }
             }
             else
             {
@@ -522,8 +529,15 @@ public class BattleSystem : MonoBehaviour
                 {
                     endMatchScreen.transform.GetChild(0).GetComponent<Image>().sprite = p_endSprite;
                 }
-                endMatchScreen.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>().text = defeatText;
 
+                if (defeatText_LS == null)
+                {
+                    endMatchScreen.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>().text = defeatText;
+                }
+                else
+                {
+                    endMatchScreen.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>().text = defeatText_LS.GetLocalizedString();
+                }
             }
         }
 
