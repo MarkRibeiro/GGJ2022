@@ -48,11 +48,13 @@ public class Character : MonoBehaviour
 
     private void Update()
     {
-        // if (Input.GetKeyDown("space"))
-        // {
-        //     currHP -= 10;
-        //     healthBar.SetValue(currHP);
-        // }
+        #if UNITY_EDITOR
+        if (Input.GetKeyDown("space"))
+        {
+            currHP -= 10;
+            healthBar.SetValue(currHP);
+        }
+        #endif
     }
 
     public void ChangeExpression(Expressions emotion)
